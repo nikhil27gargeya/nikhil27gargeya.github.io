@@ -1,4 +1,4 @@
 ### Posts
 
-#### SharedTab(sharedtab.md)
-#### SwiftUI vs UIKit(first.md)
+#### 1. [SharedTab](sharedtab.md)
+#### 2. [SwiftUI vs UIKit](first.md)
