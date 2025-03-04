@@ -12,4 +12,4 @@
 **Good For:** Private/Sensitive Data, Subscription Status
 **Not Good For:** Simple, frequently accessed data (due to performance)  
 
-For my app, to check subscription status, I avoided using UserDefaults as the data is not secure and would be deleted upon app deletion. I used keychain to store a kSecClassGenericPassword value which is the premium status as a string ("true" or "false") which validates whether the user has paid for the service. This would persist even across app deletions, is more secure, and would
+For my app, to check subscription status, I avoided using UserDefaults as the data is not secure and would be deleted upon app deletion. I used keychain to store a kSecClassGenericPassword value which is the premium status as a string ("true" or "false") which validates whether the user has paid for the service. This would persist even across app deletions and is more secure than UserDefaults.
