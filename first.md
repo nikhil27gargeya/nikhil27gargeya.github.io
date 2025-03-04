@@ -9,6 +9,6 @@
 
 **Keychain** is different because all the data is encrypted (iOS Security Framework). It is an encrypted container that persists as long as the device data isn’t wiped.
 
-**Good For:** Private/Sensitive Data  
+**Good For:** Private/Sensitive Data, Subscription Status
 **Not Good For:** Simple, frequently accessed data (due to performance)  
 
