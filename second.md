@@ -1,9 +1,9 @@
 # SwiftUI vs. UIKit
 
 **SwiftUI** is a UI framework that allows for building user interfaces using a simpler, more intuitive syntax. It is:  
-1) **Declarative**  
-2) **Compositional**  
-3) **State-driven**  
+1) Declarative (Declarative means that the programmer defines the desired state of the UI and Swift in this case will take care of the actions of the UI)
+2) Compositional (Modular components)
+3) State-driven (UI in sync with the state/data)
 
 and designed to integrate across various Apple platforms.
 
