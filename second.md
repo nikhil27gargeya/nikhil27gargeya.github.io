@@ -72,7 +72,7 @@ struct ReceiptScannerView: UIViewControllerRepresentable {
                 guard let receiptItems = request.results as? [VNRecognizedTextObservation] else { return }
                 
                 self.scannedText = receiptItems.compactMap { $0.topCandidates(1).first?.string }.joined(separator: "\n")
-                print("Scanned Text After Recognition: \(self.scannedText)")
+                print("Scanned Text: \(self.scannedText)")
             }
             
             request.recognitionLevel = .accurate
@@ -80,7 +80,7 @@ struct ReceiptScannerView: UIViewControllerRepresentable {
             do {
                 try requestHandler.perform([request])
             } catch {
-                print("Error performing text recognition: \(error)")
+                print("Error: \(error)")
             }
         }
     }
