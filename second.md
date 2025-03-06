@@ -17,7 +17,7 @@ and designed to integrate across various Apple platforms.
 **Good For:** Custom UI elements, complex gestures  
 **Not Good For:** Simplistic code with idiomatic capabilities, multi-platform development
 
-Since UIKit has extensive framework support, it is useful in SharedTab as I use the camera to scan receipts for bill calculations. The VNDocumentCameraViewController class from VisionKit is wrapped using UIViewControllerRepresentable from UIKit which bridges the data from SwiftUI and UIKit.
+Since UIKit has extensive framework support, it is useful in SharedTab as I use the camera to scan receipts for bill calculations. The VNDocumentCameraViewController class from VisionKit is wrapped using UIViewControllerRepresentable from UIKit which bridges the data from SwiftUI and UIKit. 
 
 ```
 struct ReceiptScannerView: UIViewControllerRepresentable {
@@ -35,7 +35,10 @@ struct ReceiptScannerView: UIViewControllerRepresentable {
         viewController.delegate = context.coordinator
         return viewController
     }
-        
+    
+    func updateUIViewController(_ uiViewController: VNDocumentCameraViewController, context: Context) {
+    }
+    //delegate for VNDocumentCameraViewController
     class Coordinator: NSObject, VNDocumentCameraViewControllerDelegate {
         @Binding var scannedText: String
         @Binding var itemCosts: [(String, Decimal)]
@@ -66,10 +69,10 @@ struct ReceiptScannerView: UIViewControllerRepresentable {
             
             let requestHandler = VNImageRequestHandler(cgImage: cgImage, options: [:])
             let request = VNRecognizeTextRequest { (request, error) in
-                guard let observations = request.results as? [VNRecognizedTextObservation] else { return }
+                guard let receiptItems = request.results as? [VNRecognizedTextObservation] else { return }
                 
-                self.scannedText = observations.compactMap { $0.topCandidates(1).first?.string }.joined(separator: "\n")
-                print("scannedText: \(self.scannedText)")
+                self.scannedText = receiptItems.compactMap { $0.topCandidates(1).first?.string }.joined(separator: "\n")
+                print("Scanned Text After Recognition: \(self.scannedText)")
             }
             
             request.recognitionLevel = .accurate
@@ -77,9 +80,8 @@ struct ReceiptScannerView: UIViewControllerRepresentable {
             do {
                 try requestHandler.perform([request])
             } catch {
-                print("Error: \(error)")
+                print("Error performing text recognition: \(error)")
             }
         }
     }
-}
 ```
