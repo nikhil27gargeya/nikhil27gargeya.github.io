@@ -35,9 +35,7 @@ struct ReceiptScannerView: UIViewControllerRepresentable {
         viewController.delegate = context.coordinator
         return viewController
     }
-    
-    func updateUIViewController(_ uiViewController: VNDocumentCameraViewController, context: Context) {}
-    
+        
     class Coordinator: NSObject, VNDocumentCameraViewControllerDelegate {
         @Binding var scannedText: String
         @Binding var itemCosts: [(String, Decimal)]
@@ -71,7 +69,7 @@ struct ReceiptScannerView: UIViewControllerRepresentable {
                 guard let observations = request.results as? [VNRecognizedTextObservation] else { return }
                 
                 self.scannedText = observations.compactMap { $0.topCandidates(1).first?.string }.joined(separator: "\n")
-                print("Scanned Text After Recognition: \(self.scannedText)") // Print the recognized text
+                print("scannedText: \(self.scannedText)")
             }
             
             request.recognitionLevel = .accurate
@@ -79,7 +77,7 @@ struct ReceiptScannerView: UIViewControllerRepresentable {
             do {
                 try requestHandler.perform([request])
             } catch {
-                print("Error performing text recognition: \(error)")
+                print("Error: \(error)")
             }
         }
     }
