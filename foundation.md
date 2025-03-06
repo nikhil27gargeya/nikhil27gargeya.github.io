@@ -12,5 +12,5 @@ private static func formatCurrency(amount: Decimal, currencyCode: String) -> Str
     nf.locale = Locale.current
     nf.minimumFractionDigits = 2
     nf.maximumFractionDigits = 2
-    return nf.string(from: NSDecimalNumber(decimal: amount))"
+    return nf.string(from: NSDecimalNumber(decimal: amount))
 }
