@@ -9,6 +9,8 @@ Data Warehouse: A central repository of data that can be analyzed (conglomerate 
 
 **BigLake** extends BigQuery capabilities (ie. dataplex for data governance) and unifies data warehouses. It maintains a single copy of data nad makes it uniformally accessible to open source engines like Vertex AI
 
+BigLake Tables (querying external data stores) can be used with data in Amazon S3 without copying the data but by reading it without data movement. This is done using BigQuery Omni (because when data gets siloed, it is difficult to get insights the collective store of data) so this can be used for cross-cloud joins/transfers etc.
+
 ---
 
 **VertexAI** is an AI platform used to build/deploy/scale ML models on Google Cloud
