@@ -7,9 +7,9 @@ Terms:
 Data Silos: Data collection(s) that are isolated from other systems
 Data Warehouse: A central repository of data that can be analyzed (conglomerate of data)
 
-**BigLake** extends BigQuery capabilities (ie. dataplex for data governance) and unifies data warehouses. It maintains a single copy of data nad makes it uniformally accessible to open source engines like Vertex AI
+**BigLake** extends BigQuery capabilities (ie. dataplex for data governance) and unifies data warehouses. It maintains a single copy of data and makes it uniformally accessible to open source engines like Vertex AI
 
-How BigQuery works: Distributed storage using Colossus and Dremel to compute data using memory shuffle (for data partitioning) as a middle layer
+How BigQuery works: Distributed storage using Colossus and Dremel to compute data using memory shuffle (for data partitioning) as a middle layer. Slots (units of computation) are allocated to execute queries. Optimizing queries involves limiting bytes through columns needed, late + seldom aggregations, nesting repeated data, and filters before JOINs.
 
 BigLake Tables (querying external data stores) can be used with data in Amazon S3 without copying the data but by reading it without data movement. This is done using BigQuery Omni (because when data gets siloed, it is difficult to get insights the collective store of data) so this can be used for cross-cloud joins/transfers etc.
 
