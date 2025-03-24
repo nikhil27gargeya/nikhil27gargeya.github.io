@@ -19,7 +19,7 @@ and designed to integrate across various Apple platforms.
 
 Since UIKit has extensive framework support, it is useful in SharedTab as I use the camera to scan receipts for bill calculations. The VNDocumentCameraViewController class from VisionKit is wrapped using UIViewControllerRepresentable from UIKit which bridges the data from SwiftUI and UIKit. 
 
-UIKit uses delegate pattern to handle interactions (delegate pattern is where one object (delegate) acts on behalf of another object (delegating object) to do some work). For example, in AppKit, NSWindow can declare a protocol which has methods including one called "windowShouldClose". As a user clicks the close box, the window object (delegating object) sends the method "windowShouldClose" to its delegate to determine if the window should be closed. The delegate will send back a boolean to the delegating object which results in the expected behavior. This create decoupling of functionality.
+UIKit uses delegate pattern to handle interactions (delegate pattern is where one object (delegate) acts on behalf of another object (delegating object) to do some work). For example, in AppKit, NSWindow can declare a protocol which has methods including one called "windowShouldClose". As a user clicks the close box, the window object (delegating object) sends the method "windowShouldClose" to its delegate to determine if the window should be closed. The delegate will send back a boolean to the delegating object which results in the expected behavior. This create decoupling of functionality. https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/Delegation.html
 
 ```
 struct ReceiptScannerView: UIViewControllerRepresentable {
