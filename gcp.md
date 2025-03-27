@@ -2,6 +2,10 @@
 
 **GCP** is a product suite that offers services like computing/hosting, storage, networking, and ML resources
 
+**BigLake** is cloud native (built and deployed to have microservices with independent scaling and automation). Microservices are an architectural approach where a single application is comprised of smaller independent components or services. These services typically maintain their own stack of technologies including backend services, communicating with one another through the use of APIs. These fits in with DevOps as loosely coupled services are better for testing and reliability in theory, although there could be downstream effects in practice that are caused by upstream services. Microservices are deployed within containers, which are application source code combined with 
+
+https://www.ibm.com/think/topics/cloud-native
+
 **BigQuery** is a serverless, multi-tenant cloud data warehouse that provide scalable analytics and frameworks over large datasets
 Terms:
 Data Silos: Data collection(s) that are isolated from other systems
