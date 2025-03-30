@@ -2,10 +2,11 @@
 
 **GCP** is a product suite that offers services like computing/hosting, storage, networking, and ML resources
 
-**BigLake** is cloud native (built and deployed to have microservices with independent scaling and automation). Microservices are an architectural approach where a single application is comprised of smaller independent components or services, which is advantageous for non-intrusive improvements, independent scaling, and testing. For example, a travel website's microservices could be flights, hotels, cars, deals, trip planner, etc.  However, using multiple  services requires more management. These services typically maintain their own stack of technologies including backend services, communicating with one another through the use of APIs. This meshes well in with DevOps as loosely coupled services are better for testing and reliability in theory, although there could be downstream effects in practice that are caused by upstream services. Microservices are deployed within containers, which are application source code combined with libraries and dependencies needed to run the code. Containers allow for consistent deployment. Very useful for hybrid multicloud (public cloud along with private cloud). At scale, a container orchestration platform like Kubernetes helps automate management. (https://www.ibm.com/think/topics/cloud-native).
+**BigLake** is cloud native (built and deployed to have microservices with independent scaling and automation). Microservices are an architectural approach where a single application is comprised of smaller independent components or services, which is advantageous for non-intrusive improvements, independent scaling, and testing. For example, a travel website's microservices could be flights, hotels, cars, deals, trip planner, etc.  However, using multiple  services requires more management. These services typically maintain their own stack of technologies including backend services, communicating with one another through the use of APIs. This aligns well with DevOps as loosely coupled services are better for testing and reliability in theory, although there could be downstream effects in practice that are caused by upstream services. Microservices are deployed within containers, which are application source code combined with libraries and dependencies needed to run the code. Containers allow for consistent deployment. Very useful for hybrid multicloud (public cloud along with private cloud). At scale, a container orchestration platform like Kubernetes helps automate management. (https://www.ibm.com/think/topics/cloud-native).
 
 **BigLake** is disaggregated, meaning that storage and compute resources are decoupled. Traditionally, storage and compute are integrated within the same server. This allows for dynamic allocation of storage resources based on what the compute nodes need. Pay as you go model for businesses and higher resource efficiency. 
 
+**BigLake** combines data management needs like security and governance along with flexibility of open source format as it is able to store a variety of data (structured, unstructured) and perform analytics over this data. BigLake tables allows for data governance, BigLake object tables support using BigQuery for unstructured data, and BigQuery Omni is used for non GCP clouds. So to summarize, **BigLake** extends BigQuery capabilities (ie. dataplex for data governance) and unifies data warehouses. It maintains a single copy of data and makes it uniformally accessible to open source engines like Vertex AI
 
 
 
@@ -17,7 +18,7 @@ Terms:
 Data Silos: Data collection(s) that are isolated from other systems
 Data Warehouse: A central repository of data that can be analyzed (conglomerate of data)
 
-**BigLake** extends BigQuery capabilities (ie. dataplex for data governance) and unifies data warehouses. It maintains a single copy of data and makes it uniformally accessible to open source engines like Vertex AI
+
 
 How BigQuery works: Distributed storage using Colossus and Dremel to compute data using memory shuffle (for data partitioning) as a middle layer. Slots (units of computation) are allocated to execute queries. Optimizing queries involves limiting bytes through columns needed, late + seldom aggregations (uses less slots/computation), nesting repeated data, and filters before JOINs (preventing larger JOINs).
 
