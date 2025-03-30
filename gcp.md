@@ -9,11 +9,7 @@
 **BigLake** combines data management needs like security and governance along with flexibility of open source format as it is able to store a variety of data (structured, unstructured) and perform analytics over this data. BigLake tables allows for data governance, BigLake object tables support using BigQuery for unstructured data, and BigQuery Omni is used for non GCP clouds. So to summarize, **BigLake** extends BigQuery capabilities (ie. dataplex for data governance) and unifies data warehouses. It maintains a single copy of data and makes it uniformally accessible to open source engines like Vertex AI
 
 
-
-
-
-
-**BigQuery** is a serverless, multi-tenant cloud data warehouse that provide scalable analytics and frameworks over large datasets
+**BigQuery** is a serverless (no need for user to manage servers), multi-tenant cloud (several cloud customers can access the same environment) data warehouse that provide scalable analytics and frameworks over large datasets
 Terms:
 Data Silos: Data collection(s) that are isolated from other systems
 Data Warehouse: A central repository of data that can be analyzed (conglomerate of data)
