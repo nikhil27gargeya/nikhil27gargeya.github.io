@@ -8,6 +8,8 @@
 
 **BigLake** combines data management needs like security and governance along with flexibility of open source format as it is able to store a variety of data (structured, unstructured) and perform analytics over this data. BigLake tables allows for data governance, BigLake object tables support using BigQuery for unstructured data (treating them as first class citizens that can be queried direclty), and BigQuery Omni is used for non GCP clouds. So to summarize, **BigLake** extends BigQuery capabilities (ie. dataplex for data governance) and unifies data warehouses. It maintains a single copy of data and makes it uniformally accessible to open source engines like Vertex AI for BQML inference.
 
+**Transition to Lakehouse paradigm** Traditional data warehousing is OLAP (multidimensional database) and there is a new convergence to lakehouse architecture that merges the traditional approach with data lakes storing raw data as well as structured data
+
 Workflow for using BQML:
 1. Store pre trained model artifact in Cloud Storage Bucket OR use a deployed remotely hosted model on VertexAI
 2. CREATE MODEL (import model)
@@ -26,13 +28,12 @@ Workflow for using BQML:
        (SELECT * FROM input_table) //input data for the model
      )
 
-
 **BigQuery** is a serverless (no need for user to manage servers), multi-tenant cloud (several cloud customers can access the same environment) data warehouse that provide scalable analytics and frameworks over large datasets
 Terms:
 Data Silos: Data collection(s) that are isolated from other systems
 Data Warehouse: A central repository of data that can be analyzed (conglomerate of data)
 
-**Transition to Lakehouse paradigm** Traditional data warehousing is OLAP (multidimensional database) and there is a new convergence to lakehouse architecture that merges the traditional approach with data lakes storing raw data as well as structured data
+**BigQuery Metastore** is a unified metadata (shorthand representation of other data) service as metastore are typically coupled with data processing engines, and this leads to multiple copies of data. BigQuery Metastore fits in with the lakhouse paradigm of maintaining a single copy of data and a single shared metastore. Tables in Apache Spark, Iceberg, etc. can be queried by BigQuery with a single source of metadata. 
 
 How BigQuery works: Distributed storage using Colossus and Dremel (query engine) to compute data using memory shuffle (for data partitioning) as a middle layer. Slots (units of computation) are allocated to execute queries. Optimizing queries involves limiting bytes through columns needed, late + seldom aggregations (uses less slots/computation), nesting repeated data, and filters before JOINs (preventing larger JOINs).
 
@@ -42,7 +43,7 @@ BigLake Tables (querying external data stores) can be used with data in Amazon S
 
 **VertexAI** is an AI platform used to build/deploy/scale ML models on Google Cloud
 Terms:
-AutoML: model training w/o code/data splits
+AutoML: model training w/o code/data splits (for image data in the example of identifying neighborhoods from photos of houses, video data for classification/action recognition/object tracking in the example of sports clips, text data for entity trackng/sentiment analysis in the example of reviews, tabular data for forecasting or predicting categories of customers) 
 Custom: write taining code and hyperparameter turning
 GenAI: Tune Google's LLM for deployment
 
@@ -52,3 +53,7 @@ Train (AutoML or Custom)
 Evaluate (explainable AI, which factors lead to predictions)
 Deploy (deployment includes scalable resources)
 Predict (either batch prediction or deployment prediction)
+
+
+
+
