@@ -75,6 +75,7 @@ Supervised Learning (labeled training data)
 Since the output data is already known
 1. Classification (predicting categorical label through features which are characteristics of the model used as input to create prediction)
 2. Regression (predicting real or continuous value, where the algorithm determines a relationship between 2+ variables)
+3. 
 Unsupervised Learning (non labeled training data, identifies pattern through the raw data without instruction)
 1. Clustering (ie. K-means clustering or overlapping clustering
 2. Association (ie. identifying buying patterns)
