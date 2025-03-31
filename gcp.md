@@ -45,8 +45,8 @@ BigLake Tables (querying external data stores) can be used with data in Amazon S
 
 **VertexAI** is an AI platform used to build/deploy/scale ML models on Google Cloud
 Terms:
-AutoML: model training w/o code/data splits (for image data in the example of identifying neighborhoods from photos of houses, video data for classification/action recognition/object tracking in the example of sports clips, text data for entity trackng/sentiment analysis in the example of reviews, tabular data for forecasting or predicting categories of customers) 
-Custom: write taining code and hyperparameter turning
+AutoML: model training w/o code/data splits (for image data in the example of identifying neighborhoods from photos of houses, video data for classification/action recognition/object tracking in the example of sports clips, text data for entity tracking/sentiment analysis in the example of reviews, tabular data for forecasting or predicting categories of customers) 
+Custom: write training code and hyperparameter turning
 GenAI: Tune Google's LLM for deployment
 
 Workflow:
@@ -65,6 +65,9 @@ Creating dataset requires identifying the use case:
 Ideally have 1000+ examples per data label.
 
 There are various APIs for AI features using Vertex AI endpoints that BigQuery ML supports.
+
 Cloud Natural Language API for NLP on sentiment analysis tasks and classification
 Document AI for feature extraction from documents
 Computer Vision for image classification
+
+ML.EVALUATE lets you evaluate model metrics (depends on the model) ie. for regression models, the function returns trial_id, precision, recall, accuracy, f1_score, log_loss, roc_auc
