@@ -39,7 +39,9 @@ Data Warehouse: A central repository of data that can be analyzed (conglomerate 
 
 How BigQuery works: Distributed storage using Colossus and Dremel (query engine) to compute data using memory shuffle (for data partitioning) as a middle layer. Slots (units of computation) are allocated to execute queries. Optimizing queries involves limiting bytes through columns needed, late + seldom aggregations (uses less slots/computation), nesting repeated data, and filters before JOINs (preventing larger JOINs).
 
-BigLake Tables (querying external data stores) can be used with data in Amazon S3 (simple storage service) without copying the data but by reading it without data movement. This is done using BigQuery Omni (because when data gets siloed, it is difficult to get insights the collective store of data) so this can be used for cross-cloud joins/transfers etc.
+BigLake Tables (querying external data stores) can be used with data in Amazon S3 (simple storage service) without copying the data but by reading it without data movement. This is done using BigQuery Omni (because when data gets siloed, it is difficult to get insights the collective store of data) so this can be used for cross-cloud joins/transfers etc. 
+
+Cross Cloud Joins/Transfer/View (eliminates need to copy data)
 
 ---
 
@@ -79,6 +81,5 @@ Since the output data is already known
 Unsupervised Learning (non labeled training data, identifies pattern through the raw data without instruction)
 1. Clustering (ie. K-means clustering or overlapping clustering
 2. Association (ie. identifying buying patterns)
+3. 
 Hybrid (includes supervised learning)
-
-
