@@ -6,7 +6,25 @@
 
 **BigLake** is disaggregated, meaning that storage and compute resources are decoupled. Traditionally, storage and compute are integrated within the same server. This allows for dynamic allocation of storage resources based on what the compute nodes need. Pay as you go model for businesses and higher resource efficiency. 
 
-**BigLake** combines data management needs like security and governance along with flexibility of open source format as it is able to store a variety of data (structured, unstructured) and perform analytics over this data. BigLake tables allows for data governance, BigLake object tables support using BigQuery for unstructured data, and BigQuery Omni is used for non GCP clouds. So to summarize, **BigLake** extends BigQuery capabilities (ie. dataplex for data governance) and unifies data warehouses. It maintains a single copy of data and makes it uniformally accessible to open source engines like Vertex AI
+**BigLake** combines data management needs like security and governance along with flexibility of open source format as it is able to store a variety of data (structured, unstructured) and perform analytics over this data. BigLake tables allows for data governance, BigLake object tables support using BigQuery for unstructured data (treating them as first class citizens that can be queried direclty), and BigQuery Omni is used for non GCP clouds. So to summarize, **BigLake** extends BigQuery capabilities (ie. dataplex for data governance) and unifies data warehouses. It maintains a single copy of data and makes it uniformally accessible to open source engines like Vertex AI for BQML inference.
+
+Workflow for using BQML:
+1. Store pre trained model artifact in Cloud Storage Bucket OR use a deployed remotely hosted model on VertexAI
+2. CREATE MODEL (import model)
+   CREATE MODEL 'model_name'
+     OPTIONS (
+      MODEL_TYPE = {'TENSORFLOW'},
+      MODEL_PATH = 'path_to_model'
+     )
+4. ML.PREDICT (make predictions)
+   //Connect the model if it is a remote model
+   //use object tables if unstructured data (ie. images)
+   SELECT * //all columns of data will be returned
+   FROM
+     ML.PREDICT(
+       MODEL bqml_test.imported_model, //model
+       (SELECT * FROM input_table) //input data for the model
+     )
 
 
 **BigQuery** is a serverless (no need for user to manage servers), multi-tenant cloud (several cloud customers can access the same environment) data warehouse that provide scalable analytics and frameworks over large datasets
@@ -14,9 +32,9 @@ Terms:
 Data Silos: Data collection(s) that are isolated from other systems
 Data Warehouse: A central repository of data that can be analyzed (conglomerate of data)
 
+**Transition to Lakehouse paradigm** Traditional data warehousing is OLAP (multidimensional database) and there is a new convergence to lakehouse architecture that merges the traditional approach with data lakes storing raw data as well as structured data
 
-
-How BigQuery works: Distributed storage using Colossus and Dremel to compute data using memory shuffle (for data partitioning) as a middle layer. Slots (units of computation) are allocated to execute queries. Optimizing queries involves limiting bytes through columns needed, late + seldom aggregations (uses less slots/computation), nesting repeated data, and filters before JOINs (preventing larger JOINs).
+How BigQuery works: Distributed storage using Colossus and Dremel (query engine) to compute data using memory shuffle (for data partitioning) as a middle layer. Slots (units of computation) are allocated to execute queries. Optimizing queries involves limiting bytes through columns needed, late + seldom aggregations (uses less slots/computation), nesting repeated data, and filters before JOINs (preventing larger JOINs).
 
 BigLake Tables (querying external data stores) can be used with data in Amazon S3 without copying the data but by reading it without data movement. This is done using BigQuery Omni (because when data gets siloed, it is difficult to get insights the collective store of data) so this can be used for cross-cloud joins/transfers etc.
 
