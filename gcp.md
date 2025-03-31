@@ -41,7 +41,14 @@ How BigQuery works: Distributed storage using Colossus and Dremel (query engine)
 
 BigLake Tables (querying external data stores) can be used with data in Amazon S3 (simple storage service) without copying the data but by reading it without data movement. This is done using BigQuery Omni (because when data gets siloed, it is difficult to get insights the collective store of data) so this can be used for cross-cloud joins/transfers etc. 
 
-Cross Cloud Joins/Transfer/View (eliminates need to copy data)
+Cross Cloud Joins (best practice is for one time use)
+
+Cross Cloud Transfer (also for one time use to optimize query performance)
+
+Cross Cloud View (caching is important, and external data can be queried repeatedly)
+ie. Google Dashboard for risk detection
+The materialized view in BQ summarizes the risk data through a query
+Scheduled to refresh daily (SCHEDULE OPTIONS)
 
 ---
 
@@ -77,9 +84,9 @@ Supervised Learning (labeled training data)
 Since the output data is already known
 1. Classification (predicting categorical label through features which are characteristics of the model used as input to create prediction)
 2. Regression (predicting real or continuous value, where the algorithm determines a relationship between 2+ variables)
-3. 
+   
 Unsupervised Learning (non labeled training data, identifies pattern through the raw data without instruction)
 1. Clustering (ie. K-means clustering or overlapping clustering
 2. Association (ie. identifying buying patterns)
-3. 
+   
 Hybrid (includes supervised learning)
