@@ -33,6 +33,8 @@ Terms:
 Data Silos: Data collection(s) that are isolated from other systems
 Data Warehouse: A central repository of data that can be analyzed (conglomerate of data)
 
+**BigQuery DataFrames** is a pythonic dataframe API to create regression models and clean up training data. Colab Enterprise Notebooks (where functionality like BQDF and code completion because it is hosted on Google Cloud) are available. Jupyter notebook plugins are also available.
+
 **BigQuery Metastore** is a unified metadata (shorthand representation of other data) service as metastore are typically coupled with data processing engines, and this leads to multiple copies of data. BigQuery Metastore fits in with the lakhouse paradigm of maintaining a single copy of data and a single shared metastore. Tables in Apache Spark, Iceberg, etc. can be queried by BigQuery with a single source of metadata. 
 
 How BigQuery works: Distributed storage using Colossus and Dremel (query engine) to compute data using memory shuffle (for data partitioning) as a middle layer. Slots (units of computation) are allocated to execute queries. Optimizing queries involves limiting bytes through columns needed, late + seldom aggregations (uses less slots/computation), nesting repeated data, and filters before JOINs (preventing larger JOINs).
