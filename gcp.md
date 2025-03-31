@@ -54,6 +54,11 @@ Evaluate (explainable AI, which factors lead to predictions)
 Deploy (deployment includes scalable resources)
 Predict (either batch prediction or deployment prediction)
 
+Creating dataset requires identifying the use case:
+1. What is outcome to achieve? Ie.
+2. What categories are needed to achieve this outcome?
+3. Are these human deducible categories?
+4. What are the best representative examples of classificatory data?
 
-
+Ideally have 1000+ examples per data label.
 
