@@ -55,10 +55,10 @@ Deploy (deployment includes scalable resources)
 Predict (either batch prediction or deployment prediction)
 
 Creating dataset requires identifying the use case:
-1. What is outcome to achieve? Ie.
-2. What categories are needed to achieve this outcome?
-3. Are these human deducible categories?
-4. What are the best representative examples of classificatory data?
+1. What is outcome to achieve? Ie. Classify unsafe driving from dashcam video
+2. What categories are needed to achieve this outcome? Normal, Distracted driving (texting, inebriated, eating, talking)
+3. Are these human deducible categories? In most cases
+4. What are the best representative examples of classificatory data? Varied times of day, noncircumstantial factors (ie. extreme driving conditions)
 
 Ideally have 1000+ examples per data label.
 
