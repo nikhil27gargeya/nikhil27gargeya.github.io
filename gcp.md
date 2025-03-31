@@ -64,3 +64,7 @@ Creating dataset requires identifying the use case:
 
 Ideally have 1000+ examples per data label.
 
+There are various APIs for AI features using Vertex AI endpoints that BigQuery ML supports.
+Cloud Natural Language API for NLP on sentiment analysis tasks and classification
+Document AI for feature extraction from documents
+Computer Vision for image classification
