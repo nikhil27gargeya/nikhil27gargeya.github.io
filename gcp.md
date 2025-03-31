@@ -65,9 +65,19 @@ Creating dataset requires identifying the use case:
 Ideally have 1000+ examples per data label.
 
 There are various APIs for AI features using Vertex AI endpoints that BigQuery ML supports.
-
 Cloud Natural Language API for NLP on sentiment analysis tasks and classification
 Document AI for feature extraction from documents
 Computer Vision for image classification
 
 ML.EVALUATE lets you evaluate model metrics (depends on the model) ie. for regression models, the function returns trial_id, precision, recall, accuracy, f1_score, log_loss, roc_auc
+
+Supervised Learning (labeled training data)
+Since the output data is already known
+1. Classification (predicting categorical label through features which are characteristics of the model used as input to create prediction)
+2. Regression (predicting real or continuous value, where the algorithm determines a relationship between 2+ variables)
+Unsupervised Learning (non labeled training data, identifies pattern through the raw data without instruction)
+1. Clustering (ie. K-means clustering or overlapping clustering
+2. Association (ie. identifying buying patterns)
+Hybrid (includes supervised learning)
+
+
