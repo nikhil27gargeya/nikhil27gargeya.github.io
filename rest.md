@@ -12,14 +12,22 @@ Code on Demand (optional): Most of the time, the format sent by server will be J
 Stateless: Server does not maintain or update state. Each request is standalone and contains all the information to conduct the request and elicit a response. There is no "session" like in older frameworks. 
 The term is loosely used and typically means HTTP-based API. You have an endpoint (digital location where an API receives calls). REST APIs use HTTP methods to perform database operations (POST, GET, PUT, DELETE).
 
-What is a resource:
-specific piece of data/object accessible through a URI
+What is required in a request:
+1. HTTP verb (GET (retrieve), POST (create), PUT (update), DELETE(remove))
+2. Header
+3. Path
+4. Message body
+
+
+What is a resource (the what, ie. a book):
+specific piece of data/object identified through a URI (ie. Invoice)
 
 What is a URI:
-Uniform Resource Identifier
+Uniform Resource Identifier: a string that identifies a resource
 
-What is an endpoint:
-digitial location that identifies a resource (ie. /invoices/645E79D9E14)
+What is an endpoint (the where, ie. library shelf):
+digital location that identifies a resource (ie. /invoices/645E79D9E14)
 
 What is a collection:
 group of resources (ie. /invoices)
+
