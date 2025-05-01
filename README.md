@@ -4,6 +4,7 @@
 #### 2. [SwiftUI vs UIKit](second.md)
 #### 3. [Foundation](foundation.md)
 #### 4. [GCP](gcp.md)
+#### 5. [REST](rest.md)
 
 ### Projects
 #### [SharedTab](sharedtab.md)
