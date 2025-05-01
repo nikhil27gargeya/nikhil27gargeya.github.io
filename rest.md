@@ -26,8 +26,9 @@ What is a URI:
 Uniform Resource Identifier: a string that identifies a resource
 
 What is an endpoint (the where, ie. library shelf):
-digital location that identifies a resource (ie. https://api.example.com/invoices/645E79D9E14)
+digital location that identifies a resource
 
 What is a collection:
 group of resources (ie. /invoices)
 
+https://www.codecademy.com/article/what-is-rest?utm_source=pepperjam&utm_medium=affiliate&utm_term=122858&clickId=5076558013&pj_creativeid=8-12462&pj_publisherid=122858
