@@ -8,7 +8,7 @@ Cacheable: Clients can cache (stored and reused) resources to improve performanc
 Layered System: Layers are modular. Clients are unaware to how the system is organized and where things are being handled.
 Uniform Interface: All communications must follow the same protocol. For REST, this is HTTP. Additionally, every resource should have one clear URI by which it can be used as an endpoint.
 Client-Server: Decoupled. A client and server can scale independently. A client should only know resource URIs.
-Code on Demand (optional): Most of the time, the format sent by server will be JSON/XML, but it could designed to produce code.
+Code on Demand (optional): Most of the time, the format sent by server will be JSON/XML, but it could designed to produce code. JSON is javascript object notation which is a data interchange format where messages consists of name value pairs which are objects, and ordered collection of of values which are arrays).
 Stateless: Server does not maintain or update state. Each request is standalone and contains all the information to conduct the request and elicit a response. There is no "session" like in older frameworks. 
 The term is loosely used and typically means HTTP-based API. You have an endpoint (digital location where an API receives calls). REST APIs use HTTP methods to perform database operations (POST, GET, PUT, DELETE).
 
