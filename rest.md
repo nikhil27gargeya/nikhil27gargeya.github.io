@@ -51,3 +51,25 @@ The resource here is conceptually the receipts, but the text from the receipt is
 
 Some developers choose to keep collection responses minimal which prevents showing inconsistent data when there are updates.
 
+Criteria for a good API:
+1. Not confusing the client
+2. Consistency (in naming, structure, and behavior of client/server)
+3. Documentation
+
+Creating REST APIs in Flask (microframework):
+from flask import Flask, jsonify, request
+app = Flask(__name__) #shortcut to the package
+users = [
+  {'email': 'john@gmail.com', 'name': 'John'}
+]
+@app.route('/users')
+def get_users():
+    return jsonify(users)
+    
+@app.route('/users', methods=['POST'])
+def add_user():
+    users.append(request.get_json())
+    return '', 204 #no content code
+
+
+
