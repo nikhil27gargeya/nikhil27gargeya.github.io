@@ -47,4 +47,6 @@ SharedTab API:
   ...
 ])
 
-The resource here is conceptually the receipts, but the text from the receipt is processed by the Groq API as a text completion
+The resource here is conceptually the receipts, but the text from the receipt is processed by the Groq API as a text completion.
+
+Some developers choose to keep collection responses minimal which prevents showing inconsistent data when there are updates.
