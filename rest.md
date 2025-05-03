@@ -26,7 +26,7 @@ What is a URI:
 Uniform Resource Identifier: a string that identifies a resource
 
 What is an endpoint (the where, ie. library shelf):
-digital location that identifies a resource
+digital location that identifies a resource. Used to access an operation to be perform on an API resource.
 
 What is a collection:
 group of resources (ie. /invoices)
@@ -50,3 +50,4 @@ SharedTab API:
 The resource here is conceptually the receipts, but the text from the receipt is processed by the Groq API as a text completion.
 
 Some developers choose to keep collection responses minimal which prevents showing inconsistent data when there are updates.
+
