@@ -14,7 +14,7 @@ The term is loosely used and typically means HTTP-based API. You have an endpoin
 
 What is required in a request:
 1. HTTP verb (GET (retrieve), POST (create), PUT (update), DELETE(remove))
-2. Header
+2. Header 
 3. Path
 4. Message body
 
@@ -32,3 +32,19 @@ What is a collection:
 group of resources (ie. /invoices)
 
 https://www.codecademy.com/article/what-is-rest?utm_source=pepperjam&utm_medium=affiliate&utm_term=122858&clickId=5076558013&pj_creativeid=8-12462&pj_publisherid=122858
+
+
+SharedTab API:
+1. HTTP verb (POST)
+2. Header (using api key and json)
+3. Path (/openai/v1/chat/completions)
+4. Message Body(let parameters: [String: Any] = [
+  "messages": [
+    ["role": "user", "content": prompt]
+  ],
+  "model": "llama3-8b-8192",
+  "temperature": 1,
+  ...
+])
+
+The resource here is conceptually the receipts, but the text from the receipt is processed by the Groq API as a text completion
