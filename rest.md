@@ -13,7 +13,7 @@ Stateless: Server does not maintain or update state. Each request is standalone 
 The term is loosely used and typically means HTTP-based API. You have an endpoint (digital location where an API receives calls). REST APIs use HTTP methods to perform database operations (POST, GET, PUT, DELETE).
 
 What is required in a request:
-1. HTTP verb (GET (retrieve), POST (create), PUT (update), DELETE(remove))
+1. HTTP verb (GET (retrieve), POST (create), PUT (update), DELETE(remove)) a resource or collection
 2. Header 
 3. Path
 4. Message body
