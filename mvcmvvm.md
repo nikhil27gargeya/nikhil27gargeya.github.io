@@ -13,5 +13,7 @@ Model: Data Layer
 View: UI 
 ViewModel (Model-ish): Abstraction of the view that exposes certain properties which are data binded with the model
 
+https://learn.microsoft.com/en-us/archive/blogs/johngossman/advantages-and-disadvantages-of-m-v-vm
+
 Pros: Obvious purpose is to decouples the logic from the view and the ViewModel is easier to unit test. Can allow for reactive UI updates.
 Cons: Overkill for simple UI, data binding is declarative and is harder to debug.
