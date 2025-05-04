@@ -6,7 +6,7 @@ Model: Data Layer, does talk to other components
 View: Renders UI. Receives data from controller.
 Controller: Intermediary between the data and UI, receives data and passes it onto the UI
 
-Issue: View Controller can get large in large functionality apps. Additionally, controller is tightly coupled with the model and view whereas viewmodel cannot directly update the view but use data binding to reactively update the UI
+Issue: View Controller can get large in large functionality apps since it handles the UI and the logic. Additionally, controller is tightly coupled with the model and view whereas viewmodel cannot directly update the view but use data binding to reactively update the UI
 
 Model View ViewModel:
 Model: Data Layer
