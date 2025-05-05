@@ -8,11 +8,14 @@ Steps:
 
 The splitting into subproblems is done on the way down the recursion tree. Each recursive call keeps dividing the problem until a base case is reached. As the recursive calls return, the results are combined.
 
-D&C algorithms tackle a problem of size n by recursively solving a subproblems of size n/b and combining these answers in O(n^d) time
+D&C algorithms tackle a problem of size n by recursively solving subproblems of size n/b and combining these answers in O(n^d) time
 Master Theorem(asymptotic analysis for a recurrence relation of a D&C algorithm): T(n) = aT(n/b) + O(n^d)
 a = branching factor
 b = shrinking factor
 d = work done at each level
+
+Greedy:
+
 
 
 
