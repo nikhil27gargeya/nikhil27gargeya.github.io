@@ -8,6 +8,7 @@
 #### 6. [MVC vs MVVM](mvcmvvm.md)
 #### 7. [Async](async.md)
 #### 8. [C#/.NET](cnet.md)
+#### 9. [React](react.md)
 
 ### Projects
 #### [SharedTab](sharedtab.md)
