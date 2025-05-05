@@ -9,6 +9,7 @@
 #### 7. [Async](async.md)
 #### 8. [C#/.NET](cnet.md)
 #### 9. [React](react.md)
+#### 10. [DSA+LC75](dsalc.md)
 
 ### Projects
 #### [SharedTab](sharedtab.md)
