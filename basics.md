@@ -14,5 +14,5 @@ Strongly Typed: type rules are enforced by the compiler. Error will be thrown if
 Weakly Typed: type rules are not enforced by the compiler. Implicit/type conversions. (ie. javascript, php)
 
 Statically vs Dynamically Typed:
-Statically Typed: type rules are enforced at compile time because the compiler doesn't know the types of variables until runtime due to lack of type declarations (ie. java, c, swift)
+Statically Typed: type rules are enforced at compile time, the compiler type checks at runtime (ie. java, c, swift)
 Dynamically Typed: type rules are enforced at run time (ie. javascript, python)
