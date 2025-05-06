@@ -8,12 +8,19 @@ Controller: Intermediary between the data and UI, receives data and passes it on
 
 Issue: View Controller can get large in large functionality apps since it handles the UI and the logic. Additionally, controller is tightly coupled with the model and view whereas viewmodel cannot directly update the view but use data binding to reactively update the UI
 
+User taps button -> controller handles input -> model updated -> controller manually updates view
+
 Model View ViewModel:
 Model: Data Layer
 View: UI 
-ViewModel (Model-ish): Abstraction of the view that exposes certain properties which are data binded with the view. The view updates upon state changes.
+ViewModel (Model-ish): Abstraction of the view (stores simplified version of the model specifically for that view) that exposes certain properties which are data binded with the view. The view updates upon state changes.
+
+User taps button -> viewmodel handles input, updates model, view model auto updates view
 
 https://learn.microsoft.com/en-us/archive/blogs/johngossman/advantages-and-disadvantages-of-m-v-vm
 
 Pros: Obvious purpose is to decouples the logic from the view and the ViewModel is easier to unit test. Can allow for reactive UI updates.
 Cons: Overkill for simple UI, data binding is declarative and is harder to debug.
+
+What is state:
+data at a given moment 
