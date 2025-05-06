@@ -11,7 +11,7 @@ Issue: View Controller can get large in large functionality apps since it handle
 Model View ViewModel:
 Model: Data Layer
 View: UI 
-ViewModel (Model-ish): Abstraction of the view that exposes certain properties which are data binded with the model
+ViewModel (Model-ish): Abstraction of the view that exposes certain properties which are data binded with the view. The view updates upon state changes.
 
 https://learn.microsoft.com/en-us/archive/blogs/johngossman/advantages-and-disadvantages-of-m-v-vm
 
