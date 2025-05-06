@@ -16,3 +16,13 @@ Weakly Typed: type rules are not enforced by the compiler. Implicit/type convers
 Statically vs Dynamically Typed:
 Statically Typed: type rules are enforced at compile time, the compiler type checks at runtime (ie. java, c, swift)
 Dynamically Typed: type rules are enforced at run time (ie. javascript, python)
+
+Pros of Swift:
+Type Inference
+Strongly typing (type safe)
+Optionals
+ARC Memory management
+
+Cons:
+Documentation changes rapidly(ie. Migrating from the Observable Object protocol to the Observable macro)
+Tied to Xcode
