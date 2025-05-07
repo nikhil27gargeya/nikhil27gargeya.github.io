@@ -1,7 +1,16 @@
 # Swift
 
+Localization:
+Adapting app to support different languages
+Techniques: 
+1. including strings files so that Text() (because the first argument to Text is the LocalizedStringKey type) and interpolated strings (embedded strings in expressions) are automatically formatted. issue is manually have to keep strings in sync with code. 
+2. Setting .locale in NumberFormatter/DateFormatter/CurrencyFormatter
+3. String Catalogs (automatic extraction by xcode)
+
+
 Foundation:
 Base functionality for Swift files that includes Number Formatter and Date Formatter (works with numbers and dates respectively and the textual representation) and Sorting/Filtering functionality 
+
 ```
 private static func formatCurrency(amount: Decimal, currencyCode: String) -> String {
      let formatter = NumberFormatter()
@@ -17,7 +26,7 @@ private static func formatCurrency(amount: Decimal, currencyCode: String) -> Str
 Value Type of Reference Type:
 
 Copy on Write (deferring copy for performance reasons, useful when we need a value type just for reading):
-When we pass a value type instance to an object, a new copy will not be created until modification is needed, if a change is required only then will a need to copy.
+When we pass a value type instance to an object, a new copy will not be created until modification is needed, if a change is required only then will a need to copy. Arrays and dictionaries in Swift has copy on write functionality included already. With structs though, 
 
 Structs vs Classes
 Structs:
