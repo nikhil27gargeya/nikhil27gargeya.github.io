@@ -1,5 +1,34 @@
 # DSA
 
+Basic Data Structures and their runtimes:
+Array: a contiguous block of memory that stores a fixed size, indexed collection of same type of data. Same type of data relates to the contiguous nature because every cell must be the same size.
+python: arr = []
+c++: int arr[]
+runtimes:
+Access element: O(1) because computer can identify the memory location with simple operation (address = base + (i * size_of_element)) and this is independent of array size hence O(1)
+Searching: O(n) because in the worst case it needs to traverse the entire array
+Insert/Remove: O(n) if shifting required (for insertion/removal at beginning), O(1) otherwise (insertion/removal at the end)
+Updating: O(1)
+
+List: dynamic array (can be resized)
+
+Linked List: non continguous block of memory that stores a node containing a value and pointer to the next node 
+runtimes:
+Access element: O(n) because computer cannot identify the memory location like it can with arrays
+Access element: O(n)
+Insert/remove from beginning: O(1)
+Insert/remove from end: O(n)
+Insert/remove from middle: O(n)
+
+
+Pass by Value vs Pass by Reference:
+Pass by value means copy of data is passed to the function so changes in the function don't affect the original variable
+Pass by Reference means reference of the data is passed so changes in the function will affect the other
+
+Pointer vs Reference
+Pointer: stores a memory address
+Reference: an alias variable 
+
 Divide and Conquer:
 Steps:
 1. Breaking down a problem into subproblems which are smaller instances of the same type of problem
