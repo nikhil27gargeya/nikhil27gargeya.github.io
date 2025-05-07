@@ -1,1 +1,57 @@
+# Swift
 
+Foundation:
+Base functionality for Swift files that includes Number Formatter and Date Formatter (works with numbers and dates respectively and the textual representation) and Sorting/Filtering functionality 
+```
+private static func formatCurrency(amount: Decimal, currencyCode: String) -> String {
+     let formatter = NumberFormatter()
+     formatter.numberStyle = .currency
+     formatter.currencyCode = currencyCode
+     formatter.locale = Locale.current
+     formatter.minimumFractionDigits = 2
+    formatter.maximumFractionDigits = 2
+     return formatter.string(from: NSDecimalNumber(decimal: amount)) ?? "\(amount)"
+}
+```
+
+Value Type of Reference Type:
+
+Copy on Write (deferring copy for performance reasons, useful when we need a value type just for reading):
+When we pass a value type instance to an object, a new copy will not be created until modification is needed, if a change is required only then will a need to copy.
+
+Structs vs Classes
+Structs:
+Value type instances point at different memory addresses
+
+Classes:
+Reference type instances point to the same memory address
+```
+import UIKit
+
+var value: Int? = nil
+
+struct Person {
+    let name: String
+    let attributes: Attributes
+}
+ 
+ 
+class Attributes {
+    var age: Int
+    var height: Int
+    var weight: Int
+    
+    init(age: Int, height: Int, weight: Int) {
+        self.age = age
+        self.height = height
+        self.weight = weight
+    }
+}
+ 
+ //p1 is a person value type with inner reference type
+let p1 = Person(name: "Person 1", attributes: Attributes(age: 24, height: 180, weight: 80))
+print(p1.attributes.age) //print 24
+let p2 = p1 //p2 is an independent copy of p1, but the reference type (attributes) is shared among the two objects
+p2.attributes.age = 30 //reassigns the age of the object to 30
+print(p1.attributes.age) //print 30
+```
