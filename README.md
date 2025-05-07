@@ -10,6 +10,7 @@
 #### 8. [C#/.NET](cnet.md)
 #### 9. [React](react.md)
 #### 10. [DSA+LC75](dsalc.md)
+#### 11. [Swift Fundamentals](swift.md)
 
 ### Projects
 #### [SharedTab](sharedtab.md)
