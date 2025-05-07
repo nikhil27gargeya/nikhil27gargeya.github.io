@@ -34,6 +34,20 @@ Recurrence Relation: T(n) = aT(n/b) + f(n)
 In this case, a = 2 (2 subproblems), b = 2 (each subproblem is size n/2)
 
 
+Big O (worst case complexity): 
+From least to most:
+O(1): constant time meaning that runtime is independent of the input size
+O(log n): logarithmic time
+O(n): linear time meaning that runtime is proportional to the input size
+O(n log n): linearithmic time
+O(n^2): quadratic time meaning that runtime grows proportionallyto the square of the input size
+O(2^n): exponential time
+
+Runtime Complexity:
+how long does it take to run an algorithm as size of the input problem grows
+
+Spacetime Complexity:
+working memory required by an algorithm as size of the input problem grows
 
 
 # LC75
