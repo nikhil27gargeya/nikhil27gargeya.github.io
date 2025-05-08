@@ -64,3 +64,6 @@ let p2 = p1 //p2 is an independent copy of p1, but the reference type (attribute
 p2.attributes.age = 30 //reassigns the age of the object to 30
 print(p1.attributes.age) //print 30
 ```
+
+Closures:
+functions that can be passed around in your code
