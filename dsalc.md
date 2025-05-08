@@ -12,13 +12,12 @@ Updating: O(1)
 
 List: dynamic array (can be resized)
 
-Linked List: non continguous block of memory that stores a node containing a value and pointer to the next node 
+Linked List: non continguous block of memory that stores a node containing a value and pointer to the next node. Nodes not necessarily have to have the same type of value.
 runtimes:
 Access element: O(n) because computer cannot identify the memory location like it can with arrays
-Access element: O(n)
-Insert/remove from beginning: O(1)
-Insert/remove from end: O(n)
-Insert/remove from middle: O(n)
+Insert/remove from beginning:
+Insert/remove from end:
+Insert/remove from middle:
 
 
 Pass by Value vs Pass by Reference:
