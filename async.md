@@ -16,3 +16,12 @@ Callback vs Promise vs Async Await:
 Callback: is a function passed to another function and is invoked after the function completes. issue is nesting callbacks is (callback hell)
 Promise: object that defers some asynchronous event while something else is done.
 Async Await: cleaner syntax because asynchronous wrapper and it looks like synchronous code, no need to nest promises. Good for writing multiple async functions so promises don't need to be nested.
+
+
+Swift:
+DispatchQueue.global.async {
+  let data = getData()
+  DispatchQueue.main.async {
+    //UI updates
+  }
+}
