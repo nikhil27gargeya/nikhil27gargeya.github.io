@@ -30,7 +30,7 @@ When we pass a value type instance to an object, a new copy will not be created 
 
 Structs vs Classes
 Structs:
-Value types like Strings and Ints and Doubles and Bools and structs and enums, create independent copies when assigned (pass by value). Use structs when you don't control identity (ie. instance's identity is owned by a remote server).
+Value types like Strings and Ints and Doubles and Bools and structs and enums, create independent copies when assigned (pass by value). Use structs when you don't control identity (ie. instance's identity is owned by a remote server, objects you want to be independent).
 
 Classes:
 Reference types, like classes, share the same instance and when assigned and are passed by reference. Use classes when you do control identity (ie. network connections, bluetooth central manager which needs to be shared across the app, shopping cart object, authentication session). Two different class instances sharing the same values will not be the same using the (===) operator.
