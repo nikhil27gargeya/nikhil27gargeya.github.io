@@ -14,9 +14,9 @@ The term is loosely used and typically means HTTP-based API. You have an endpoin
 
 What is required in a request:
 1. HTTP verb (GET (retrieve), POST (create), PUT (update), DELETE(remove)) a resource or collection
-2. Header 
-3. Path
-4. Message body
+2. Header (metadata in the form of key value pairs
+3. Path (endpoint)
+4. Message body (data being sent, json)
 
 
 What is a resource (the what, ie. a book):
