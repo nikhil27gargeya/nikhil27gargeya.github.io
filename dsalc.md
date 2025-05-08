@@ -19,7 +19,8 @@ Insert/remove from beginning:
 Insert/remove from end:
 Insert/remove from middle:
 
-
+Hashmap: unordered collection of key value pairs. Known as dictionary in python or swift.
+Hashset: unordered collection of unique elements (more specific version of a set)
 Pass by Value vs Pass by Reference:
 Pass by value means copy of data is passed to the function so changes in the function don't affect the original variable
 Pass by Reference means reference of the data is passed so changes in the function will affect the other
