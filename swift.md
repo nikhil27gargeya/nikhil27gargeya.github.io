@@ -23,17 +23,17 @@ private static func formatCurrency(amount: Decimal, currencyCode: String) -> Str
 }
 ```
 
-Value Type of Reference Type:
+Value Type vs Reference Type:
 
 Copy on Write (deferring copy for performance reasons, useful when we need a value type just for reading):
 When we pass a value type instance to an object, a new copy will not be created until modification is needed, if a change is required only then will a need to copy. Arrays and dictionaries in Swift has copy on write functionality included already. With structs though, 
 
 Structs vs Classes
 Structs:
-Value type instances point at different memory addresses
+Value types like Strings and Ints and Doubles and Bools and structs and enums, create independent copies when assigned (pass by value). Use structs when you don't control identity (ie. instance's identity is owned by a remote server).
 
 Classes:
-Reference type instances point to the same memory address
+Reference types, like classes, share the same instance and when assigned and are passed by reference. Use classes when you do control identity (ie. network connections, bluetooth central manager which needs to be shared across the app, shopping cart object, authentication session). Two different class instances sharing the same values will not be the same using the (===) operator.
 ```
 import UIKit
 
