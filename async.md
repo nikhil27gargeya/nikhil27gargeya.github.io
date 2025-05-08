@@ -19,8 +19,10 @@ Async Await: cleaner syntax because asynchronous wrapper and it looks like synch
 
 
 Swift:
+//background thread
 DispatchQueue.global.async {
   let data = getData()
+  //main thread
   DispatchQueue.main.async {
     //UI updates
   }
