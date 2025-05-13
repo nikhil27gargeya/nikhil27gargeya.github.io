@@ -38,7 +38,7 @@ Dependency: class A temporarily uses class B, but neither A nor B strictly own e
 Example: Mechanic uses a Tool
 
 Aggregation (has a, unidirectional relationship, Class A knows Class B but not vice versa, loosely coupled because lifecycles of both objects are independent/do not depend on one another): class holds a reference to an object but doesn't control it. Contained class can still exist independently. 
-Example: One-to-one or one-to-many or many-to-many. School has Principal(1-1), School has Student(1-many). Teacher has Student(many-to-many). Child class comes and goes (ie. Passengers in a Car, Students in a Lecture, Weapons in a Player, Books in a Library).
+Example: One-to-one or one-to-many or many-to-many. School has Principal(1-1), School has Student(1-many). Teacher has Student(many-to-many). Child class comes and goes (ie. Passengers in a Car, Students in a Lecture, Weapons in a Player, Books in a Library). Directionality and Cardinality are different. While the cardinality can be many-to-many, an aggregation relationship is unidirectional.
 
 Composition (class B is part of class A/class A consists of class B, or strong has a, tightly coupled because dependent lifecycles): child class owns part of parent's class's member objects  
 Example: One-to-one or one-to-many. House has rooms(1-many). Car has engine(1-1). Child class gets destroyed when the parent gets destroyed. There cannot be many-to-many relationships in a compositional relationship because class A has exclusive ownership of its children. 
