@@ -24,14 +24,25 @@ Dog **extends** Animal
 Polymorphism:
 Uniform treatment of classes in a class hierarchy. Allows the same code to be used with different objects and behave differently with each.
 
-Containership/Composition (has a):
+Association (has a):
+There are different strengths of associative relationships which are described below:
 Using an object within another.
 Car **has a** Wheel
 
-Class Relationships(weak to strong):
-Using: temporarily use an object
-Aggregation: class holds a reference to an object but doesn't control it
-Composition: child class owns part of parent class's member objects 
-Inheritance (strongest relationship): child class inherits all data members from parent class
+Object Lifecycle:
+Period from object creation to its destruction
 
-The difference between aggregation and composition is that with aggregation, the child can exist independently, whereas in composition, the child cannot exist independent and is tied to the concept of the parent class.
+Class Relationships(weak to strong):
+Dependency: class A temporarily uses class B, but neither A or B strictly own each other. Temporary relationship.
+Example: Car and Engine. Engine lifecycle exists insofar as the car is driven. Car is dependent on the ngine to drive, and this is a temporary relatinoship.
+
+Aggregation (has a): class holds a reference to an object but doesn't control it. Contained class can still exist independently. 
+Example: Driver has a car. Car can exist independently of the driver. Child class comes and goes (ie. Passengers in a Car)
+
+Composition (part of, or strong has a): child class owns part of parent class's member objects  
+Example: Wheel is part of a Car. The Car owns its wheels. Child class gets destroyed when the parent gets destroyed.
+
+Inheritance (is a): child class inherits all public/protected data members and methods from parent class, doesn't inherit constructors
+Example: 
+
+The difference between aggregation and composition is that with aggregation, the child can exist independently, whereas in composition, the child cannot exist independently and is tied to the concept of the parent class.
