@@ -1,4 +1,4 @@
-# OOP
+![image](https://github.com/user-attachments/assets/5da6cae3-f8dc-4574-8989-e5c13a9b6100)# OOP
 
 OOP: Software design organized through objects rather than functions
 
@@ -14,35 +14,36 @@ Encapsulation:
 A class is a unit that has methods and attributes as a part of it. This class exposes specific data using access specifiers.
 
 Abstraction:
-Simpliifed classes over complex implementation code (ie. ignition switch vs engine mechanics)
+Simplified classes over complex implementation code (ie. ignition switch vs engine mechanics)
+
+Polymorphism:
+Uniform treatment of classes in a class hierarchy. Allows the same code to be used with different objects and behave differently with each.
 
 Inheritance (is a):
 With inheritance, classes automatically inhabit the same properties and functionalities as their parent class. This functionality can be modified and/or extended.
 Dog **is an** Animal
 Dog **extends** Animal
 
-Polymorphism:
-Uniform treatment of classes in a class hierarchy. Allows the same code to be used with different objects and behave differently with each.
-
 Association (has a):
-There are different strengths of associative relationships which are described below:
-Using an object within another.
-Car **has a** Wheel
+Unidirectional or Bidirectional reference. Further differentiated into Aggregation and Composition.
+Example: Teacher -> Student (teacher teaches student)
 
 Object Lifecycle:
 Period from object creation to its destruction
 
 Class Relationships(weak to strong):
-Dependency: class A temporarily uses class B, but neither A or B strictly own each other. Temporary relationship.
-Example: Car and Engine. Engine lifecycle exists insofar as the car is driven. Car is dependent on the ngine to drive, and this is a temporary relatinoship.
+The way in which class relationships are designed are dependent on the implementation details. Context matters. In the case of a Car and Engine, if the context were to be parts in an auto shop, the appropriate class relationship between Car and Engine would be aggregation, because the engine is not owned by the car but the car has an engine and this can be swapped out. In the context of a racing game, it would be better for this class relationship to be compositional, because the car owns the engine.
 
-Aggregation (has a): class holds a reference to an object but doesn't control it. Contained class can still exist independently. 
-Example: Driver has a car. Car can exist independently of the driver. Child class comes and goes (ie. Passengers in a Car)
+Dependency: class A temporarily uses class B, but neither A nor B strictly own each other (loose coupling). Temporary relationship.
+Example: Mechanic uses a Tool
 
-Composition (part of, or strong has a): child class owns part of parent class's member objects  
-Example: Wheel is part of a Car. The Car owns its wheels. Child class gets destroyed when the parent gets destroyed.
+Aggregation (has a, unidirectional relationship Class A knows Class B but not vice versa, loosely coupled because lifecycles of both objects are independent/do not depend on one another): class holds a reference to an object but doesn't control it. Contained class can still exist independently. 
+Example: One-to-one or one-to-many or many-to-many. School has Principal (1-1), School has Student(1-many). Teacher has Student(many-to-many). Child class comes and goes (ie. Passengers in a Car, Students in a Lecture, Weapons in a Player, Books in a Library).
+
+Composition (part of, or strong has a, tightly coupled because dependent lifecycles): child class owns part of parent class's member objects  
+Example: One-to-one or one-to-many. House has rooms(1-many). Car has engine(1-1). Child class gets destroyed when the parent gets destroyed.
 
 Inheritance (is a): child class inherits all public/protected data members and methods from parent class, doesn't inherit constructors
-Example: 
+Example: Dog is an Animal
 
 The difference between aggregation and composition is that with aggregation, the child can exist independently, whereas in composition, the child cannot exist independently and is tied to the concept of the parent class.
