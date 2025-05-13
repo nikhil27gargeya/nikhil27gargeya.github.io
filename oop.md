@@ -25,7 +25,7 @@ Dog **is an** Animal
 Dog **extends** Animal
 
 Association (has a):
-Unidirectional or Bidirectional reference. Further differentiated into Aggregation and Composition.
+Unidirectional (ie. Wallet and Money) or Bidirectional (ie. Teacher and Classroom) reference. Further differentiated into Aggregation and Composition.
 Example: Teacher -> Student (teacher teaches student)
 
 Object Lifecycle:
@@ -37,17 +37,17 @@ The way in which class relationships are designed are dependent on the implement
 Dependency: class A temporarily uses class B, but neither A nor B strictly own each other (loose coupling). Temporary relationship.
 Example: Mechanic uses a Tool
 
-Aggregation (has a, unidirectional relationship Class A knows Class B but not vice versa, loosely coupled because lifecycles of both objects are independent/do not depend on one another): class holds a reference to an object but doesn't control it. Contained class can still exist independently. 
+Aggregation (has a, unidirectional relationship, Class A knows Class B but not vice versa, loosely coupled because lifecycles of both objects are independent/do not depend on one another): class holds a reference to an object but doesn't control it. Contained class can still exist independently. 
 Example: One-to-one or one-to-many or many-to-many. School has Principal (1-1), School has Student(1-many). Teacher has Student(many-to-many). Child class comes and goes (ie. Passengers in a Car, Students in a Lecture, Weapons in a Player, Books in a Library).
 
-Composition (class B is part of class A/class A consists of class B, or strong has a, tightly coupled because dependent lifecycles): child class owns part of parent class's member objects  
-Example: One-to-one or one-to-many. House has rooms(1-many). Car has engine(1-1). Child class gets destroyed when the parent gets destroyed.
+Composition (class B is part of class A/class A consists of class B, or strong has a, tightly coupled because dependent lifecycles): child class owns part of parent's class's member objects  
+Example: One-to-one or one-to-many. House has rooms(1-many). Car has engine(1-1). Child class gets destroyed when the parent gets destroyed. There cannot be many to many relationships in a compositional relationship because class A has exclusive ownership of its children. 
 
 Inheritance (is a): child class inherits all public/protected data members and methods from parent class, doesn't inherit constructors
 Example: Dog is an Animal
 
 The difference between aggregation and composition is that with aggregation, the child can exist independently, whereas in composition, the child cannot exist independently and is tied to the concept of the parent class.
 
-
 ![image](https://github.com/user-attachments/assets/98e11fab-7e1c-4eaa-a825-e0285a169ab8)
+Source: https://www.umlboard.com/docs/relations/
 
