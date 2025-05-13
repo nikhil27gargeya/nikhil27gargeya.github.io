@@ -15,7 +15,8 @@ A class is a unit that has methods and attributes as a part of it. This class ex
 
 Abstraction:
 Simplified classes over complex implementation code (ie. ignition switch vs engine mechanics). Interfaces and Abstract Classes.
-Interface: contract that specifies the implementation of a class that implements it
+Interface: contract that specifies the implementation of a class that implements it. Use for common behavior.
+Abstract: blueprint class that cannot be instantiated but must be inherited. Use for common implementation.
 
 Polymorphism:
 Uniform treatment of classes in a class hierarchy. Allows the same code to be used with different objects and behave differently with each.
