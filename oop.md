@@ -14,7 +14,8 @@ Encapsulation:
 A class is a unit that has methods and attributes as a part of it. This class exposes specific data using access specifiers.
 
 Abstraction:
-Simplified classes over complex implementation code (ie. ignition switch vs engine mechanics)
+Simplified classes over complex implementation code (ie. ignition switch vs engine mechanics). Interfaces and Abstract Classes.
+Interface: contract that specifies the implementation of a class that implements it
 
 Polymorphism:
 Uniform treatment of classes in a class hierarchy. Allows the same code to be used with different objects and behave differently with each.
@@ -25,14 +26,14 @@ Dog **is an** Animal
 Dog **extends** Animal
 
 Association (has a):
-Unidirectional (ie. Wallet and Money) or Bidirectional (ie. Teacher and Classroom in the case of teacher class knows about their designated classroom and classroom class knows who teaches in the room) reference. Further differentiated into Aggregation and Composition.
+Unidirectional (ie. Wallet and Money) or Bidirectional (ie. Teacher and Classroom in the case of teacher class knows about their designated classroom and classroom class knows who teaches in the room) reference. Further differentiated into Aggregation and Composition based on the appropriate designation of object ownership.
 Example: Teacher -> Student (teacher teaches student)
 
 Object Lifecycle:
 Period from object creation to its destruction
 
 Class Relationships(weak to strong):
-The way in which class relationships are designed are dependent on the implementation details. Context matters. In the case of a Car and Engine, if the context were to be parts in an auto shop, the appropriate class relationship between Car and Engine would be aggregation, because the engine is not owned by the car but the car has an engine and this can be swapped out. In the context of a racing game, it would be better for this class relationship to be compositional, because the car owns the engine.
+The way in which class relationships are designed are dependent on the implementation details. Context matters, and more specifically, the scope of concepts (ie. Engine/Tire in a supplier context of a racing game context). In the case of a Car and Engine, if the context were to be parts in an auto shop, the appropriate class relationship between Car and Engine would be aggregation, because the engine is not owned by the car but the car has an engine and this can be swapped out. In the context of a racing game, it would be better for this class relationship to be compositional, because the car owns the engine.
 
 Dependency: class A temporarily uses class B, but neither A nor B strictly own each other (loose coupling). Temporary relationship.
 Example: Mechanic uses a Tool
