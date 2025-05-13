@@ -47,3 +47,7 @@ Inheritance (is a): child class inherits all public/protected data members and m
 Example: Dog is an Animal
 
 The difference between aggregation and composition is that with aggregation, the child can exist independently, whereas in composition, the child cannot exist independently and is tied to the concept of the parent class.
+
+
+![image](https://github.com/user-attachments/assets/98e11fab-7e1c-4eaa-a825-e0285a169ab8)
+
