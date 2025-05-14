@@ -62,8 +62,25 @@ Vector:
 push_back vs emplace_back
 push_back is for constructs and appends a copy of that element
 emplace_back is to construct and append an element in place within the container
+reserve(): reserves memory for at least a specificied number of elements
 
 Function Signature:
 function name + parameters
 
 --version command can tell you what version you are using
+
+
+Networking:
+TCP: Transmission Control Protocol
+3 way handshake: SYN (synchronize), SYN-ACK (synchronize acknowledge), ACK (acknowledge)
+Seq Number: counter used to track every byte sent outward by a host (doesn't start at 1 for security reasons)
+
+
+Web Socket:
+Context: Chatting Application
+Person 1 and Person 2 both have instances of their application
+Server and Database that stores conversation data
+In a REST model, Person 1 application sends POST request (containing room, user id, message payload) to the server and database will store it
+When Person 2 responds, this response is retrieved with a GET request from Person 1's application 
+Issue here is that we don't know how to notify Person 2 to pull the request. This can be solved using shortpulling, meaning that when the application loads up, it will send a GET request asking for any new messages. However, this is not efficient at all, because of latency delay between api calls. Longpulling would be keeping the request open until the database changes.
+In the Web Socket model, Person 1 and Person 2 application establishes connection to the server (indicating that the user is present). When a message is sent, the server will broadcast the message out to the recipient user. So, instead of request-response which is client-initiated, server can initiate and push content which is bidirectional.
