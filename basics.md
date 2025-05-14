@@ -26,3 +26,26 @@ ARC Memory management
 Cons:
 Documentation changes rapidly(ie. Migrating from the Observable Object protocol to the Observable macro)
 Tied to Xcode
+
+Shallow copy vs Deep copy:
+Shallow copy: a new object with references to the original object's data, changes affect the original
+Deep copy: a new object with independent copies, changes don't affect the original
+
+Pointer vs Reference
+Pointer: stores a memory address, it points to the location of data in memory
+A pointer is a primitive data type just like an integer and character.
+
+Primitive data type:
+basic data types built into a language (ie. int, char, float, void), stored on the stack
+
+Non-Primitive data type:
+built from primitive types or built by programmer (arrays, linked lists, stacks, queues, etc.) and these objects stored on the heap (their reference variables still exist on the stack)
+
+Size of data types:
+Integer: 4 bytes
+Character: 1 byte
+Pointer: 4 bytes on 32 bit machine, 8 bytes on 64 bit machine
+
+
+Reference: an alias variable 
+
