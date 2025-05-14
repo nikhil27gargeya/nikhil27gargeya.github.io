@@ -20,6 +20,7 @@ Insert/remove from end:
 Insert/remove from middle:
 
 Hashmap: unordered collection of key value pairs. Known as dictionary in python or swift.
+Hashtable: similar to hashmap in the sense that it is an unordered collection of key value paris but different than hashmap because no null keys or null values and is thread safe
 Hashset: unordered collection of unique elements (more specific version of a set)
 Pass by Value vs Pass by Reference:
 Pass by value means copy of data is passed to the function so changes in the function don't affect the original variable
