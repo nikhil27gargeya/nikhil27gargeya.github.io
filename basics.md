@@ -53,16 +53,17 @@ One difference between a pointer and a reference is
 Shared Pointer:
 pointer that retains shared ownership of an object through a reference count, used for memory management
 
-
 STL (standard template library):
 template classes that provide the common data structures and algorithms like lists, stacks, arrays, sorting, searching
 the four components are containers, algorithms, iterators, functors
 Containers are data structures and include sequence containers (arrays which are non-resizable, vectors which are resizable, deque, list with is doubly linked list, forward list which is singly linked list), container adaptors (stack LIFO, queue FIFO, priority queue which uses vector as underlying structure), associative containers (sets which is ordered, maps which are sorted by keys using Compare function, multisets, multimaps), unordered associated containers (unordered set, unordered multiset, unordered map, unordered multimap)
 
+Vector:
+push_back vs emplace_back
+push_back is for constructs and appends a copy of that element
+emplace_back is to construct and append an element in place within the container
 
 Function Signature:
 function name + parameters
-
-
 
 --version command can tell you what version you are using
