@@ -25,14 +25,6 @@ Pass by Value vs Pass by Reference:
 Pass by value means copy of data is passed to the function so changes in the function don't affect the original variable
 Pass by Reference means reference of the data is passed so changes in the function will affect the other
 
-Shallow copy vs Deep copy:
-Shallow copy: a new object with references to the original object's data, changes affect the original
-Deep copy: a new object with independent copies, changes don't affect the original
-
-Pointer vs Reference
-Pointer: stores a memory address
-Reference: an alias variable 
-
 Divide and Conquer:
 Steps:
 1. Breaking down a problem into subproblems which are smaller instances of the same type of problem
