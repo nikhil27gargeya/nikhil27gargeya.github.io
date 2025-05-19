@@ -14,8 +14,10 @@ processor, memory/RAM, disk
 
 The OS takes these physical resources and virtualizes them
 
-
-
+Core vs Processor vs Thread:
+Processor: chip that plugs into a motherboard
+Core: a processing unit within a processor that can handle its own tasks and is responsible for executing instructions and coordination. More cores aren't always better beeccause the software needs to be able to take advantage of the cores
+Thread: an execution context which consists of the values of the CPU's registers
 
 
 Difference between 32 bit and 64 bit architecture:
@@ -46,3 +48,4 @@ double: 8 bytes or 64 bits
 bool: 1 byte
 
 https://ee.hawaii.edu/~tep/EE160/Book/chap4/subsection2.1.1.1.html
+
