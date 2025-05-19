@@ -5,12 +5,18 @@ Library: prewritten codebase that is a piece in the build
 Framework: Blueprint on which your code functions on
 
 Shell vs Compiler vs IDE:
-Shell: interface between user and os kernel (kernel is the core of the os and has complete control over the system) 
+Shell: interface between user and os kernel (kernel is the core of the os and has complete control over the system), used to invoke the compiler
 Compiler: Converts a program from high level code to machine code
 IDE: Code editor with features
 
-Interpreter vs Compiler:
 
+How to check the version of C++:
+as a command line: --version
+in c++: __cplusplus which returns a string literal in the format yearmm
+
+Compiler vs Interpreter:
+Compiler: Translates into machine code at compile time before the program runs
+Interpreter: Translates at run time line by line as the program runs
 
 Software exists within a framework
 Software contains libraries
