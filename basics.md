@@ -4,6 +4,14 @@ Language: tool to write code
 Library: prewritten codebase that is a piece in the build
 Framework: Blueprint on which your code functions on
 
+Shell vs Compiler vs IDE:
+Shell: interface between user and os kernel (kernel is the core of the os and has complete control over the system) 
+Compiler: Converts a program from high level code to machine code
+IDE: Code editor with features
+
+Interpreter vs Compiler:
+
+
 Software exists within a framework
 Software contains libraries
 
