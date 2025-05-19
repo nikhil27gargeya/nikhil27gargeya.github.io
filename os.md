@@ -36,7 +36,7 @@ x86: 32 bit architecture
 A byte a the minimum addressable unit. 1 byte is 8 bits. The reason that pointers are 8 bytes on 64 bit architecture is because they need to store a 64 bit memory address 8 x 8 = 62. On the other hand, pointers are 4 bytes on 32 bit architecture because they only need to store a 32 bit memory address 8 x 4 = 32.
 
 Size of data types (depends on the language)
-char: 1 byte in C because the binary representation can fit into 1 byte (ASCII needs 7 bits to encode)
+char: 1 byte in C because the binary representation can fit into 1 byte (ASCII needs 7 bits to encode). ASCII (American standard code for information interchange) has 0 through 127 which is 128 characters. 
 unsigned char: stores non negative values, also 1 byte in C
 short: 2 bytes or 16 bits
 long: 4 bytes or 32 bits
@@ -44,3 +44,5 @@ int: 4 bytes or 32 bits
 float: 4 bytes or 32 bits
 double: 8 bytes or 64 bits
 bool: 1 byte
+
+https://ee.hawaii.edu/~tep/EE160/Book/chap4/subsection2.1.1.1.html
