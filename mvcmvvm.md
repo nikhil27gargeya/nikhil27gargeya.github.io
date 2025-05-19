@@ -24,3 +24,7 @@ Cons: Overkill for simple UI, data binding is declarative and is harder to debug
 
 What is state:
 data at a given moment 
+
+Concurrency vs Parallelism:
+Concurrency: performing multiple tasks in overlapping time periods (ie. downloading data while keeping UI responsive)
+Parallelism: performing multiple tasks independently on different threads (ie. Dispatch Group)
