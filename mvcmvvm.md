@@ -13,7 +13,7 @@ User taps button -> controller handles input -> model updated -> controller manu
 Model View ViewModel:
 Model: Data Layer
 View: UI 
-ViewModel (Model-ish): Abstraction of the view (stores simplified version of the model specifically for that view) that exposes certain properties which are data binded with the view. The view updates upon state changes.
+ViewModel (Model-ish): Abstraction of the view (stores simplified version of the model specifically for that view) that exposes certain properties which are data binded with the view. The view updates upon state changes. The key responsibility of the viewmodel is to encapsulate the interaction logic for a view, but not all logic should go in the ViewModel, some should go in the model or other files. The ViewModel unlike a controller does not know the concrete UI but is rather an abstraction of the view. 
 
 User taps button -> viewmodel handles input, updates model, view model auto updates view
 
