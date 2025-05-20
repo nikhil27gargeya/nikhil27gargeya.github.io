@@ -62,7 +62,7 @@ Pointer: 4 bytes on 32 bit machine, 8 bytes on 64 bit machine
 
 Reference: an alias variable 
 
-One difference between a pointer and a reference is that a pointer can be reassigned. References are aliases and once bound to a variable it cannot be changed to refer to another variable, they can only reassign the value of the existing alias.
+One difference between a pointer and a reference is that a pointer can be reassigned. References are aliases and once bound to a variable it cannot be changed to refer to another variable, they can only reassign the value of the existing alias. Another difference is that a pointer can pointer to a pointer but a pointer cannot point to a reference. Pointer must be dereferenced to be accessed but a reference can be accessed directly. 
 
 Shared Pointer:
 pointer that retains shared ownership of an object through a reference count, used for memory management
