@@ -8,3 +8,16 @@ I recently graduated from the University of Southern California with a degree in
 to approach engineering challenges with a user focused mindset and a hands on, iterative approach to building. 
 
 I had an interest in working at the intersection of health and technology. I studied Cognitive Science for its interdisciplinary nature, and being able to understand the link between mind subareas and how humans think and intereact with products.
+
+I have skills working in Figma, work experience in design. I also have a solid understanding of computer programming and computer science fundamentals including:
+Networking ()
+OS (Operating systems 3 easy pieces) 
+Object Oriented Programming (Design Patterns)
+Middleware (gRPC up and running)
+Client-server architecture (Comp Systems)
+Distributed systems (Designing Data intensive applications)
+Computer architecture (Computer Organization)
+Data Structures and Algorithms (Grokking Algorithms + DSA in C++)
+
+
+Personal Project:
