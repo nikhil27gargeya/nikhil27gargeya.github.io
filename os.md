@@ -49,3 +49,12 @@ bool: 1 byte
 
 https://ee.hawaii.edu/~tep/EE160/Book/chap4/subsection2.1.1.1.html
 
+Von Neumann Organization of a Computer:
+Memory: stores data and instruction
+CPU: central component of a computer that carries out instructions
+Control Unit: Directs flow between CPU and other components, part of the CPU
+ALU: arithmetic operations, part of the CPU
+I/O devices: input and output
+
+
+
