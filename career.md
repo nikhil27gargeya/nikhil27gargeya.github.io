@@ -18,6 +18,6 @@ Client-server architecture (Comp Systems)
 Distributed systems (Designing Data intensive applications)
 Computer architecture (Computer Organization)
 Data Structures and Algorithms (Grokking Algorithms + DSA in C++)
-
+Machine Learning (stanford resources)
 
 Personal Project:
