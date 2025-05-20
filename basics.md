@@ -4,20 +4,6 @@ Language: tool to write code
 Library: prewritten codebase that is a piece in the build
 Framework: Blueprint on which your code functions on
 
-Shell vs Compiler vs IDE:
-Shell: interface between user and os kernel (kernel is the core of the os and has complete control over the system), used to invoke the compiler
-Compiler: Converts a program from high level code to machine code
-IDE: Code editor with features
-
-
-How to check the version of C++:
-as a command line: --version
-in c++: __cplusplus which returns a string literal in the format yearmm
-
-Compiler vs Interpreter:
-Compiler: Translates into machine code at compile time before the program runs
-Interpreter: Translates at run time line by line as the program runs
-
 Software exists within a framework
 Software contains libraries
 
@@ -62,7 +48,7 @@ Pointer: 4 bytes on 32 bit machine, 8 bytes on 64 bit machine
 
 Reference: an alias variable 
 
-One difference between a pointer and a reference is that a pointer can be reassigned. References are aliases and once bound to a variable it cannot be changed to refer to another variable, they can only reassign the value of the existing alias. Another difference is that a pointer can pointer to a pointer but a pointer cannot point to a reference. Pointer must be dereferenced to be accessed but a reference can be accessed directly. 
+One difference between a pointer and a reference is that a pointer can be reassigned
 
 Shared Pointer:
 pointer that retains shared ownership of an object through a reference count, used for memory management
