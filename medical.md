@@ -56,12 +56,20 @@ DNA: deoxyribonucleic acid
 repeating units of sugar deoxyribose and phosphate linked to 4 bases: A, T, C, G
 Copying mistake = Mutation
 
-Mitosis: cell division producing two identical daughter cells with the same number of chromosomes (46). If cells don't have the full set of chromosomes, they can cause cancer or just die.
+Mitosis: cell division producing two identical daughter cells with the same number of chromosomes (46). If cells don't have the full set of chromosomes, they can cause cancer or just die. Cancer is the unchecked cell division caused by a breakdown of mechanism regulating the cell cycle and this leads to rapidly reproducing nonfunctional cells.
 
 Once difference between Meiosis and Mitosis is the number of chromosomes in the daughter cells (23 for daughter gamete cells, 46 for daughter cells of mitosis). Also, mitosis does not separate homologous chromosomes like in meiosis 1 but rather separates sister chromatids.
 
+Human somatic cells have 46 chromosomes consisting of two sets of 22 homologous chromosomes and a pair of nonhomologous sex chromosomes.
+
 DNA replication:
 Initiation (enzymes are recruited to sites along the DNA sequence) -> Elongation (assembly of the daughter DNA strands) -> Termination (signaled by stop sequence in DNA)
+
+
+Cell Cycle:
+Interphase (cell grows and dna is replicated)
+Mitotic phase: replicated dna is separated and the cell divides
+
 
 
 
