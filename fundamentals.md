@@ -1,4 +1,4 @@
-# Basics:
+# Fundamentals:
 
 Language: tool to write code
 Library: prewritten codebase that is a piece in the build
