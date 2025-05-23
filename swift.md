@@ -1,5 +1,31 @@
 # Swift
 
+Swift was introduced in 2014 as a modern language for writing apps. It replaces Objective-C as the primary programming language for iOS and macOS. Swift is designed to be safe (prevents human errors), fast, and expressive.
+Swift types are not automatically cast to other types unless it is manually instructed. Type inference means that the compiler can deduce the type of an expression.
+
+let keyword is used for constants
+var keyword is used for variables
+
+comments can be used through // or /* */
+
+Built in types:
+Int: represents whole numbers
+Double: representing a decimal number
+Bool: true or false
+String: text
+
+Type annotation
+let cityName : String = "San Francisco" //Swift would infer this type but we use annotation to be explicit 
+let amountOwed : Decimal = 0 //case where it is useful
+3 cases to use Type annotation:
+1. Create a constant or variable without assigning a value
+2. When you create a constant that can be inferred as two or more different types (ie. "J" is character or string?)
+3. When you create attributes to a type definition (ie. struct/class where you don't want a default value in many cases)
+
+
+
+   
+
 Localization:
 Adapting app to support different languages
 Techniques: 
