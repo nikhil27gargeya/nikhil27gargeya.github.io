@@ -4,7 +4,7 @@
 # Skills  
 Programming:  
 [Fundamentals](fundamentals.md)  
-[Languages](languages.md)
+[Languages](languages.md)  
 [OS](os.md)  
 [Networking](networking.md)  
 [OOP](oop.md)  
