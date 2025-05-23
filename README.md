@@ -4,6 +4,7 @@
 # Skills  
 Programming:  
 [Fundamentals](fundamentals.md)  
+[Languages](languages.md)
 [OS](os.md)  
 [Networking](networking.md)  
 [OOP](oop.md)  
@@ -12,6 +13,10 @@ Programming:
 [Computer Architecture](comparch.md)  
 [DSA+LC75](dsalc.md)  
 [ML](ml.md)
+
+
+
+
 
 Design:
 [Design](design.md)
