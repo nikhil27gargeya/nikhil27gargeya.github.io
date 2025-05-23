@@ -1,5 +1,3 @@
-### Posts
-
 # About Me:
 [About](career.md)
 
