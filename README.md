@@ -3,8 +3,31 @@
 # About Me:
 [About](career.md)
 
-# Programming
-Fundamentals:
+# Skills
+Programming:
+[Fundamentals](fundamentals.md)
+[OS](os.md)
+[Networking](networking.md)
+[OOP](oop.md)
+[Middleware](middleware.md)
+[Cloud Computing](oop.md)
+[OOP](oop.md)
+[Computer Architecture](comparch.md)
+[DSA+LC75](dsalc.md)
+[ML](ml.md)
+
+Design:
+[Design](design.md)
+
+Entrepreneurship:
+
+
+### Projects
+#### [SharedTab](sharedtab.md)
+#### [Fortune](fortune.md)
+#### [Medical](medical.md)
+
+
 I have skills working in Figma, work experience in design. I also have a solid understanding of computer programming and computer science fundamentals including: Networking () OS (Operating systems 3 easy pieces)  Object Oriented Programming (Design Patterns) Middleware (gRPC up and running) Client-server architecture (Comp Systems) Distributed systems (Designing Data intensive applications) Computer architecture (Computer Organization) Data Structures and Algorithms (Grokking Algorithms + DSA in C++) Machine Learning (stanford resources)
 
 
@@ -20,12 +43,8 @@ I have skills working in Figma, work experience in design. I also have a solid u
 #### 9. [React](react.md)
 #### 10. [DSA+LC75](dsalc.md)
 #### 11. [Swift Fundamentals](swift.md)
-#### 12. [OOP](oop.md)
-
+#### 12. 
 # Career
 
 
-### Projects
-#### [SharedTab](sharedtab.md)
-#### [Fortune](fortune.md)
-#### [Medical](medical.md)
+
