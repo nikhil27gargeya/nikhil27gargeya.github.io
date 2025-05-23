@@ -3,17 +3,16 @@
 # About Me:
 [About](career.md)
 
-# Skills
-Programming:
-[Fundamentals](fundamentals.md)
-[OS](os.md)
-[Networking](networking.md)
-[OOP](oop.md)
-[Middleware](middleware.md)
-[Cloud Computing](oop.md)
-[OOP](oop.md)
-[Computer Architecture](comparch.md)
-[DSA+LC75](dsalc.md)
+# Skills  
+Programming:  
+[Fundamentals](fundamentals.md)  
+[OS](os.md)  
+[Networking](networking.md)  
+[OOP](oop.md)  
+[Middleware](middleware.md)  
+[Cloud Computing](cloud.md)  
+[Computer Architecture](comparch.md)  
+[DSA+LC75](dsalc.md)  
 [ML](ml.md)
 
 Design:
