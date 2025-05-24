@@ -21,7 +21,6 @@ Programming:
 Design:
 [Design](design.md)
 
-Entrepreneurship:
 ### Projects
 #### [SharedTab](sharedtab.md)
 #### [Fortune](fortune.md)
