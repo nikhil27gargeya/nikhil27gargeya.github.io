@@ -60,6 +60,21 @@ Value types like Strings and Ints and Doubles and Bools and structs and enums, c
 
 Classes:
 Reference types, like classes, share the same instance and when assigned and are passed by reference. Use classes when you do control identity (ie. network connections, bluetooth central manager which needs to be shared across the app, shopping cart object, authentication session). Two different class instances sharing the same values will not be the same using the (===) operator.
+
+Generics:
+prevents duplicating code and provides a higher level of abstraction for working with a variety of data types
+
+Closures:
+functions that can be passed around in your code, they are similar to anonymous functions and lambdas in other programming languages
+
+Trailing Closure Syntax:
+rather than passing closure as a parameter, it is passed directly after the function in brackets {} and you can omit the parameter label if it is the last one
+
+
+
+
+
+
 ```
 import UIKit
 
