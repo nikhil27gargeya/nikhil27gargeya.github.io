@@ -98,6 +98,9 @@ std::endl outputs a newline which basically ends the current line, it is ineffic
 std::cout is buffered (a buffer is a region of memory set aside to collect requests), and periodically the buffer is flushed
 '\n' is more efficient because it doesn't flush the buffer
 
+std::cin reads character input
+used with >> (extraction operator)
+
 
 
 
