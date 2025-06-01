@@ -76,3 +76,11 @@ int x;
 at compile time, the compiler makes a note that we want a variable that is of the type int.
 compile time means when the program is checked for syntax and type errors
 runtime means when the program is loaded into memory and executed
+
+= is the assignment operator and copies the value on the right to the left hand identifier
+== checks for operand equality
+
+int width { 5.5 }; // compiler throws error because list initialization disallows narrowing conversions
+int width = 5.5 ; //compiler does not throw error because copy intialization allows narrowing conversions
+
+[[maybe_unused]]: introduced in c++17
