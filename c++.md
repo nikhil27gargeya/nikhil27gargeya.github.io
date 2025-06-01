@@ -70,7 +70,7 @@ The name of a function is called an identifier
 --
 Data: information that can be moved, processed or stored by a computer
 in C++, direct memory access is discouraged, instead we access memory through the use of objects
-An object is a region of storage (typically RAM or a CPU register)
+An object is a region of storage (typically RAM or a CPU register) that is used
 
 int x;
 at compile time, the compiler makes a note that we want a variable that is of the type int.
