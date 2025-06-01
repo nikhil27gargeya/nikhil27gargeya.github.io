@@ -84,3 +84,13 @@ int width { 5.5 }; // compiler throws error because list initialization disallow
 int width = 5.5 ; //compiler does not throw error because copy intialization allows narrowing conversions
 
 [[maybe_unused]]: introduced in c++17
+
+--
+io library
+std::cout sends data to the console to be printed as text
+cout means character output
+<< is the insertion operator, it can be used repeatedly to concatenate strings
+
+std::endl outputs a newline which basically ends the current line
+std::cout is buffered
+
