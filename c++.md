@@ -94,6 +94,10 @@ std::cout sends data to the console to be printed as text
 cout means character output
 << is the insertion operator, it can be used repeatedly to concatenate strings
 
-std::endl outputs a newline which basically ends the current line
-std::cout is buffered
+std::endl outputs a newline which basically ends the current line, it is inefficient as it flushes the buffer
+std::cout is buffered (a buffer is a region of memory set aside to collect requests), and periodically the buffer is flushed
+'\n' is more efficient because it doesn't flush the buffer
+
+
+
 
