@@ -83,6 +83,9 @@ runtime means when the program is loaded into memory and executed
 int width { 5.5 }; // compiler throws error because list initialization disallows narrowing conversions
 int width = 5.5 ; //compiler does not throw error because copy intialization allows narrowing conversions
 
+int x { 5 } //definition and direct initialization
+int x = 5; //two steps definition and copy initialization which calls copy constructor
+
 [[maybe_unused]]: introduced in c++17
 
 --
