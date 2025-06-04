@@ -108,3 +108,7 @@ print(p1.attributes.age) //print 30
 
 Closures:
 functions that can be passed around in your code
+
+Trailing closure syntax (syntactic sugar):
+if the last parameter to a function is a closure, you can pass it directly after the function and not use the argument label for the closure
+
