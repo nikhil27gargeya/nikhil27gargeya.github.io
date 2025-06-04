@@ -1,4 +1,4 @@
-# Distributed Systems
+# Systems Design
 
 Most applications are data intensive. CPU power is rarely a limiting factor. 
 Data Systems include:
