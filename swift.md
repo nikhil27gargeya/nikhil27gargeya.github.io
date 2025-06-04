@@ -109,6 +109,29 @@ print(p1.attributes.age) //print 30
 Closures:
 functions that can be passed around in your code
 
+escaping closure:
+when is a closure is called after the function returns
+
+
 Trailing closure syntax (syntactic sugar):
 if the last parameter to a function is a closure, you can pass it directly after the function and not use the argument label for the closure
 
+func loadFont(from server: Server, completion (Font) -> Void, onFailure: () -> Void) {
+   if let font = download(font.ttf || font.otf, from: server) {
+      completion(font)
+   } else {
+      onFailure()
+   }
+}
+//without trailing closure syntax
+loadFont(from: someServer, completion: { font in
+   } onFailure: {
+   print("couldn't load the font.")
+})
+
+//with trailing closure syntax
+loadFont(from: someServer) { font in //font is the parameter being passed in
+   someView.font = font
+} onFailure: {
+   print("couldn't load the font.")
+}
