@@ -57,7 +57,8 @@ git pull from origin would mean you want the latest changes from your fork (ie. 
 git pull from upstream would mean you wnat the latest changes from the original repo (ie. multiple contributors)
 
 git revert: remove all the changes a single commit made to your source code repository (typically used in a public branch/larger team)
-git revert --no-commit f414f31..HEAD
+git revert --no-commit f414f31..HEAD //reverts/removes all the changes from commit AFTER f414f31 all the way to HEAD (current)
+git revert --no-commit HEAD~16 //16 commit ago
 
 git reset --hard [commit]: undoes changes (used in your own private branch and not a public branch). deletes commits after the one being newly pointed to.
 
@@ -73,8 +74,10 @@ git reset
 
 --
 
+Two main protocols for cloning (SSH secure shell, and HTTPS)
+SSH is used to authenticate and encrypt communication between machine and server. enhanced seucirty and credential free operations. Requires creating SSH key pair, adding the key to github. configuring the ssh agent which contains the key pairs and prevents the need of typing a passphrase every time you connect. Clone using ssh url: git@github.com:owner/repo.git
+ssh -T git@github.com verifies the setup
 
-Using Https:
+HTTPS is easier to setup. Clone using HTTPS URL git clone https://github.com/user/repository.git
+Personal access token instead of a password is used on 2FA enabled accounts.
 
-Using ssh:
-git clone git@github.com:owner/repo.git
