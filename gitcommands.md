@@ -55,3 +55,7 @@ origin: your fork
 git pull from origin would mean you want the latest changes from your fork (ie. you made edits on multiple computers or with teammates)
 
 git pull from upstream would mean you wnat the latest changes from the original repo (ie. multiple contributors)
+
+
+git revert: remove all the changes a single commit made to your source code repository
+git revert --no-commit HEAD~16..HEAD would stage the 16th commit ago 
