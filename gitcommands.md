@@ -63,8 +63,15 @@ git reset --hard [commit]: undoes changes (used in your own private branch and n
 
 git rebase: apply any commits of current branch ahead of specified one, preventing non linear commit trees
 
---
+How to revert to a previous commit:
+Option 1: 
+Push a new commit which reverts to a previous commit. Thus there will be an original commit and a new identical one. The right choice for public or shared branches, as it prevents deletion of commit which other people may be dependent on.
+git revert
+Option 2:
+Delete pushed commit. 
+git reset
 
+--
 
 
 Using Https:
