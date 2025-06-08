@@ -56,6 +56,18 @@ git pull from origin would mean you want the latest changes from your fork (ie. 
 
 git pull from upstream would mean you wnat the latest changes from the original repo (ie. multiple contributors)
 
+git revert: remove all the changes a single commit made to your source code repository (typically used in a public branch/larger team)
+git revert --no-commit f414f31..HEAD
 
-git revert: remove all the changes a single commit made to your source code repository
-git revert --no-commit HEAD~16..HEAD would stage the 16th commit ago 
+git reset --hard [commit]: undoes changes (used in your own private branch and not a public branch). deletes commits after the one being newly pointed to.
+
+git rebase: apply any commits of current branch ahead of specified one, preventing non linear commit trees
+
+--
+
+
+
+Using Https:
+
+Using ssh:
+git clone git@github.com:owner/repo.git
