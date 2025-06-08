@@ -1,5 +1,8 @@
 # Biology Review
 
+8 characteristics of life:
+cellular organization, reproduction, metabolism, homeostasis, heredity, response to stimuli, growth and development, and adaptation through evolution
+
 3 domains of organisms:
 Archaea:
 prokaryotic cell, lack membrane bound nucleus, tough cell wall allowing them to exist in extreme conditions (hot springs, ocean)
@@ -71,6 +74,27 @@ Interphase (cell grows and dna is replicated)
 Mitotic phase: replicated dna is separated and the cell divides
 
 
+Biotechnology: use of artificial methods to modify genetic material of cells or organisms
+They
+1. Extract DNA
+2. Manipulate DNA using gel electrophoresis
+3. Analyze Nucleic Acids
+PCR assembles new strands of DNA from a template. Tools needed template DNA, primers, nucleotides, and buffer.
+PCR amplifies the volume of DNA allowing for gel electrophoresis to be conducted, where we see how far the fragments of DNA move.
+PCR uses thermocycling to elongate DNA
 
+Genetic Engineering: moving genes from one organism to another
+restriction enzyme gives a strand with a sticky end that blend into another genome
+
+Evolution:
+species changes over long periods of time, changes of allele frequencies in a species' gene pool
+Darwin: Life comes from some common ancestry and descendants have accumulated adaptations.
+Evidence of Evolution:
+Fossil Record and changes through that
+Anatomical Record
+Molecular Record (DNA)
+
+Antibiotics were discovered in the earlier part of the 20th century. Antibiotics have have caused organisms to become drug resistant.
+Malaria and sickle cell are correlated
 
 
