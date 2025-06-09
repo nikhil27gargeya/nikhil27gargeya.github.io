@@ -135,3 +135,15 @@ loadFont(from: someServer) { font in //font is the parameter being passed in
 } onFailure: {
    print("couldn't load the font.")
 }
+
+info.plist 
+contains:
+app name, versino, build number, support orientation and build info
+
+entitlement file declares which restricted APIs an app can access, the capabilities of the app
+
+podfile: stores the dependencies of the targets
+
+target: defines a specific product to build within the xcode project
+
+
