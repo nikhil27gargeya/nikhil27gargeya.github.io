@@ -76,7 +76,7 @@ NSNumber *magicNumber = [[NSNumber alloc] initWithInt:42];
 Factory method:
 NSNumber *magicNumber = [NSNumber numberWithInt:42];
 
-Use new to create an objects if no arguments are needed for initializatino
+Use new to create an objects if no arguments are needed for initialization
 
 Using literals for concise object creation
 NSString *string = @"Hello";
@@ -112,3 +112,11 @@ Properties are atomic, meaning that the synthesized accesors ensure that a value
 A strong reference is when one objects relies on another, effectively taking ownership of it. In Obj-c, an object is kept alive as long as it has at least one strong reference to it from another object.
 
 A strong reference cycle results in a memory leak. To remedy this, one of the strong references should be substituted for a weak reference. A weak reference does not imply ownership and doesnot keep an object alive.
+
+__weak variable doesn't not keep an object alive and it is set to nil when the object is deallocated to prevent a dangling pointer (when a pointer points to an object that has already been freed/deallocated)
+
+caching a weak property in a strong variable ensures that it exists in memory while the strong variable (object) is still in scope
+
+
+
+
