@@ -147,3 +147,21 @@ podfile: stores the dependencies of the targets
 target: defines a specific product to build within the xcode project
 
 
+Protocol Delegate Pattern:
+Used when messaging some information from a parent view to a child view
+
+UIKit:
+Coordinator Pattern:
+Extracting navigation code into a dedicated object
+Coordinator tells other views to present/dismiss
+
+
+
+
+
+
+
+
+
+
+
