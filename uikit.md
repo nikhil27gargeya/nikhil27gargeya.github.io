@@ -30,8 +30,32 @@ App Delegate:
 
 Scene Delegate:
 
-UIKit components:
-UIViewController: Navigation (controlling the flow of the app) 
+UIKit is used to build user interfaces and handle touch events and other things imperatively and giving control. 
+UIView: object that manages content for a rectangular area and it is the fundamental superclass for all visual elements
+let view = UIView()
 
-Coordinator Pattern:
-The problem: 
+
+
+
+
+
+
+
+Coordinators:
+Without coordinators, navigation (controlling the flow of the app) is tightly coupled with UIViewControllers and is hard coded. Coordinators replace navigation flow with separate object.
+View Controller A, instead of speaking to View Controller B and building it, speaks to its Coordinator, which pushes or pops the view. This decouples the navigation from the View Controller.
+protocol Coordinator {
+  var children: [Coordinator] { get set } //child coordinators
+  var nav : UINavigationController { get set}
+  func start() {}
+}
+class MainCoordinator : Coordinator { //implements the protocol
+  func start() {
+    let vc = ViewController()
+    vc.coordinator = self
+    nav.pushViewController(vc, animated = false)
+  }
+  func userTapped() {
+    coordinator?.buy(widget)
+  }
+}
