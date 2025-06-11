@@ -31,9 +31,21 @@ App Delegate:
 Scene Delegate:
 
 UIKit is used to build user interfaces and handle touch events and other things imperatively and giving control. 
-UIView: object that manages content for a rectangular area and it is the fundamental superclass for all visual elements
+UIView: container object that manages content for a rectangular area and it is the parent class for all visual elements
+![image](https://github.com/user-attachments/assets/1e067afd-c37c-4902-b5ef-d884af36159b)
+
 let view = UIView()
 
+Subclasses include:
+UILabel: displays static text
+UIImageView: displays images
+UITextField: displays editable text
+UIButton: user interaction that executes custom code
+UITableView: for simple lists
+UICollectionView: an object that manages an ordered collection of items and displyas them with a customizable layout
+
+
+UINavigationControllers: container for view controllers, pushes and pops screens like a stack of cards
 
 
 
