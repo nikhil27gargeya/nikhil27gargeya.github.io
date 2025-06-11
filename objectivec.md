@@ -41,7 +41,7 @@ Factory Method: used as an alternative to object allocation, objective c's const
 Working with Objects:
 work in an objective-c are messaging being sent between objects
 
-[someObject doSomething]; //uses the square brackets
+[someObject doSomething]; //uses the square brackets for enclosing messages
 
 someObject in this case is the receiver of the object, it will be sent the doSomething message
 
@@ -124,6 +124,33 @@ For customizing existing classes, we have categories which add functionality to 
 These are great but are not always reusable. An alternative is to use interitance, but this creates the problem of creating a new subclass every time you want to use the original class.
 
 Another alternative is for a class to use a delegate object, which is delegated the decision making at runtime.
+
+Associative References: adds storage to an object without affecting the original class implementation
+
+Protocol: methods that a conforming class is meant to use
+
+Blocks: similar to closure or lambdas in other languages
+^{
+}
+
+void (^simpleBlock)void;
+
+completion handlers are a way of implementing callback functionality using blocks
+
+block variable
+- (void)beginTaskWithName:(NSString *)name completion:(void(^))(void)callback;
+block literal
+[self beginTaskWithName@"MyTask" completion:^{
+  NSLog(@"Task completed");
+}];
+
+Concurrency in iOS
+Operation Queues: built on top of GCD, for more control\
+GCD: low level api that uses dispatch queues
+serial queue: one task at a time
+concurrent queue: multiple tasks simultaneously, not necessarily in the order they are added
+
+
 
 
 
