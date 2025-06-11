@@ -19,6 +19,7 @@ Objective-C objects use an asterisk to indicate they are C pointers and a ; at t
 - (void)someMethodWithParam:(Param)value;
 
 Syntax for a class:
+```
 #import "Car.h"
 
 @implementation Car
@@ -27,6 +28,7 @@ Syntax for a class:
   NSLog(@"engine starting');
 }
 @end
+```
 
 In Objective-C, classes are also object, with opaque type called Class
 
@@ -46,9 +48,11 @@ work in an objective-c are messaging being sent between objects
 someObject in this case is the receiver of the object, it will be sent the doSomething message
 
 local variables like this are limited in scope to the method in which they are defined. Once the closing bracket is reached, the integer will no longer be accessible
+```
 - (void)myMethod {
   int someInteger = 42;
 }
+```
 
 Obj-C objects are allocated differently, they have longer life cycles than the scope of a method call. They normally need to stay alive long than the original variable created to keep track of it.
 
