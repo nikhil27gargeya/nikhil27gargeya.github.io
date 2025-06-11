@@ -25,3 +25,13 @@ results panel have the results of each Swift expression
 
 execute playground button located in the bottom left-hand corner of the main panel, or click the play buttons to run code in stages on the margin of the editor
 
+
+App Delegate:
+
+Scene Delegate:
+
+UIKit components:
+UIViewController: Navigation (controlling the flow of the app) 
+
+Coordinator Pattern:
+The problem: 
