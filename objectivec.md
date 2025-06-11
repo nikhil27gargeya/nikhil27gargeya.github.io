@@ -117,6 +117,14 @@ __weak variable doesn't not keep an object alive and it is set to nil when the o
 
 caching a weak property in a strong variable ensures that it exists in memory while the strong variable (object) is still in scope
 
+@property (copy) is the copy property, meaning whatever object you try to give that property is copied first and the copy is stored instead of the original
+
+For customizing existing classes, we have categories which add functionality to classes that we have the source code implementation for, while extensions add functionality to classes that we have the internal implementatino for and what will compile at the same time as the class extension. 
+
+These are great but are not always reusable. An alternative is to use interitance, but this creates the problem of creating a new subclass every time you want to use the original class.
+
+Another alternative is for a class to use a delegate object, which is delegated the decision making at runtime.
+
 
 
 
