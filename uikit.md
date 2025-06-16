@@ -56,6 +56,7 @@ UINavigationControllers: container for view controllers, pushes and pops screens
 Coordinators:
 Without coordinators, navigation (controlling the flow of the app) is tightly coupled with UIViewControllers and is hard coded. Coordinators replace navigation flow with separate object.
 View Controller A, instead of speaking to View Controller B and building it, speaks to its Coordinator, which pushes or pops the view. This decouples the navigation from the View Controller.
+```
 protocol Coordinator {
   var children: [Coordinator] { get set } //child coordinators
   var nav : UINavigationController { get set}
@@ -71,3 +72,4 @@ class MainCoordinator : Coordinator { //implements the protocol
     coordinator?.buy(widget)
   }
 }
+```
