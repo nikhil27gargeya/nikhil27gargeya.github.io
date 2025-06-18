@@ -16,7 +16,8 @@ Programming:
 
 ### Projects
 #### [SharedTab](sharedtab.md)
-#### [Fortune](fortune.md)
+#### [Track&FieldOlympics](olympics.md)
+#### [Fortune (coming soon...)](fortune.md)
 
 
 
