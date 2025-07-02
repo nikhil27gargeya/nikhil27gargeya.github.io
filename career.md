@@ -9,3 +9,18 @@ to approach engineering challenges with a user focused mindset and a hands on, i
 
 I had an interest in working at the intersection of health and technology. I studied Cognitive Science for its interdisciplinary nature, and being able to understand the link between mind subareas and how humans think and intereact with products.
 
+
+
+
+
+Notes:
+Data resonance : mandated for privacy reasons
+Matrix:
+          US      EU      CA    
+Prod
+Staging
+QA
+
+Environments:
+Availability zones which has the collection of user data, not necessarily where the data is stored
+
