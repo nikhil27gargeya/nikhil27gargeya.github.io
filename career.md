@@ -24,3 +24,6 @@ QA
 Environments:
 Availability zones which has the collection of user data, not necessarily where the data is stored
 
+API service with load balancer
+
+Facebook allows any developer to ship code to prod, and they have their own instance of the production code, and they use canary testing before their code is integrated into the actual production.
