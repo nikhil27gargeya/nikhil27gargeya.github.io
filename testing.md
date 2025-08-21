@@ -22,8 +22,14 @@ public class TodoListTests:
   {
     // arrange  
     var list = new TodoList();
+    
+
+    //act
     list.Add(new("Test Content");
 
-
+    //assert
+    var savedItem = Assert.Single(list.All);
+    Assert.NotNull(savedItem);
+    Assert.Equal("Test Content", savedItem.Content);
   }
 }
