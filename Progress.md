@@ -5,6 +5,7 @@ Month 1:
 Read material that is beneficial for solid understanding of computer science
 Project Work
 Resume Work
+Meditation/Exercise/Routine to enhance sleep
 
 Week 1:
 September 20, 2025
