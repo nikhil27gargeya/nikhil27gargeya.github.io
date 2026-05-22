@@ -22,5 +22,27 @@ O(1) < O(logn) < O(n) < O(n^c) < O(c^n) < O(n!)
 when using if elif else, it will run the first matching condition, so if one condition is a more specific it should be put first so the wrong condition is not hit
 
 python itertools: module that is part of the standard library for creating iterators (objects that can be looped over)
+from itertools import combinations
+def pairs(elements):
+    return [list(pair) for pair in combinations(elements, 2)]
+or
+def pairs(elements):
+  result = []
+  n = len(elements)
+  for i in range(n):
+     for j in range(i + 1, n):
+         result.append([elements[i], elements[j])
+  return result
 
+i = 0 # "a"
+j = 1 # "b"
+["a","b"]
+j = 2 # "c"
+["a","c"]
+i = 1 # "b"
+j = 2 # "c"
+i = 2 # "c"
+j = 3 # inner loop doesn't run
+
+HashSets and HashMaps:
 
