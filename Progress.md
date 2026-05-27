@@ -101,6 +101,47 @@ tuples in python: immutable ordered list
 tuple1 = ("abc", 34, True, 40, "male")
 
 
+#algorithm: we will construct two sets (we need two sets because each list must be checked against the other) and we will iterate over each list O(n) and see if each element is in the other set O(1) and if not we will append on the result list. O(n) time O(n + m) space
+def exclusive_items(a, b):
+  set_a = set(a) # O(n)
+  set_b = set(b) # O(n)
+  result = []
+  for num in b:
+    if num not in set_a:
+      result.append(num)
+  for num in a:
+    if num not in set_b:
+      result.append(num)
+  return result
+
+def all_unique(items):
+  s = set(items)
+  return len(s) == len(items)
+
+#algorithm: we will construct counter dictionary and then iterate through each string in the other list (smaller list) and see if the value of that key is greater than zero, and if it is it should append it to a result list, and then decrement
+from collections import Counter
+def intersection_with_dupes(a, b):
+  if len(a) > len(b):
+    a, b = b, a
+  count_a = Counter(a)
+  result = []
+  for s in b:
+    if count_a[s] > 0:
+        result.append(s)
+        count_a[s] -= 1
+  return result
+
+def anagrams(s1, s2):
+  if len(s1) != len(s2):
+    return False
+  count = Counter(s1)
+  for c in s2:
+    if c not in count:
+      return False
+    count[c] -= 1
+    if count[c] == 0:
+      del count[c]
+  return len(count) == 0
 
 
 
