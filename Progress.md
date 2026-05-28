@@ -1,10 +1,12 @@
 # Progress
+Todo:
+Sorting Algorithms
 
 M1:
 Array: 
 -Ordered
 -Contiguous
-Fast access, but inserts and deletes can be expensive
+Fast access, but inserts and deletes can be expensive (insert at beginning or middle is O(n) but at end is O(1) amortized meaning average in the long term)
 .split in python: breaks string into list of smaller strings based on specified delimiter
 words = sentence.split(" ")
 
@@ -143,6 +145,39 @@ def anagrams(s1, s2):
       del count[c]
   return len(count) == 0
 
+recursive functions calls itself
+def sum_numbers_recursive(numbers):
+  #recursive pattern = sum(x + rest) = x + sum(rest)
+  #base case being empty array
+  if not numbers:
+    return 0
+  return numbers[0] + sum_numbers_recursive(numbers[1:])
+sum_numbers_recursive([4, 2, 7]) = 4 + 
+sum_numbers_recursive([2, 7]) = 2 +
+sum_numbers_recursive([7]) = 7 +
+sum_numbers_recursive([]) = 0
+
+Linked List:
+represents a sequence of nodes, with each node storing data and a pointer to the next node
+[HEAD] -> [node] -> [node] -> [node] -> [TAIL]
+
+some basic operations
+adding to the head O(1) because it just rearranges pointers
+removing from head O(1) for same reason
+adding to tail O(n) because traversal required O(1) for DLL with tail pointer
+accessing middle O(n) because no indexing
+
+#algorithm is to maintain a prev, curr, next pointer and for each node save next node, point curr.next to prev and advance prev and curr. when curr is null, prev is the new head of the reversed list
+def reverse_list(head):
+  prev = None
+  curr = head
+  while curr is not None:
+    next = curr.next
+    curr.next = prev
+    prev = curr
+    curr = next
+  return prev
+  
 
 
 
