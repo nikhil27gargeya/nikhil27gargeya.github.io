@@ -1,6 +1,14 @@
 # DSA
 
-Basic Data Structures and their runtimes:
+Most data structures are used in four basic ways:
+1. Read
+2. Search
+3. Insert
+4. Delete
+
+We often want to optimize for the steps taken as we want high performance algorithms with the data structures we choose.
+
+Data Structures and their runtimes:
 Array: a contiguous block of memory that stores a fixed size, indexed collection of same type of data. Same type of data relates to the contiguous nature because every cell must be the same size.
 python: arr = []
 c++: int arr[]
@@ -20,8 +28,9 @@ Insert/remove from end:
 Insert/remove from middle:
 
 Hashmap: unordered collection of key value pairs. Known as dictionary in python or swift.
-Hashtable: similar to hashmap in the sense that it is an unordered collection of key value paris but different than hashmap because no null keys or null values and is thread safe
+Hashtable: similar to hashmap in the sense that it is an unordered collection of key value pairs but different than hashmap because no null keys or null values and is thread safe
 Hashset: unordered collection of unique elements (more specific version of a set)
+
 Pass by Value vs Pass by Reference:
 Pass by value means copy of data is passed to the function so changes in the function don't affect the original variable
 Pass by Reference means reference of the data is passed so changes in the function will affect the other
