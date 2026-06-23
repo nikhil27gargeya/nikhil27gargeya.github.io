@@ -12,9 +12,7 @@ Abstract Data Structures: an ADT is a set of operations and behavior, without sp
 
 Data structures can be neatly classified into contiguous or linked structures. Contiguous structures use single slabs of memory and include arrays, matrices, heaps, hash tables. Linked structures are composed of distinct chunks of memory bound together by pointers and include lists, trees, and graph adjacency lists.
 
-Array is the fundamental contiguously allocated data structure. They are fixed size data records such that each element can be indexed. Like street of houses, where each house has an address and the exact location can be determined by address.
-
-Array: a contiguous block of memory that stores a fixed size, indexed collection of same type of data. Same type of data relates to the contiguous nature because every cell must be the same size.
+Array: a contiguous block of memory that stores a fixed size, indexed collection of same type of data. Same type of data relates to the contiguous nature because every cell must be the same size. Like street of houses, where each house has an address and the exact location can be determined by address.
 python: arr = []
 c++: int arr[]
 runtimes:
