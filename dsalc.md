@@ -22,7 +22,7 @@ runtimes:
 Access element: O(1) because computer can identify the memory location with simple operation (address = base + (i * size_of_element)) and this is independent of array size hence O(1)
 Searching: O(n) because in the worst case it needs to traverse the entire array
 Insert/Remove: O(n) if shifting required (for insertion/removal at beginning), O(1) otherwise (insertion/removal at the end)
-Updating: O(1)
+Updating: O(1) if index is known, O(n) if element must first be searched for
 
 List: dynamic array (can be resized)
 
