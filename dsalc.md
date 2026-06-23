@@ -1,15 +1,13 @@
 # DSA
 
-Most data structures are used in four basic ways:
+Most data structures are used in these basic ways:
 1. Read
 2. Search
 3. Insert
 4. Delete
-
-and also:
 5. Update
 
-We often want to optimize for the steps taken as we want high performance algorithms with the data structures we choose.
+We often want to optimize for the steps taken as we want high performance algorithms with the data structures we choose (A Common Sense Guide to Data Structures, Wengrow)
 
 Abstract Data Structures: an ADT is a set of operations and behavior, without specifying how its built internally (ie. containers, dictionaries, priority queue)
 
