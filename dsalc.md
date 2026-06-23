@@ -8,7 +8,12 @@ Most data structures are used in four basic ways:
 
 We often want to optimize for the steps taken as we want high performance algorithms with the data structures we choose.
 
-Data Structures and their runtimes:
+Abstract Data Structures: an ADT is a set of operations and behavior, without specifying how its built internally (ie. containers, dictionaries, priority queue)
+
+Data structures can be neatly classified into contiguous or linked structures. Contiguous structures use single slabs of memory and include arrays, matrices, heaps, hash tables. Linked structures are composed of distinct chunks of memory bound together by pointers and include lists, trees, and graph adjacency lists.
+
+Array is the fundamental contiguously allocated data structure. They are fixed size data records such that each element can be indexed. Like street of houses, where each house has an address and the exact location can be determined by address.
+
 Array: a contiguous block of memory that stores a fixed size, indexed collection of same type of data. Same type of data relates to the contiguous nature because every cell must be the same size.
 python: arr = []
 c++: int arr[]
@@ -83,6 +88,33 @@ how long does it take to run an algorithm as size of the input problem grows
 
 Spacetime Complexity:
 working memory required by an algorithm as size of the input problem grows
+
+
+
+
+
+Algorithms:
+An algorithm is a procedure to accomplish a specific task (takes any of possible input instances and transforms it to the desired output). An algorithmic problem describes the complete set of instances it must work on and its output after running on one of its instances. (Skiena, The Algorithm Design Manual)
+
+3 desirable properties of a good algorithm:
+1. Correct
+2. Efficient
+3. Easy to implement
+
+These goals may not be simultaneously achievable (hence why tradeoffs are required)
+
+
+Correct algorithms have a proof of correctness, which explains why every instance of the problem is transformed to the expected output
+
+
+
+
+
+
+
+
+
+
 
 
 # LC75
