@@ -17,6 +17,12 @@ Statically vs Dynamically Typed:
 Statically Typed: type rules are enforced at compile time, the compiler type checks at runtime (ie. java, c, swift)
 Dynamically Typed: type rules are enforced at run time (ie. javascript, python)
 
+Pass by Value vs Pass by Reference:
+Pass by value means copy of data is passed to the function so changes in the function don't affect the original variable
+Pass by Reference means reference of the data is passed so changes in the function will affect the other
+
+
+
 Pros of Swift:
 Type Inference
 Strongly typing (type safe)
