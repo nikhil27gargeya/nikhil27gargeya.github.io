@@ -9,7 +9,7 @@ Most data structures are used in these basic ways:
 
 We often want to optimize for the steps taken as we want high performance algorithms with the data structures we choose (A Common Sense Guide to Data Structures, Wengrow)
 
-Abstract Data Structures: an ADT is a set of operations and behavior, without specifying how its built internally (ie. containers, dictionaries, priority queue)
+Abstract Data Type: an ADT is a set of operations and behavior, without specifying how its built internally (ie. containers: lists, sets, stacks, queues, dictionaries, priority queue)
 
 Data structures can be neatly classified into contiguous or linked structures. Contiguous structures use single slabs of memory and include arrays, matrices, heaps, hash tables. Linked structures are composed of distinct chunks of memory bound together by pointers and include lists, trees, and graph adjacency lists.
 
