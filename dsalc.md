@@ -9,7 +9,7 @@ Most data structures are used in these basic ways:
 
 We often want to optimize for the steps taken as we want high performance algorithms with the data structures we choose (A Common Sense Guide to Data Structures, Wengrow)
 
-Abstract Data Type: an ADT is a set of operations and behavior, without specifying how its built internally (ie. containers: lists, sets, stacks, queues, dictionaries, priority queue)
+Abstract Data Type: an ADT is a set of operations and behaviors, without specifying how its built internally (ie. containers: lists, sets, stacks, queues, dictionaries, priority queue)
 
 Data structures can be neatly classified into contiguous or linked structures. Contiguous structures use single slabs of memory and include arrays, matrices, heaps, hash tables. Linked structures are composed of distinct chunks of memory bound together by pointers and include lists, trees, and graph adjacency lists.
 
@@ -34,8 +34,6 @@ For dynamic arrays, the doubling of size process involves allocating a new array
 3. Single data type which is less flexible
 
 So conceptually, an array is a container that stores values in a specific order, it is contiguously allocated and can be indexed to find an address in O(1). It has issues with insertions / deletions which requires shifting.
-
-List: dynamic array (can be resized). It is the simplest linked structure (supports searching, insertion, deletion)
 
 Linked List: non continguous block of memory that stores a node containing a value and pointer to the next node. Nodes not necessarily have to have the same type of value.
 runtimes:
