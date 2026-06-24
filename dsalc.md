@@ -13,7 +13,7 @@ Abstract Data Type: an ADT is a set of operations and behaviors, without specify
 
 Data structures can be neatly classified into contiguous or linked structures. Contiguous structures use single slabs of memory and include arrays, matrices, heaps, hash tables. Linked structures are composed of distinct chunks of memory bound together by pointers and include lists, trees, and graph adjacency lists.
 
-Array: a contiguous block of memory that stores a fixed size, indexed collection of homogenous/same type of data. Same type of data relates to the contiguous nature because every cell must be the same size. Like street of houses, where each house has an address and the exact location can be determined by address.
+Array: an ordered container represented by a contiguous block of memory that stores a fixed size, indexed collection of homogenous/same type of data. Same type of data relates to the contiguous nature because every cell must be the same size. Like street of houses, where each house has an address and the exact location can be determined by address.
 python: arr = []
 c++: int arr[]
 runtimes:
@@ -37,8 +37,11 @@ For dynamic arrays, the doubling of size process involves allocating a new array
 So conceptually, an array is a container that stores values in a specific order, it is contiguously allocated and can be indexed to find an address in O(1). It has issues with insertions / deletions which requires shifting.
 
 Linked List: non continguous block of memory that stores a node containing a value and pointer to the next node. Nodes not necessarily have to have the same type of value.
-runtimes:
+When implementing a linked list, sometimes there are sentinel nodes, which are dummy nodes added to both ends of the linked list and which head and tail always point to. Basically an empty list still contains the sentinels (head -> tail). Using sentinel nodes eliminates many edge cases when implementing linked list operations.
+ie. insertAtBeginning
 
+
+runtimes:
 SLL (Singly Linked List) is where each node only has pointer to the successor element.
 Access element: O(n) because computer cannot identify the memory location like it can with arrays
 Search: O(n) because, in the worst case, it must traverse the entire linked list
@@ -46,7 +49,7 @@ Insert: O(1) at the beginning or after a known node; O(1) at the end if a tail p
 Remove: O(1) from the beginning or after a known previous node; O(n) from the end because the node before the tail must be found; O(n) if the removal location must first be found
 Updating: O(1) if the node is already known; O(n) if the node must first be searched for
 
-DLL (Doubly Linked List) is where each node points to predecessor and successor element. It simplifies these operations (trading off memory from the extra pointeres)
+DLL (Doubly Linked List) is where each node points to predecessor and successor element. It simplifies these operations (trading off memory from the extra pointers)
 1. Deleting a node when you have a pointer to it (the advantage is that instead of traversing the list to access the predecessor node), we can delete it in O(1) instead of O(n)
    Practical example of this is LRU cache, because we maintain hashmap of keys (which is whatever identifies the  cached item). For web cache, key is URL string, for db cache key is query string, for api server key is api request. The key basically is our input in the context of what our cache is designed for. Also the DLL neeeds to store the hashmap key of each node because during eviction, the DLL tells us which node to evict (the tail node), but to keep the hashmap in sync.
    What both data structures represent:
@@ -61,9 +64,6 @@ Hashmap: unordered collection of key value pairs. Known as dictionary in python 
 Hashtable: similar to hashmap in the sense that it is an unordered collection of key value pairs but different than hashmap because no null keys or null values and is thread safe
 Hashset: unordered collection of unique elements (more specific version of a set)
 
-Pass by Value vs Pass by Reference:
-Pass by value means copy of data is passed to the function so changes in the function don't affect the original variable
-Pass by Reference means reference of the data is passed so changes in the function will affect the other
 
 Divide and Conquer:
 Steps:
