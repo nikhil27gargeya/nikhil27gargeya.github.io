@@ -37,9 +37,11 @@ For dynamic arrays, the doubling of size process involves allocating a new array
 So conceptually, an array is a container that stores values in a specific order, it is contiguously allocated and can be indexed to find an address in O(1). It has issues with insertions / deletions which requires shifting.
 
 Linked List: non continguous block of memory that stores a node containing a value and pointer to the next node. Nodes not necessarily have to have the same type of value.
-When implementing a linked list, sometimes there are sentinel nodes, which are dummy nodes added to both ends of the linked list and which head and tail always point to. Basically an empty list still contains the sentinels (head -> tail). Using sentinel nodes eliminates many edge cases when implementing linked list operations.
+When implementing a linked list, sometimes there are sentinel nodes, which are dummy nodes added to both ends of the linked list and which head and tail always point to. Basically an empty list still contains the sentinels (head sentinel -> tail sentinel). Without using sentinels, an empty list has no nodes, head and tail point to null. Using sentinel nodes eliminates many edge cases when implementing linked list operations.
 ie. insertAtBeginning
-
+with sentinel nodes, head may be null, so insertion requires a separate case for empty list:
+if head == null:
+   
 
 runtimes:
 SLL (Singly Linked List) is where each node only has pointer to the successor element.
@@ -63,6 +65,37 @@ Also, an ordered hashmap works under the hood by combining with a DLL or array t
 Hashmap: unordered collection of key value pairs. Known as dictionary in python or swift.
 Hashtable: similar to hashmap in the sense that it is an unordered collection of key value pairs but different than hashmap because no null keys or null values and is thread safe
 Hashset: unordered collection of unique elements (more specific version of a set)
+
+
+
+
+
+
+Stacks and Queues: Container: a data structure that permits storage and retrieval of data items independent of content
+
+Stacks: Retrieval is LIFO Advantage: simple to implement, best to use when retrieval order doesn't matter at all, like processing batch jobs LIFO examples: subway, food in a refrigerator Queue: Retrieval is FIFO Dictionary: Access to data items by content
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Divide and Conquer:
@@ -131,7 +164,7 @@ All linked structures share certain properties:
 
 
 Algorithms:
-An algorithm is a procedure to accomplish a specific task (takes any of possible input instances and transforms it to the desired output). An algorithmic problem describes the complete set of instances it must work on and its output after running on one of its instances. (Skiena, The Algorithm Design Manual)
+An algorithm is a procedure that takes any of the possible input instances and transforms it to the desired output. (Skiena, The Algorithm Design Manual)
 
 3 desirable properties of a good algorithm:
 1. Correct
@@ -140,8 +173,8 @@ An algorithm is a procedure to accomplish a specific task (takes any of possible
 
 These goals may not be simultaneously achievable (hence why tradeoffs are required)
 
-
 Correct algorithms have a proof of correctness, which explains why every instance of the problem is transformed to the expected output
+
 
 
 
