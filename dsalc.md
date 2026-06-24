@@ -20,9 +20,35 @@ runtimes:
 Access element: O(1) because computer can identify the memory location with simple operation (address = base + (i * size_of_element)) and this is independent of array size hence O(1)
 Searching: O(n) because in the worst case it needs to traverse the entire array
 Insert/Remove: O(n) if shifting required (for insertion/removal at beginning), O(1) otherwise (insertion/removal at the end)
-Updating: O(1) if index is known, O(n) if element must first be searched for
+Updating: O(1) if index is known, O(n) if element must first be searched for 
 
-List: dynamic array (can be resized)
+Advantages
+1. Constant time access given the index (each index maps to particular memory address, so with index, we can get data)
+2. Space efficiency (no space wasted with metadata (data about data) / pointers / end of record information)
+3. Memory locality (physical continuity that comes iwth contiguous structures exploits high speed cache memory on modern computer architectures)
+
+Downsides:
+1. Cannot be resized (hence why we have dynamic arrays)
+For dynamic arrays, the doubling of size process involves allocating a new array of size 2n, copying the contents of the old array to the new one, and returning the space of the old array to the allocation system. The average number of moves per element is 2; hence, the total work of resizing is O(n). A dynamic array is asymptotically as efficient as allocating a perfectly sized array from the start. Insertions at the end, however, are no longer guaranteed O(1); they are O(1) amortized (average in the long term).
+2. Expensive insertions / deletions, requires shifting elements
+3. Single data type which is less flexible
+
+So conceptually, an array is a container that stores values in a specific order, it is contiguously allocated and can be indexed to find an address in O(1). It has issues with insertions / deletions which requires shifting.
+
+
+
+List: dynamic array (can be resized). It is the simplest linked structure (supports searching, insertion, deletion)
+Doubly Linked List is where each node points to predecessor and successor element. It simplifies these operations (trading off memory from the extra pointeres)
+1. Deleting a node when you have a pointer to it (the advantage is that instead of traversing the list to access the predecessor node), we can delete it in O(1) instead of O(n)
+   Practical example of this is LRU cache, because we maintain hashmap of keys (which is whatever identifies the  cached item). For web cache, key is URL string, for db cache key is query string, for api server key is api request. The key basically is our input in the context of what our cache is designed for. Also the DLL neeeds to store the hashmap key of each node because during eviction, the DLL tells us which node to evict (the tail node), but to keep the hashmap in sync.
+   What both data structures represent:
+   1) hashmap: do I have this key cached? If so, how recently used is it?
+   2) DLL: recency timeline, which was used least recently
+2. Inserting before a given node
+   4 point updates needed because prev/next for inserted node and next for the preceeding node and prev for the following node
+3. Traversing backwards through the linked list
+Also, an ordered hashmap works under the hood by combining with a DLL or array to track sequence of data (drawback is more space / memory usage)
+
 
 Linked List: non continguous block of memory that stores a node containing a value and pointer to the next node. Nodes not necessarily have to have the same type of value.
 runtimes:
@@ -87,6 +113,18 @@ how long does it take to run an algorithm as size of the input problem grows
 
 Spacetime Complexity:
 working memory required by an algorithm as size of the input problem grows
+
+
+
+
+Pointers are the connections that bind linked structures together, and they represent the address of a location in memory. A cell phone number can be thought of as a pointer to its owner, as they move around. 
+All linked structures share certain properties:
+1. each node contains one or more data fields
+2. each node contains pointer field(s) to other node(s), this means much much of the space is devoted to pointers over data
+3. pointer to head of the structure so we know where to access it (ie. head, root)
+
+
+
 
 
 
