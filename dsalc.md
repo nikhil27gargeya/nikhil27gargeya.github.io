@@ -38,14 +38,15 @@ So conceptually, an array is a container that stores values in a specific order,
 
 Linked List: non continguous block of memory that stores a node containing a value and pointer to the next node. Nodes not necessarily have to have the same type of value.
 runtimes:
-SLL (Singly Linked List)
-Access element: O(n) because computer cannot identify the memory location like it can with arrays
-Search: O(n)
-Insert/remove from beginning: O(1)
-Insert/remove from end: O(1) if tail pointer
-Insert/remove from middle: O(n)
 
-Doubly Linked List is where each node points to predecessor and successor element. It simplifies these operations (trading off memory from the extra pointeres)
+SLL (Singly Linked List) is where each node only has pointer to the successor element.
+Access element: O(n) because computer cannot identify the memory location like it can with arrays
+Search: O(n) because, in the worst case, it must traverse the entire linked list
+Insert: O(1) at the beginning or after a known node; O(1) at the end if a tail pointer is maintained; O(n) if the insertion location must first be found
+Remove: O(1) from the beginning or after a known previous node; O(n) from the end because the node before the tail must be found; O(n) if the removal location must first be found
+Updating: O(1) if the node is already known; O(n) if the node must first be searched for
+
+DLL (Doubly Linked List) is where each node points to predecessor and successor element. It simplifies these operations (trading off memory from the extra pointeres)
 1. Deleting a node when you have a pointer to it (the advantage is that instead of traversing the list to access the predecessor node), we can delete it in O(1) instead of O(n)
    Practical example of this is LRU cache, because we maintain hashmap of keys (which is whatever identifies the  cached item). For web cache, key is URL string, for db cache key is query string, for api server key is api request. The key basically is our input in the context of what our cache is designed for. Also the DLL neeeds to store the hashmap key of each node because during eviction, the DLL tells us which node to evict (the tail node), but to keep the hashmap in sync.
    What both data structures represent:
