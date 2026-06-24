@@ -35,9 +35,15 @@ For dynamic arrays, the doubling of size process involves allocating a new array
 
 So conceptually, an array is a container that stores values in a specific order, it is contiguously allocated and can be indexed to find an address in O(1). It has issues with insertions / deletions which requires shifting.
 
-
-
 List: dynamic array (can be resized). It is the simplest linked structure (supports searching, insertion, deletion)
+
+Linked List: non continguous block of memory that stores a node containing a value and pointer to the next node. Nodes not necessarily have to have the same type of value.
+runtimes:
+Access element: O(n) because computer cannot identify the memory location like it can with arrays
+Insert/remove from beginning:
+Insert/remove from end:
+Insert/remove from middle:
+
 Doubly Linked List is where each node points to predecessor and successor element. It simplifies these operations (trading off memory from the extra pointeres)
 1. Deleting a node when you have a pointer to it (the advantage is that instead of traversing the list to access the predecessor node), we can delete it in O(1) instead of O(n)
    Practical example of this is LRU cache, because we maintain hashmap of keys (which is whatever identifies the  cached item). For web cache, key is URL string, for db cache key is query string, for api server key is api request. The key basically is our input in the context of what our cache is designed for. Also the DLL neeeds to store the hashmap key of each node because during eviction, the DLL tells us which node to evict (the tail node), but to keep the hashmap in sync.
@@ -48,14 +54,6 @@ Doubly Linked List is where each node points to predecessor and successor elemen
    4 point updates needed because prev/next for inserted node and next for the preceeding node and prev for the following node
 3. Traversing backwards through the linked list
 Also, an ordered hashmap works under the hood by combining with a DLL or array to track sequence of data (drawback is more space / memory usage)
-
-
-Linked List: non continguous block of memory that stores a node containing a value and pointer to the next node. Nodes not necessarily have to have the same type of value.
-runtimes:
-Access element: O(n) because computer cannot identify the memory location like it can with arrays
-Insert/remove from beginning:
-Insert/remove from end:
-Insert/remove from middle:
 
 Hashmap: unordered collection of key value pairs. Known as dictionary in python or swift.
 Hashtable: similar to hashmap in the sense that it is an unordered collection of key value pairs but different than hashmap because no null keys or null values and is thread safe
