@@ -19,7 +19,8 @@ c++: int arr[]
 runtimes:
 Access element: O(1) because computer can identify the memory location with simple operation (address = base + (i * size_of_element)) and this is independent of array size hence O(1)
 Searching: O(n) because in the worst case it needs to traverse the entire array
-Insert/Remove: O(n) if shifting required (for insertion/removal at beginning), O(1) otherwise (insertion/removal at the end)
+Insert: O(n) if shifting required; O(1) amortized when inserting at the end of a dynamic array
+Remove: O(n) if shifting is required; O(1) when removing from the end
 Updating: O(1) if index is known, O(n) if element must first be searched for 
 
 Advantages
@@ -37,10 +38,12 @@ So conceptually, an array is a container that stores values in a specific order,
 
 Linked List: non continguous block of memory that stores a node containing a value and pointer to the next node. Nodes not necessarily have to have the same type of value.
 runtimes:
+SLL (Singly Linked List)
 Access element: O(n) because computer cannot identify the memory location like it can with arrays
-Insert/remove from beginning:
-Insert/remove from end:
-Insert/remove from middle:
+Search: O(n)
+Insert/remove from beginning: O(1)
+Insert/remove from end: O(1) if tail pointer
+Insert/remove from middle: O(n)
 
 Doubly Linked List is where each node points to predecessor and successor element. It simplifies these operations (trading off memory from the extra pointeres)
 1. Deleting a node when you have a pointer to it (the advantage is that instead of traversing the list to access the predecessor node), we can delete it in O(1) instead of O(n)
