@@ -1,6 +1,7 @@
 # Backend
 
 Topics: 
+client-server architecture, HTTP request-response lifecycle, HTTP methods, headers, status codes, cookies, sessions, API design, REST APIs, GraphQL, gRPC, WebSockets, polling, long polling, authentication, authorization, OAuth 2.0, OpenID Connect, JWT, server-side frameworks, middleware, request validation, serialization, deserialization, file uploads, object storage, background jobs, worker processes, scheduled jobs, message queues, event-driven backends, caching, rate limiting, pagination, idempotency, dependency injection, backend architecture patterns, monoliths, modular monoliths, microservices, logging, metrics, tracing, API testing, integration testing, backend security, performance optimization
 
 
 
