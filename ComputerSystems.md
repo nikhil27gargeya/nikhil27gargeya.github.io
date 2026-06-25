@@ -1,4 +1,4 @@
-# Fundamentals:
+# Computer Systems:
 
 Language: tool to write code
 Library: prewritten codebase that is a piece in the build
