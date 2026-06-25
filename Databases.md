@@ -1,1 +1,3 @@
 # Databases
+
+Topics: database fundamentals, relational databases, tables, rows, columns, primary keys, foreign keys, entity relationships, SQL, SELECT, INSERT, UPDATE, DELETE, joins, aggregations, subqueries, common table expressions, views, stored procedures, schema design, normalization, denormalization, indexes, B-trees, hash indexes, query execution plans, query optimization, transactions, ACID properties, isolation levels, concurrency control, locks, optimistic concurrency, pessimistic concurrency, NoSQL databases, document databases, key-value databases, wide-column databases, graph databases, replication, partitioning, sharding, database migrations, connection pooling, backups, recovery, data warehouses, OLTP, OLAP
