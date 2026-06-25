@@ -1,5 +1,7 @@
 # DSA
 
+Topics: abstract data types, time complexity, space complexity, Big-O, Big-Theta, Big-Omega, amortized analysis, arrays, dynamic arrays, strings, linked lists, stacks, queues, deques, hash tables, sets, maps, trees, binary trees, binary search trees, balanced trees, heaps, priority queues, tries, graphs, graph representations, sorting algorithms, searching algorithms, recursion, backtracking, two pointers, sliding window, prefix sums, binary search, divide and conquer, greedy algorithms, dynamic programming, breadth-first search, depth-first search, shortest-path algorithms, minimum spanning trees, union-find, topological sorting
+
 Most data structures are used in these basic ways:
 1. Read
 2. Search
