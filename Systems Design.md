@@ -1,5 +1,7 @@
 # Systems Design
 
+Topics: requirements clarification, functional requirements, nonfunctional requirements, capacity estimation, latency, throughput, bandwidth, scalability, vertical scaling, horizontal scaling, load balancing, stateless services, stateful services, caching, content delivery networks, database selection, replication, partitioning, sharding, consistent hashing, CAP theorem, consistency models, strong consistency, eventual consistency, availability, reliability, fault tolerance, redundancy, failover, message queues, pub/sub systems, event-driven architecture, batch processing, stream processing, distributed transactions, idempotency, retries, exponential backoff, circuit breakers, rate limiting, service discovery, API gateways, monoliths, microservices, distributed locking, leader election, observability, logging, metrics, tracing, disaster recovery, security, system design trade-offs
+
 Load Balancing (distributing workloads across servers):
 https://www.cloudflare.com/learning/performance/what-is-load-balancing/
 Its like having multiple checkout lines at a grocery store
