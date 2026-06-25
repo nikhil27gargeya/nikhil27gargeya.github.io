@@ -1,5 +1,7 @@
 # Languages
 
+Topics: variables, data types, control flow, functions, scope, error handling, object-oriented programming, encapsulation, inheritance, polymorphism, interfaces, abstractions, functional programming, immutability, generics, type systems, memory management, synchronous programming, asynchronous programming, concurrency fundamentals, exception handling, debugging, testing, unit testing, integration testing, system testing, end-to-end testing, test-driven development, clean code, SOLID principles, design patterns, software architecture, requirements gathering, software development lifecycle, Agile, Scrum, version control, Git, code reviews, documentation, build systems, package management, dependency management, continuous integration, continuous delivery, refactoring, technical debt, profiling, performance
+
 [Swift](swift.md)  
 [C++](c++.md)  
 [Java](java.md)  
