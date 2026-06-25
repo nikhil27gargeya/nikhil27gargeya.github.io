@@ -39,12 +39,23 @@ So conceptually, an array is a container that stores values in a specific order,
 Linked List: non continguous block of memory that stores a node containing a value and pointer to the next node. Nodes not necessarily have to have the same type of value.
 When implementing a linked list, sometimes there are sentinel nodes, which are dummy nodes added to both ends of the linked list and which head and tail always point to. Basically an empty list still contains the sentinels (head sentinel -> tail sentinel). Without using sentinels, an empty list has no nodes, head and tail point to null. Using sentinel nodes eliminates many edge cases when implementing linked list operations.
 ie. insertAtBeginning
-with sentinel nodes, head may be null, so insertion requires a separate case for empty list:
-if head == null:
-   
+without sentinel nodes, head may be null, so insertion requires a separate case for empty list.
+def insertAtBeginning(value): 
+	new_node = Node(value) 
+	if head is None: 
+		head = new_node 
+		tail = new_node 
+	else: 
+		new_node.next = head 
+		head = new_node
+but with sentinel nodes, head and tail always exist, so there is no need for separate case.
+def insert_at_beginning(value): 
+	new_node = Node(value) 
+	new_node.next = head.next 
+	head.next = new_node
 
-runtimes:
 SLL (Singly Linked List) is where each node only has pointer to the successor element.
+runtimes:
 Access element: O(n) because computer cannot identify the memory location like it can with arrays
 Search: O(n) because, in the worst case, it must traverse the entire linked list
 Insert: O(1) at the beginning or after a known node; O(1) at the end if a tail pointer is maintained; O(n) if the insertion location must first be found
@@ -61,6 +72,27 @@ DLL (Doubly Linked List) is where each node points to predecessor and successor 
    4 point updates needed because prev/next for inserted node and next for the preceeding node and prev for the following node
 3. Traversing backwards through the linked list
 Also, an ordered hashmap works under the hood by combining with a DLL or array to track sequence of data (drawback is more space / memory usage)
+
+runtimes:
+Access element: O(n) because the computer cannot identify the memory location directly like it can with arrays, although traversal can begin from either the head or tail
+Search: O(n) because, in the worst case, we need to inspect every node
+Insert: O(1) at the beginning, at the end if a tail pointer is maintained, or before/after a known node; O(n) if the insertion location must first be found
+Remove: O(1) from the beginning, from the end if a tail pointer is maintained, or when the node is already known; O(n) if the removal location must first be found
+Updating: O(1) if the node is already known; O(n) if the node must first be searched for
+
+Array vs Linked List:
+
+
+
+
+
+
+
+
+
+
+
+
 
 Hashmap: unordered collection of key value pairs. Known as dictionary in python or swift.
 Hashtable: similar to hashmap in the sense that it is an unordered collection of key value pairs but different than hashmap because no null keys or null values and is thread safe
