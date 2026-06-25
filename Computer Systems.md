@@ -1,5 +1,8 @@
 # Computer Systems:
 
+Topics: binary, hexadecimal, data representation, bits, bytes, words, integer representation, floating-point representation, Boolean logic, computer architecture, CPU structure, registers, instruction cycles, assembly language, machine code, memory hierarchy, CPU caches, cache locality, RAM, virtual memory, stack memory, heap memory, memory allocation, pointers, references, processes, threads, context switching, concurrency, parallelism, synchronization, locks, mutexes, semaphores, condition variables, deadlocks, operating systems, system calls, file systems, input/output, networking fundamentals, TCP/IP, UDP, DNS, sockets, compilers, interpreters, linking, loading
+
+
 Language: tool to write code
 Library: prewritten codebase that is a piece in the build
 Framework: Blueprint on which your code functions on
