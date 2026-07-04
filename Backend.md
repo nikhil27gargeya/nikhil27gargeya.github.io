@@ -15,7 +15,7 @@ Kafka is a distributed data store for ingesting and processing streaming data in
 
 API design:
 
-JSON can have 3 types:
+JSON can have 3 categories:
 1. Scalars (single atomic data points like Strings, numbers, booleans, null)
 2. Arrays (ordered list of values)
 3. Objects (unordered collections of key value pairs)
