@@ -12,3 +12,22 @@ Autoconfiguration intializes applications with pre-set dependencies
 Redis(short for remote dictionary server): stores data in memory instead of on drive, in key/value pairs for low latency retrieval. God to use as a cache for web apps.
 
 Kafka is a distributed data store for ingesting and processing streaming data in real-time. Good for building real-time streaming data pipelines. Used as a message broker or for taking in activity data.
+
+API design:
+
+JSON can have 3 types:
+1. Scalars (single atomic data points like Strings, numbers, booleans, null)
+2. Arrays (ordered list of values)
+3. Objects (unordered collections of key value pairs)
+
+
+
+
+
+Resources and collections:
+A resource represents a specific piece of data or object that can be accessed via a unique URI. In an API that handles invoices and payments, each invoice would be a resource, with each resource having its own URI. For example, /invoices/645E79D9E14 is the **endpoint** (a alocation where an API receives  that uniquely idenitfies a single resource, in this case, the invoice with the ID 645E79D9E14. (https://apisyouwonthate.com/blog/understanding-resources-and-collections-in-restful-apis/)
+
+
+
+
+A collection is a group of resources, and a list or set of all the items of a particular type.
