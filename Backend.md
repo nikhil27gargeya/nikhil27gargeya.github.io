@@ -20,12 +20,10 @@ JSON can have 3 categories:
 2. Arrays (ordered list of values)
 3. Objects (unordered collections of key value pairs)
 
-
-
-
+An endpoint is a location/point of entry to an API typically denoted by a URL where an API accepts requests to access data or perform an operation
 
 Resources and collections:
-A resource represents a specific piece of data or object that can be accessed via a unique URI. In an API that handles invoices and payments, each invoice would be a resource, with each resource having its own URI. For example, /invoices/645E79D9E14 is the **endpoint** (a alocation where an API receives  that uniquely idenitfies a single resource, in this case, the invoice with the ID 645E79D9E14. (https://apisyouwonthate.com/blog/understanding-resources-and-collections-in-restful-apis/)
+A resource represents a specific piece of data or object that can be accessed via a unique URI. In an API that handles invoices and payments, each invoice would be a resource, with each resource having its own URI. For example, /invoices/645E79D9E14 is the **endpoint**  that uniquely idenitfies a single resource, in this case, the invoice with the ID 645E79D9E14. (https://apisyouwonthate.com/blog/understanding-resources-and-collections-in-restful-apis/)
 
 
 
