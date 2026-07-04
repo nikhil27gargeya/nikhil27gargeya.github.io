@@ -96,7 +96,7 @@ Array vs Linked List:
 
 
 
-Hashmap: unordered collection of key value pairs. Known as dictionary in python or swift.
+Hashmap: unordered collection of key value pairs (there is no guaranteed order). Known as dictionary in python or swift.
 Hashtable: similar to hashmap in the sense that it is an unordered collection of key value pairs but different than hashmap because no null keys or null values and is thread safe
 Hashset: unordered collection of unique elements (more specific version of a set)
 
