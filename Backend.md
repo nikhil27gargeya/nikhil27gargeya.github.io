@@ -4,7 +4,7 @@ Topics:
 client-server architecture, HTTP request-response lifecycle, HTTP methods, headers, status codes, cookies, sessions, API design, REST APIs, GraphQL, gRPC, WebSockets, polling, long polling, authentication, authorization, OAuth 2.0, OpenID Connect, JWT, server-side frameworks, middleware, request validation, serialization, deserialization, file uploads, object storage, background jobs, worker processes, scheduled jobs, message queues, event-driven backends, caching, rate limiting, pagination, idempotency, dependency injection, backend architecture patterns, monoliths, modular monoliths, microservices, logging, metrics, tracing, API testing, integration testing, backend security, performance optimization
 
 Client server architecture:
-A computing model where multiple clients (users or devices) communicate with a server to access data, resources, or services. The client triggers requests (commonly in form of HTTP messages but could be other protocols) to a server's IP address. The server listens on a specific port and handles the incoming requests. It runs logic, queries a db if needed, then prepares a response. Once this processing is done, the server sends the result back. The client receivese the response and renders it on screen. 
+A computing model where multiple clients (users or devices) communicate with a server to access data, resources, or services. The client triggers requests (commonly in form of HTTP messages but could be other protocols) to a server's IP address. The server listens on a specific port and handles the incoming requests. It runs logic, queries a db if needed, then prepares a response. Once this processing is done, the server sends the result back. The client receives the response and renders it on screen. 
 Client server architecture can be 1 tier/monolithic, 2 tier, 3 tier (includes dedicated application layer), n-tier (dedicated layers for caching, authentication, analytics, API gateways, etc.)
 
 HTTP request-response lifecycle:
@@ -30,6 +30,7 @@ HTTP request:   GET /v2/profiles HTTP/1.1
                 Host: ://myapp.com
                 Accept: application/json
 
+HTTP Methods:
 
 
 
