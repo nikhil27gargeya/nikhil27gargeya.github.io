@@ -5,26 +5,38 @@ client-server architecture, HTTP request-response lifecycle, HTTP methods, heade
 
 Client server architecture:
 A computing model where multiple clients (users or devices) communicate with a server to access data, resources, or services. The client triggers requests (commonly in form of HTTP messages but could be other protocols) to a server's IP address. The server listens on a specific port and handles the incoming requests. It runs logic, queries a db if needed, then prepares a response. Once this processing is done, the server sends the result back. The client receivese the response and renders it on screen. 
-Client server architecture can be 1 tier/monolithic, 2 tier, 3 tier (includes dedicated application layer), n tier (dedicated layers for caching, authentication, analytics, API gateways, etc.)
+Client server architecture can be 1 tier/monolithic, 2 tier, 3 tier (includes dedicated application layer), n-tier (dedicated layers for caching, authentication, analytics, API gateways, etc.)
 
 HTTP request-response lifecycle:
 HTTP is a communication protocol that defines how clients and servers communicate. HTTPS encrypts the communicated data using TLS, more on encryption later) which defines:
-1. where request is sent (
-2. request method
-3. headers
-4. status codes
+1. where request is sent (the URL identifies the server and requested resource, such as https://yourservice.com/api/auth/signup)
+2. request method (GET, POST, PUT, DELETE)
+3. headers (metadata about the request and/or the response)
+4. status codes (indicates result of the request)
 5. Request and response body (JSON is commonly found in the HTTP body, but HTTP does not require it)
 
-When a client executes a call, it splits an endpoint into request target and domain. 
-GET /v2/profiles HTTP/1.1
-Host: ://myapp.com
-Accept: application/json
+URL vs URI vs URN:
+URI (Uniform Resource Identifier): string that identifies a resource (represenation of a specific piece of data or object). It may identify the resource by location, by name, or through another URI scheme. (ie. mailto:alice@example.com)
+URL (Uniform Resource Locator): string that denotes the location of a given resource (ie. https://example.com/users/42)
+URN (Uniform Resource Name): identifies a resource by name rather than by location (ie. urn:isbn:9780140328721)
+
+When a client executes a call, it splits a URL:
+URL:            https://myapp.com/v2/profiles
+Scheme:         https
+Domain/host:    myapp.com
+Request target: /v2/profiles
+Endpoint:       GET https://myapp.com/v2/profiles
+HTTP request:   GET /v2/profiles HTTP/1.1
+                Host: ://myapp.com
+                Accept: application/json
+
+
+
 
 JSON can have 3 categories:
 1. Scalars (single atomic data points like Strings, numbers, booleans, null)
 2. Arrays (ordered list of values)
 3. Objects (unordered collections of key value pairs)
-
 
 API design:
 
