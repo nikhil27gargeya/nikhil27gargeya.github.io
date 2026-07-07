@@ -55,11 +55,23 @@ HTTP request:   GET /v2/profiles HTTP/1.1
                 {blank line represents end of request headers}
                 {Request body, such as JSON body would go here if needed}
 
-HTTP Methods:
-GET (retrieves data from a server without modifying anything), typically there is no request body and if there is one it should't have any semantic meaning and may be ignored by the server
+HTTP Methods (correlates with CRUD operations):
+GET (retrieves data from a server without modifying anything), typically does not include a request body. Although a request body is possible, it usually has no defined semantic meaning and may be ignored by the server.
 POST (submits new data to a server to create a resource),
 PUT (replaces a target resource with uploaded payload)
+PATCH (partially updates target resource with uploaded payload, sends fields that need to change)
 DELETE (removes specified resource from the server)
+
+API Headers:
+represents key-value metadata associated with an api request and response
+Examples:
+Content-Type: application/json (header that describes the body)
+Authorization: Bearer abc123token (request authorization)
+Cache-Control: max-age=3600 (telling client whether it can reuse a response)
+Set-Cookie: sessionId=abc123 (store cookie and send back on future requests)
+
+
+
 
 
 JSON can have 3 categories:
