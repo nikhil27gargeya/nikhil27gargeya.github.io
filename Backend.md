@@ -8,7 +8,7 @@ A computing model where multiple clients (users or devices) communicate with a s
 Client server architecture can be 1 tier/monolithic, 2 tier, 3 tier (includes dedicated application layer), n-tier (dedicated layers for caching, authentication, analytics, API gateways, etc.)
 
 HTTP request-response lifecycle:
-HTTP is a communication protocol that defines how clients and servers communicate. HTTPS encrypts the communicated data using TLS, more on encryption later) which defines:
+HTTP is a communication protocol that defines how clients and servers communicate. HTTP protocol is stateless (each request is independent and server has no memory of previous requests by default). HTTPS encrypts the communicated data using TLS, more on encryption later) which defines:
 1. where request is sent (the URL identifies the server and requested resource, such as https://yourservice.com/api/auth/signup)
 2. request method (GET, POST, PUT, DELETE)
 3. headers (metadata about the request and/or the response)
@@ -98,6 +98,18 @@ Preservation: when a redirected request keeps the same HTTP method and request b
 - 501 means not implemented (request method or feature is not recognized or has not been enabled on the server)
 - 502 means bad gateway (when server acting as a gateway receives invalid response from upstream server)
 - 504 means gateway timeout (similar to 502, but instead of invalid response, there is no response received within given timeframe)
+
+
+Cookies vs Sessions vs Tokens:
+
+Cookies:
+Cookies are small pieces of data that a server sends to a client to enable features like session management, personalization, and user tracking. Server response contains Set-Cookie header (ie. Set-Cookie: userId=xyz12345) and client stores that cookie. On subsequent requests, the client includes the cookie header with the stored value. In a stateful session, the cookie stores a random session ID. In a stateless cookie/token, the cookie itself contains encoded user/session information plus a cryptographic signature, allowing the backend to verify that the data was created by the server and not tampered with.
+
+Sessions:
+
+
+Tokens:
+
 
 
 
