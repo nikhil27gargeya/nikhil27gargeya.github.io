@@ -70,6 +70,35 @@ Authorization: Bearer abc123token (request authorization)
 Cache-Control: max-age=3600 (telling client whether it can reuse a response)
 Set-Cookie: sessionId=abc123 (store cookie and send back on future requests)
 
+Status Codes:
+1xx (Informational, these responses are provisional and do not represent a final outcome)
+2xx (Success)
+- 200 means request successful (request was received, understood, processed, and requested content was returned normally)
+- 201 means request successful and resource created
+- 202 means accepted (request has been received and accepted, but is still being processed, typically seen in asynchronous operations where immediate completion is not possible)
+- 204 means no content (server successfully processed request but does not need to return a response body)
+3xx (Redirection, instruct the client to take additional action to complete the request, usually by requesting a different URL)
+- 301 means moved permanently (URL has moved permanently, does not guarantee the same HTTP method or request body is preserved)
+- 302 means found (URL is temporarily moved)
+- 304 means not modified (requested resource has not changed since the last time it was retrieved)
+- 308 means permanent redirect (similar to 301, permanent change on URL, but the difference is that it guarantees the same HTTP method and request body is preserved
+Preservation: when a redirected request keeps the same HTTP method and request body as the original request
+4xx (Client error)
+- 400 means bad request (server cannot process due to syntax issues, invalid parameters, or unreadable/corrupted data sent by client)
+- 401 means unauthorized (server does not receive valid authorization credentials)
+- 403 means forbidden (server does not grant access to resource)
+- 404 means not found (requested resource is not available and may or may not come back)
+- 406 means not acceptable (server cannot generate a response that matches acceptable values defined in request's headers)
+- 407 means proxy authentication required (client must authenticate with proxy server before request can be fulfilled)
+- 408 means request timeout (server did not receive complete request in expected time frame, and closed the connection)
+- 409 means conflict (request could not be completed due to conflict with the current state of the resource)
+- 429 means too many requests (client has sent too many requests in a given timeframe. Prevents excessive traffic)
+5xx (Server error)
+- 500 means internal server error (generic code when server cannot fulfill the request)
+- 501 means not implemented (request method or feature is not recognized or has not been enabled on the server)
+- 502 means bad gateway (when server acting as a gateway receives invalid response from upstream server)
+- 504 means gateway timeout (similar to 502, but instead of invalid response, there is no response received within given timeframe)
+
 
 
 
