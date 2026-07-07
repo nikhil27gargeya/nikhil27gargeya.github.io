@@ -21,6 +21,7 @@ URL (Uniform Resource Locator): string that denotes the location of a given reso
 URN (Uniform Resource Name): identifies a resource by name rather than by location (ie. urn:isbn:9780140328721)
 
 API design:
+An API is set of definitions and protocols that enables software components to communicate
 
 Why have APIs:
 To enable developers to avoid rebuilding application features that already exist (https://www.cloudflare.com/learning/security/api/what-is-api-endpoint/)
@@ -28,10 +29,18 @@ To enable developers to avoid rebuilding application features that already exist
 An endpoint is a location (point of entry to an API) typically identified by a URL, where an API accepts requests to access data or perform an operation.
 
 Resources and collections:
-A resource represents a specific piece of data or object that can be accessed via a unique URI. In an API that handles invoices and payments, each invoice would be a resource, with each resource having its own URI. For example, /invoices/645E79D9E14 is the resource path that uniquely idenitfies a single resource, in this case, the invoice with the ID 645E79D9E14. (https://apisyouwonthate.com/blog/understanding-resources-and-collections-in-restful-apis/). GET /invoices/645E79D9E14 would be the endpoint.
+A resource is a specific piece of data or object that can be accessed via a unique URI. In an API that handles invoices and payments, each invoice would be a resource, with each resource having its own URI. For example, /invoices/645E79D9E14 is the resource path that uniquely idenitfies a single resource, in this case, the invoice with the ID 645E79D9E14. (https://apisyouwonthate.com/blog/understanding-resources-and-collections-in-restful-apis/). GET /invoices/645E79D9E14 would be the endpoint.
 
 What is a RESTful API:
-An API that conforms to the REST (representational state transfer) architecture style. At its core, it revolves around the idea of resources, which can be any piece of information like a user, product, document, or collection of items. (https://cloud.google.com/discover/what-is-rest-api)
+An API that conforms to the REST (representational state transfer) architecture style (it is not a protocol, but rather a set of constraints). At its core, it revolves around the idea of resources, which can be any piece of information like a user, product, document, or collection of items. (https://cloud.google.com/discover/what-is-rest-api). When a client request is made via a REST API, it transfers a reprentation of the state of the resource to the endpoint. This information is delivered in one of several formats via HTTP (JSON, HTML, XML, Python, PHP, plain text). JSON is popular because it is language agnostic and readable by humans and machines (https://www.redhat.com/en/topics/api/what-is-a-rest-api). 
+
+In order for an API to be considered RESTful, it must have:
+A client-server architecture made up of clients, servers, and resources, with requests managed through HTTP.
+Stateless client-server communication, meaning no client information is stored between get requests and each request is separate and unconnected.
+Cacheable data so clients can avoid making unnecessary requests
+Uniform interface between components so data is transferred in standard way (resources are identified by URIs, actions are performed through standard HTTP methods, and data is transferred as representations, such as JSON. The resource itself is separate from the representation sent to the client)
+Layered system that organizes each type of server into hierarchies, invisible to the client
+Code on demand (server can send exectuable code to the client)
 
 When a client executes a call, it parses a URL:
 URL:            https://myapp.com/v2/profiles
@@ -46,12 +55,11 @@ HTTP request:   GET /v2/profiles HTTP/1.1
                 {blank line represents end of request headers}
                 {Request body, such as JSON body would go here if needed}
 
-
 HTTP Methods:
-GET (
-POST (
-PUT (
-DELETE (
+GET (retrieves data from a server without modifying anything), typically there is no request body and if there is one it should't have any semantic meaning and may be ignored by the server
+POST (submits new data to a server to create a resource),
+PUT (replaces a target resource with uploaded payload)
+DELETE (removes specified resource from the server)
 
 
 JSON can have 3 categories:
