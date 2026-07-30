@@ -52,8 +52,8 @@ HTTP request:   GET /v2/profiles HTTP/1.1
                 Host: myapp.com
                 Accept: application/json
                 
-                {blank line represents end of request headers}
-                {Request body, such as JSON body would go here if needed}
+                blank line represents end of request headers
+                Request body, such as JSON body would go here if needed
 
 HTTP Methods (correlates with CRUD operations):
 GET (retrieves data from a server without modifying anything), typically does not include a request body. Although a request body is possible, it usually has no defined semantic meaning and may be ignored by the server.
