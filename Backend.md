@@ -21,7 +21,7 @@ URL (Uniform Resource Locator): string that denotes the location of a given reso
 URN (Uniform Resource Name): identifies a resource by name rather than by location (ie. urn:isbn:9780140328721)
 
 API design:
-An API is set of definitions and protocols that enables software components to communicate
+An API is set of definitions and protocols that enable software components to communicate
 
 Why have APIs:
 To enable developers to avoid rebuilding application features that already exist (https://www.cloudflare.com/learning/security/api/what-is-api-endpoint/)
@@ -30,6 +30,8 @@ An endpoint is a location (point of entry to an API) typically identified by a U
 
 Resources and collections:
 A resource is a specific piece of data or object that can be accessed via a unique URI. In an API that handles invoices and payments, each invoice would be a resource, with each resource having its own URI. For example, /invoices/645E79D9E14 is the resource path that uniquely idenitfies a single resource, in this case, the invoice with the ID 645E79D9E14. (https://apisyouwonthate.com/blog/understanding-resources-and-collections-in-restful-apis/). GET /invoices/645E79D9E14 would be the endpoint.
+
+A collection is a group of resources, and a list or set of all the items of a particular type.
 
 What is a RESTful API:
 An API that conforms to the REST (representational state transfer) architecture style (it is not a protocol, but rather a set of constraints). At its core, it revolves around the idea of resources, which can be any piece of information like a user, product, document, or collection of items. (https://cloud.google.com/discover/what-is-rest-api). When a client request is made via a REST API, it transfers a reprentation of the state of the resource to the endpoint. This information is delivered in one of several formats via HTTP (JSON, HTML, XML, Python, PHP, plain text). JSON is popular because it is language agnostic and readable by humans and machines (https://www.redhat.com/en/topics/api/what-is-a-rest-api). 
@@ -99,7 +101,6 @@ Preservation: when a redirected request keeps the same HTTP method and request b
 - 502 means bad gateway (when server acting as a gateway receives invalid response from upstream server)
 - 504 means gateway timeout (similar to 502, but instead of invalid response, there is no response received within given timeframe)
 
-
 Cookies vs Sessions vs Tokens:
 
 Cookies:
@@ -111,15 +112,24 @@ A session stores a user's state and related data across multiple requests. Sessi
 Tokens:
 A token is a credential that a client sends for identity. Commonly sent through the authorization header. Example is JWT which is signed and contains information about a user. When the backend receives JWT, it verifies the signature (to make sure it wasn't modified) using its secret key. For example, a user logs into mobile app, server creates a JWT, returns it to the mobile app (access token, and refresh token), and the app stores those tokens in a secure storage. Then the app sends JWT as part of the api headers. When expired it sends the refresh token to receive a new access token. As compared to a session token which is usually a random opaque id, a JWT contains signed information that the server can directly verify.
 
-API design:
-
-
 JSON can have 3 categories:
 1. Scalars (single atomic data points like Strings, numbers, booleans, null)
 2. Arrays (ordered list of values)
 3. Objects (unordered collections of key value pairs)
 
-A collection is a group of resources, and a list or set of all the items of a particular type.
+GraphQL:
+
+
+
+
+
+
+
+
+
+
+
+
 Springboot is a tool that makes developing web applications with Java Spring Framework faster.
 
 Good for modular applications that are ideal for microservices.
