@@ -111,6 +111,7 @@ A session stores a user's state and related data across multiple requests. Sessi
 Tokens:
 A token is a credential that a client sends for identity. Commonly sent through the authorization header. Example is JWT which is signed and contains information about a user. When the backend receives JWT, it verifies the signature (to make sure it wasn't modified) using its secret key. For example, a user logs into mobile app, server creates a JWT, returns it to the mobile app (access token, and refresh token), and the app stores those tokens in a secure storage. Then the app sends JWT as part of the api headers. When expired it sends the refresh token to receive a new access token. As compared to a session token which is usually a random opaque id, a JWT contains signed information that the server can directly verify.
 
+API design:
 
 
 JSON can have 3 categories:
