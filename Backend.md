@@ -106,11 +106,10 @@ Cookies:
 Cookies are small pieces of data that a server sends to a client to enable features like session management, personalization, and user tracking. Server response contains Set-Cookie header (ie. Set-Cookie: userId=xyz12345) and client stores that cookie. On subsequent requests, the client includes the cookie header with the stored value. In a stateful session, the cookie stores a random session ID. In a stateless cookie/token, the cookie itself contains encoded user/session information plus a cryptographic signature, allowing the backend to verify that the data was created by the server and not tampered with.
 
 Sessions:
-
+A session stores a user's state and related data across multiple requests. Session data is stored on the server and gives the server a way to associate multiple requests with the same user. The client stores a sessionId and send it with each request. The server uses the id to lookup the session and identify the user.
 
 Tokens:
-
-
+A token is a credential that a client sends for identity. Commonly sent through the authorization header. Example is JWT which is signed and contains information about a user. When the backend receives JWT, it verifies the signature (to make sure it wasn't modified) using its secret key. For example, a user logs into mobile app, server creates a JWT, returns it to the mobile app (access token, and refresh token), and the app stores those tokens in a secure storage. Then the app sends JWT as part of the api headers. When expired it sends the refresh token to receive a new access token.
 
 
 
