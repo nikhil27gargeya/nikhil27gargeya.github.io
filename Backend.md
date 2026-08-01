@@ -126,6 +126,8 @@ For modifying the data (write operation)
 Subscription
 For real time updates
 
+Example: Github GraphQL API lets developers query what they need, and a single request can fetch repository details, issues, and contributors all at once. (https://blog.postman.com/what-is-a-graphql-api-how-does-it-work/)
+
 
 
 
