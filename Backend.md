@@ -118,9 +118,13 @@ JSON can have 3 categories:
 3. Objects (unordered collections of key value pairs)
 
 GraphQL:
-Query language for APIs that enables clients to interact with a single endpoint to get the data they need. Reduces round trips between client and server which is beneficial for performance.
-
-
+Query language for APIs that enables clients to interact with a single endpoint to get the data they need. Reduces round trips between client and server which is beneficial for performance. Every GraphQL endpoint is defined by a schema, which defines the types, fields, relationships in the data, as well as the queries/mutations allowed. 
+Query
+For reading data, the syntax of the query mirrors the structure of the response. 
+Mutation
+For modifying the data (write operation)
+Subscription
+For real time updates
 
 
 
