@@ -128,8 +128,13 @@ For real time updates
 
 Example: Github GraphQL API lets developers query what they need, and a single request can fetch repository details, issues, and contributors all at once. (https://blog.postman.com/what-is-a-graphql-api-how-does-it-work/)
 
+gRPC:
+implementation of RPC open sourced by Google
+A schema driven framework that facilitates service-to-service communication in distributed environments.
+RPC: remote procedure call
 
 
+Websockets:
 
 
 
