@@ -130,15 +130,17 @@ Example: Github GraphQL API lets developers query what they need, and a single r
 
 gRPC (implementation of RPC open sourced by Google):
 A schema driven framework that facilitates service-to-service communication in distributed environments (collection of independent components and machines located on different systems communicating together). It is language agnostic.
-RPC: remote procedure call
+RPC: remote procedure call (with gRPC you define which procedures can be called remotely by other microservices)
 Protobuf (.proto) files contain the service methods, message types, and structure of the API. The protoc compiler generates the client and server code including classes or modules that abstract the complexity of making gRPC calls.
 Method types:
-Unary 
-Server streaming
-Client streaming
-Bidirectional streaming
+Unary (single request, single response)
+Server streaming (single request, stream of responses)
+Client streaming (stream of requests, single response)
+Bidirectional streaming (stream of requests, stream of responses)
 
-
+Difference between REST and gRPC (https://blog.postman.com/what-is-grpc/)
+REST uses standardized set of HTTP methods to request resources from a server via their corresponding API endpoints
+gRPC client calls functions on the server as if they were local functions, and uses Protobuf to define the data structure and serializes the data into binary format (no need to use gZip across microservices)
 
 Websockets:
 
