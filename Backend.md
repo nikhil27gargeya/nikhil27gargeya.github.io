@@ -128,10 +128,16 @@ For real time updates
 
 Example: Github GraphQL API lets developers query what they need, and a single request can fetch repository details, issues, and contributors all at once. (https://blog.postman.com/what-is-a-graphql-api-how-does-it-work/)
 
-gRPC:
-implementation of RPC open sourced by Google
-A schema driven framework that facilitates service-to-service communication in distributed environments (collection of independent components and machines located on different systems communicating together).
+gRPC (implementation of RPC open sourced by Google):
+A schema driven framework that facilitates service-to-service communication in distributed environments (collection of independent components and machines located on different systems communicating together). It is language agnostic.
 RPC: remote procedure call
+Protobuf (.proto) files contain the service methods, message types, and structure of the API. The protoc compiler generates the client and server code including classes or modules that abstract the complexity of making gRPC calls.
+Method types:
+Unary 
+Server streaming
+Client streaming
+Bidirectional streaming
+
 
 
 Websockets:
