@@ -143,10 +143,12 @@ REST uses standardized set of HTTP methods to request resources from a server vi
 gRPC client calls functions on the server as if they were local functions, and uses Protobuf to define the data structure and serializes the data into binary format (no need to use gZip across microservices)
 
 Websockets:
+network protocol that provides two way real time communication between client and server
+reduces latency and overhead for applications that require real time interaction
+unlike HTTP protocol, where the client initiates requests, websockets allow the client and server to send messages to each other
+every websocket connection starts with an HTTP request with special headers (101 switching protocols status code confirms the protocol change)
 
-
-
-
+Polling:
 
 
 Springboot is a tool that makes developing web applications with Java Spring Framework faster.
