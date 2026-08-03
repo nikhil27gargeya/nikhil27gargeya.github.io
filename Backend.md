@@ -130,7 +130,7 @@ Example: Github GraphQL API lets developers query what they need, and a single r
 
 gRPC:
 implementation of RPC open sourced by Google
-A schema driven framework that facilitates service-to-service communication in distributed environments.
+A schema driven framework that facilitates service-to-service communication in distributed environments (collection of independent components and machines located on different systems communicating together).
 RPC: remote procedure call
 
 
