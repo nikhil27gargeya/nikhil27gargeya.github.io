@@ -149,8 +149,13 @@ unlike HTTP protocol, where the client initiates requests, websockets allow the 
 every websocket connection starts with an HTTP request with special headers (101 switching protocols status code confirms the protocol change)
 
 Polling:
-Short: client continuously sends requests to server at fixed intervals (server responds with data if available or empty response if not)
-Long: client sends a request and the server holds it until data is available instead of responding immmediately, once response is received, the client instantly sends another request to keep listening for further responses
+Short: client continuously sends requests to server at fixed intervals (server responds with data if available or empty response if not). Easy to implement but client can receives many empty responses. 
+Long: client sends a request and the server holds it until data is available instead of responding immmediately, once response is received, the client instantly sends another request to keep listening for further responses. Fewer requests, data is sent once available (low latency), consumes more server resources as each open connection uses system memory
+
+
+
+
+
 
 Springboot is a tool that makes developing web applications with Java Spring Framework faster.
 
