@@ -158,7 +158,16 @@ client makes initial request, and connection remains open
 main difference between SSE and long polling is that with SSE there is a single connection open for multiple data updates, while long polling opens a new connection for each update
 
 Authentication:
+verification of the identity of an individual or device before granting access to a specific resource or system
+most basic form is username and password combination, but past this there is:
+MFA
+OTP
+Biometrics
 
+
+
+
+Authorization:
 
 
 
