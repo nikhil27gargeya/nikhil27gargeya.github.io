@@ -163,12 +163,20 @@ most basic form is username and password combination, but past this there is:
 MFA
 OTP
 Biometrics
+Token based (JWT)
 
-
+User enters email and password -> backend compares these details against the database. If they match, the server generates a JWT or sessionId, confirming that the user is authenticated
 
 
 Authorization:
+determines what a user is allowed to do after they are authenticated
+role based access
+attribute based access
+permission based access
 
+An access token is a short lived credential that tells an API what the user is allowed to 
+contains the permissions, scripts, or roles
+sent in authorization token
 
 
 
