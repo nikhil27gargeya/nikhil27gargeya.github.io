@@ -306,8 +306,49 @@ Space Complexity: O(k) where k with the number of unique characters stored in th
 Basic DSA problems:
 
 max value (return the largest number in a list of numbers)
+
 `
 def max_value(nums):
+	max = nums[0] # set max to the first number, then we will compare with the rest of the numbers
+	# 3, 4, 5, 6    n = 4 , iteration happens for index 1 to index 3
+	for i in range(1, n):
+	  if nums[i] > max:
+        max = nums[i]
+    return max
+`
+
+`
+def longest_word(sentence):
+  #"what a wonderful word" -> "wonderful"
+  #track the length of the current word and store it as max, anytime we find a longer word we can update the variable
+  arr = sentence.split(" ")
+  n = len(arr)
+  max = arr[0]
+  for i in range(1, n):
+    if len(arr[i]) >= len(max):
+      max = arr[i] # ie. max gets updated to "wonderful"
+  return max # -> "wonderful"
+`
+
+`
+def all_even(nums):
+  for num in nums:
+  #early exit condition
+    if num % 2 != 0:
+      return False
+  return True
+`
+
+`
+def is_prime(n):
+  #dealing with base cases
+  if n <= 1:
+    return False
+  for i in range(2, n):
+    if n % i == 0:
+      return False
+  return True
+  
 `
 
 
