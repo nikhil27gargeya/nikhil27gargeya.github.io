@@ -303,7 +303,26 @@ Space Complexity: O(k) where k with the number of unique characters stored in th
 
 
 
-#Structy
+Basic DSA problems:
+
+max value (return the largest number in a list of numbers)
+`
+def max_value(nums):
+`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Todo: Sorting Algorithms
 
 M1: Array: -Ordered -Contiguous Fast access, but inserts and deletes can be expensive (insert at beginning or middle is O(n) but at end is O(1) amortized meaning average in the long term) .split in python: breaks string into list of smaller strings based on specified delimiter words = sentence.split(" ")
