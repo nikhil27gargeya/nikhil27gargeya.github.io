@@ -230,7 +230,7 @@ Correct algorithms have a proof of correctness, which explains why every instanc
 
 
 
-# LC75
+# LC Patterns
 Sliding Window has two types of problems (and its typically not used when constraints indicate there are negative numbers, because it would be uncertain whether shifting helps)
 1. Fixed Size (set window size)
 2. Dynamic Size (two pointers that move in the same direction which shrinks and expands the window depending on the subset being looked at in the array)
@@ -310,6 +310,18 @@ Time Complexity: O(n + m) as we iterate through both strings
 
 Space Complexity: O(k) where k with the number of unique characters stored in the map """
 
+def twoSum(self, nums: List[int], target: int) -> List[int]: 
+"""
+Problem: Given an array of integers and a target number, return the indices i and j where nums[i] + nums[j] == target, and i != j
+
+Algorithm: 
+for each element in the array, we calculate the number we will be looking for in the rest of the array, and storing it against the index in a hashmap. Once we find that value (by checking if the current num is in our hashmap), then we can return the index associated with the number we stored in our hashmap and the current index i.
+
+
+
+
+
+"""
 
 
 # Basic DSA Problems
