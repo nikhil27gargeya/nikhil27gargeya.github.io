@@ -148,6 +148,15 @@ reduces latency and overhead for applications that require real time interaction
 unlike HTTP protocol, where the client initiates requests, websockets allow the client and server to send messages to each other
 every websocket connection starts with an HTTP request with special headers (101 switching protocols status code confirms the protocol change)
 
+ie. Chatting Application
+Person 1 and Person 2 both have instances of their application
+Server and Database that stores conversation data
+In a REST model, Person 1 application sends POST request (containing room, user id, message payload) to the server and database will store it
+When Person 2 responds, this response is retrieved with a GET request from Person 1's application 
+Issue here is that we don't know how to notify Person 2 to pull the request. This can be solved using short polling, meaning that when the application loads up, it will send a GET request asking for any new messages. However, this is not efficient at all, because of latency delay between api calls. Long polling would be keeping the request open until the database changes, but this utilizes server resources constantly which is inefficent (ie. memory, threads).
+In the Web Socket model, Person 1 and Person 2 application establishes connection to the server (indicating that the user is present). When a message is sent, the server will broadcast the message out to the recipient user. So, instead of request-response which is client-initiated, server can initiate and push content which is bidirectional.
+
+
 Polling:
 Short: client continuously sends requests to server at fixed intervals (server responds with data if available or empty response if not). Easy to implement but client can receives many empty responses. 
 Long: client sends a request and the server holds it until data is available instead of responding immmediately, once response is received, the client instantly sends another request to keep listening for further responses. Fewer requests, data is sent once available (low latency), consumes more server resources as each open connection uses system memory
