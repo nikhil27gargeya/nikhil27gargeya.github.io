@@ -296,8 +296,8 @@ def hasDuplicate(nums: List[int]) -> bool:
 	return len(s) == len(nums)
 ```
 
-# isAnagram:
-
+**isAnagram:
+**
 Problem: Given two strings s and t, return True if t is an anagram of s. Otherwise return False  
 
 Core Idea: Use a hash map to count character frequencies. 
