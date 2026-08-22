@@ -16,10 +16,12 @@ Static Method: belongs to class rather than any specific object (used for operat
 -cannot use this
 -cannot access instance variables
 -static methods are shared among all instances
+-resolved at compile time
 Instance Method: belongs to object of a class and requires an object to invoke the method (used to operate on object specific data)  
 -can use this
 -can access instance variables
 -can be overridden in subclasses
+-resolved at run time
 
 
 
