@@ -11,6 +11,19 @@ Topics: variables, data types, control flow, functions, scope, error handling, o
 
 
 
+Static Methods vs Instance Methods:
+Static Method: belongs to class rather than any specific object (used for operations that do not depend on object state)
+-cannot use this
+-cannot access instance variables
+-static methods are shared among all instances
+Instance Method: belongs to object of a class and requires an object to invoke the method (used to operate on object specific data)  
+-can use this
+-can access instance variables
+-can be overridden in subclasses
+
+
+
+
 
 # Version Control
 Git Commands
