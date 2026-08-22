@@ -23,8 +23,9 @@ Instance Method: belongs to object of a class and requires an object to invoke t
 -can be overridden in subclasses
 -resolved at run time
 
-
-
+Math math = new Math();
+double result = math.sqrt(25);
+What would the math object actually store? Nothing. There's no object-specific information needed to calculate:
 
 
 # Version Control
