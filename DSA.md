@@ -267,9 +267,23 @@ If nums[i] == nums[j]:
 return True because we found the same value at two different indexes.
 If no matching pair is found:
 return False.
-for i in range(len(nums)): for j in range(i + 1, len(nums)): if nums[i] == nums[j]: return True return False
 
-i = 0 j = 1 → compare nums[0] and nums[1] j = 2 → compare nums[0] and nums[2] j = 3 → compare nums[0] and nums[3] i = 1 j = 2 → compare nums[1] and nums[2] j = 3 → compare nums[1] and nums[3] i = 2 j = 3 → compare nums[2] and nums[3] i = 3 j loop does not execute because range(4, 4) is empty
+for i in range(len(nums)):  
+	for j in range(i + 1, len(nums)):  
+		if nums[i] == nums[j]: 
+			return True 
+return False
+
+i = 0   
+j = 1 → compare nums[0] and nums[1]   
+j = 2 → compare nums[0] and nums[2]   
+j = 3 → compare nums[0] and nums[3]  
+i = 1  
+j = 2 → compare nums[1] and nums[2]  
+j = 3 → compare nums[1] and nums[3]  
+i = 2  
+j = 3 → compare nums[2] and nums[3]  
+i = 3 j loop does not execute because range(4, 4) is empty. 
 
 Efficient Algorithm:
 Convert nums into a set. This automatically removes duplicate values. Compare the length of the set with the length of nums.
