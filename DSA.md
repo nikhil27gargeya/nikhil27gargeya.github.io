@@ -279,7 +279,7 @@ Else:
 Return False because no duplicates existed.
 Why This Works: A set cannot contain duplicate values. So if nums has duplicates, the set will be smaller than nums. If nums has no duplicates, the set and nums will have the same length.
 
-Time Complexity: O(n), because creating the set checks each number once. set(nums) → O(n) len(nums) → O(1) because python stores the length internally
+Time Complexity: O(n), because creating the set checks each number once. set(nums) → O(n) len(nums) → O(1) because python stores the length internally  
 Space Complexity: O(n), because the set stores every number
 
 ```python
