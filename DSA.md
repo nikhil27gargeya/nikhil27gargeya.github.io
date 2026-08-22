@@ -255,8 +255,11 @@ def max_sum_subarray(arr, k):
 # NC150
 
 hasDuplicate:
+
 Problem: Check if there is any duplicate in nums
+
 Core Idea: Use a set because sets only store unique values 
+
 Brute Force Algorithm:
 Loop through each index i in nums
 For each i, loop through every index j after i.
