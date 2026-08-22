@@ -386,7 +386,33 @@ class Solution:
             tup[index] += 1
         return tuple(tup)
 ```
+top K frequent elements:
 
+Problem: 
+
+
+
+
+singleNumber:
+
+Problem: Return the integer that appears only once in a non-empty array
+
+Core Idea: Utilize bitwise operators to solve this, as it doesn't require additional space.
+
+Algorithm: XORing two identical numbers results in 0. Thus, if we xor all the numbers in the array, we will get the unique number as a result. The order of the numbers does not matter due to the associative property of xor. 
+
+```python
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+ 		x = 0
+		for i in range(0, len(nums):
+			x ^= nums[i]
+		return x
+```
+
+number of 1 bits:
+
+Problem: 
 
 # Basic DSA Problems
 
