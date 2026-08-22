@@ -305,33 +305,37 @@ def hasDuplicate(nums: List[int]) -> bool:
 	return len(s) == len(nums)
 ```
 
-def isAnagram(s: str, t: str) -> bool: """ Problem: Given two strings s and t, return True if t is an anagram of s. Otherwise return False Core Idea: Use a hash map to count character frequencies Brute Force Algorithm: sort each string and compare them Efficient Algorithm:
+isAnagram:
 
-create an empty hash map called count
-Loop through each character in s
-If the character is already in count:
-Increase its frequency by 1.
-Else:
-Add the character to count with frequency 1.
-Loop through each character in t
-If the character exists in count:
-Decrease its frequency by 1
-If the frequency becomes 0
-Delete the character key from the count map
-Else
-Return False because t contains a character that s does not have
-After checking all the character in t
-If count is empty
-Return True
-Else
-Return False
-Optimizations: if the length of s != lenght of t, immediately return false Building a map from the smaller collection can reduce space, but for this it doesn't matter as s and t have to be the same length in the context of anagrams
+Problem: Given two strings s and t, return True if t is an anagram of s. Otherwise return False  
 
-Why this works: A hashmap stores a frequency of all the characters. If s and t are anagrams, every character count from s should be perfectly canceled out by t. That means the map should be empty at the end.
+Core Idea: Use a hash map to count character frequencies. 
 
-Time Complexity: O(n + m) as we iterate through both strings
+Brute Force Algorithm: sort each string and compare them 
 
-Space Complexity: O(k) where k with the number of unique characters stored in the map """
+Efficient Algorithm:
+construct character frequency dictionaries using Counter from collections for the string s and string t
+compare equality of both dictionaries, return true if both are equal (as in has the same keys and values)
+
+Optimizations: if the length of s != length of t, immediately return false 
+
+```python
+from collections import Counter
+def isAnagram(s: str, t: str) -> bool:
+	if len(s) != len(t):
+		return False
+	count_s = Counter(s)
+	count_t = Counter(t)
+	return count_s == count_t
+```
+Time Complexity: O(n)  
+Space Complexity: O(k) where k with the number of unique characters stored in the map   
+
+
+twoSum:
+
+
+
 
 def twoSum(self, nums: List[int], target: int) -> List[int]: 
 """
