@@ -254,9 +254,7 @@ def max_sum_subarray(arr, k):
 
 # NC150
 
-```python
-def hasDuplicate(nums: List[int]) -> bool:
-"""
+hasDuplicate:
 Problem: Check if there is any duplicate in nums
 Core Idea: Use a set because sets only store unique values 
 Brute Force Algorithm:
@@ -280,7 +278,11 @@ Why This Works: A set cannot contain duplicate values. So if nums has duplicates
 
 Time Complexity: O(n), because creating the set checks each number once. set(nums) → O(n) len(nums) → O(1) because python stores the length internally
 Space Complexity: O(n), because the set stores every number
-"""
+
+```python
+def hasDuplicate(nums: List[int]) -> bool:
+	s = set(nums)
+	return len(s) == len(nums)
 ```
 
 def isAnagram(s: str, t: str) -> bool: """ Problem: Given two strings s and t, return True if t is an anagram of s. Otherwise return False Core Idea: Use a hash map to count character frequencies Brute Force Algorithm: sort each string and compare them Efficient Algorithm:
