@@ -329,26 +329,63 @@ def isAnagram(s: str, t: str) -> bool:
 	return count_s == count_t
 ```
 Time Complexity: O(n)  
-Space Complexity: O(k) where k with the number of unique characters stored in the map   
+Space Complexity: O(k) where k is the number of unique characters stored in the map   
 
 
 twoSum:
 
-
-
-
 def twoSum(self, nums: List[int], target: int) -> List[int]: 
-"""
-Problem: Given an array of integers and a target number, return the indices i and j where nums[i] + nums[j] == target, and i != j
 
-Algorithm: 
+Problem: Given an array of integers and a target number, return the indices i and j where nums[i] + nums[j] == target, and i != j. 
+
+Core Idea: Use a hashmap to track an association between the number in the array and its index so we can figure out if our complement exists
+
+Algorithm:  
 for each element in the array, we calculate the number we will be looking for in the rest of the array, and storing it against the index in a hashmap. Once we find that value (by checking if the current num is in our hashmap), then we can return the index associated with the number we stored in our hashmap and the current index i.
 
+```python
+def twoSum(self, nums: List[int], target: int) -> List[int]:
+	map = {}
+	for i in range(0, len(nums)):
+		x = target - nums[i]
+		if x in map:
+			return [map[x], i]
+		map[nums[i]] = i
+	return []
+```
 
+Time Complexity: O(n)  
+Space Complexity: O(n)
 
+groupAnagrams:
 
+Problem: Given an array of strings strs, group all anagrams into sublists, you can return the output in any order  
 
-"""
+Core Idea: Use a hashmap to store a tuple (character frequency) which is hashable -> list of anagrams
+
+Algorithm: Calculate a tuple which indicates the character freq of the word and use that as a hashable for a dictionary which maintains tuple -> list of anagrams
+
+```python
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        anagramMap = {}
+        for s in strs:
+            tup = self.charFreq(s)
+            if tup in anagramMap:
+                anagramMap[tup].append(s)
+            else:
+                anagramMap[tup] = []
+                anagramMap[tup].append(s)
+        return list(anagramMap.values())
+    def charFreq(self, s: str) -> tuple:
+        # 26 characters
+        tup = [0] * 26
+        # turn each character into an index from 0 to 25
+        for c in s:
+            index = ord(c) - ord('a')
+            tup[index] += 1
+        return tuple(tup)
+```
 
 
 # Basic DSA Problems
