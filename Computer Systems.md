@@ -10,24 +10,23 @@ Not (~)
 Left Shift (<<)
 Right Shift (>>)
 
-X Y X & Y
-0 0   0
-0 1   0
-1 0   0
-1 1   1
+X Y   X & Y
+0 0     0
+0 1     0
+1 0     0
+1 1     1
 
+X Y   X | Y
+0 0     0
+0 1     1
+1 0     1
+1 1     1
 
-X Y X | Y
-0 0   0
-0 1   1
-1 0   1
-1 1   1
-
-X Y X ^ Y (Exclusive or, can't have both)
-0 0   0
-0 1   1
-1 0   1
-1 1   0
+X Y   X ^ Y   (Exclusive or, can't have both)
+0 0     0
+0 1     1
+1 0     1
+1 1     0
 
 5 << 1
 0101 → 1010
