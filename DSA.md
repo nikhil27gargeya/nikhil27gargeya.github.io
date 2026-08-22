@@ -13,18 +13,11 @@ O(n log n): linearithmic time
 O(n^2): quadratic time meaning that runtime grows proportionallyto the square of the input size
 O(2^n): exponential time
 
-
-
 Runtime Complexity:
 how long does it take to run an algorithm as size of the input problem grows
 
 Spacetime Complexity:
 working memory required by an algorithm as size of the input problem grows
-
-
-
-
-
 
 Most data structures are used in these basic ways:
 1. Read
@@ -34,8 +27,6 @@ Most data structures are used in these basic ways:
 5. Update
 
 We often want to optimize for the steps taken as we want high performance algorithms with the data structures we choose (A Common Sense Guide to Data Structures, Wengrow)
-
-
 
 Data structures can be neatly classified into contiguous or linked structures. Contiguous structures use single slabs of memory and include arrays, matrices, heaps, hash tables. Linked structures are composed of distinct chunks of memory bound together by pointers and include lists, trees, and graph adjacency lists.
 
