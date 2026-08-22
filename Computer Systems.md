@@ -24,6 +24,24 @@ A-F (values 10 to 15)
 2F3 = 2 × 16² + F (15) × 16¹ + 3 × 16⁰ = 512 + 240 + 3 = 755 (decimal)
 
 Converting between systems:
+Decimal to binary:
+Take the decimal number and keep dividing by 2, tracking the remainder until the quotient is 0. Then read the remainders from bottom to top.
+13 = 1101
+13 / 2 = 6 (R1)
+6 / 2 = 3 (R0)
+3 / 2 = 1 (R1)
+1 / 2 = 0 (R1)
+
+Binary to hexadecimal:
+Group the binary digits in sets of four (starting from the right), then convert each group to its hexadecimal equivalent.
+11011101 = DD
+(1101) (1101)
+1101 = D (13 in decimal)
+
+Hexadecimal to decimal:
+Multiply each digit by its place value in powers of 16, then add them up.
+1A3 = 1 × 16² + A (10) × 16¹ + 3 × 16⁰ = 256 + 160 + 3 = 419 (decimal)
+
 
 
 
