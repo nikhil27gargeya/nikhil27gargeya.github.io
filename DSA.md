@@ -245,7 +245,7 @@ def max_sum_subarray(arr, k):
 
 # NC150
 
-# hasDuplicate:
+**hasDuplicate**:
 
 Problem: Check if there is any duplicate in nums
 
@@ -323,7 +323,7 @@ Time Complexity: O(n)
 Space Complexity: O(k) where k is the number of unique characters stored in the map   
 
 
-# twoSum:
+**twoSum**:
 
 def twoSum(self, nums: List[int], target: int) -> List[int]: 
 
@@ -348,7 +348,7 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
 Time Complexity: O(n)  
 Space Complexity: O(n)
 
-# groupAnagrams:
+**groupAnagrams**:
 
 Problem: Given an array of strings strs, group all anagrams into sublists, you can return the output in any order  
 
@@ -377,14 +377,14 @@ class Solution:
             tup[index] += 1
         return tuple(tup)
 ```
-# top K frequent elements:
+**top K frequent elements**:
 
 Problem: 
 
 
 
 
-# singleNumber:
+**singleNumber**:
 
 Problem: Return the integer that appears only once in a non-empty array
 
