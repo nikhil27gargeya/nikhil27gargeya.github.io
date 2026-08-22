@@ -253,8 +253,13 @@ def max_sum_subarray(arr, k):
 ```
 
 # NC150
-N150 (thinking in algorithms): def hasDuplicate(nums: List[int]) -> bool: """ Problem: Check if there is any duplicate in nums Core Idea: Use a set because sets only store unique values Brute Force Algorithm:
 
+```python
+def hasDuplicate(nums: List[int]) -> bool:
+"""
+Problem: Check if there is any duplicate in nums
+Core Idea: Use a set because sets only store unique values 
+Brute Force Algorithm:
 Loop through each index i in nums
 For each i, loop through every index j after i.
 If nums[i] == nums[j]:
@@ -266,12 +271,7 @@ for i in range(len(nums)): for j in range(i + 1, len(nums)): if nums[i] == nums[
 i = 0 j = 1 → compare nums[0] and nums[1] j = 2 → compare nums[0] and nums[2] j = 3 → compare nums[0] and nums[3] i = 1 j = 2 → compare nums[1] and nums[2] j = 3 → compare nums[1] and nums[3] i = 2 j = 3 → compare nums[2] and nums[3] i = 3 j loop does not execute because range(4, 4) is empty
 
 Efficient Algorithm:
-
-Convert nums into a set.
-
-This automatically removes duplicate values.
-Compare the length of the set with the length of nums.
-
+Convert nums into a set. This automatically removes duplicate values. Compare the length of the set with the length of nums.
 If the lengths are different:
 Return True because at least one duplicate was removed.
 Else:
@@ -279,8 +279,9 @@ Return False because no duplicates existed.
 Why This Works: A set cannot contain duplicate values. So if nums has duplicates, the set will be smaller than nums. If nums has no duplicates, the set and nums will have the same length.
 
 Time Complexity: O(n), because creating the set checks each number once. set(nums) → O(n) len(nums) → O(1) because python stores the length internally
-
-Space Complexity: O(n), because the set stores every number """
+Space Complexity: O(n), because the set stores every number
+"""
+```
 
 def isAnagram(s: str, t: str) -> bool: """ Problem: Given two strings s and t, return True if t is an anagram of s. Otherwise return False Core Idea: Use a hash map to count character frequencies Brute Force Algorithm: sort each string and compare them Efficient Algorithm:
 
