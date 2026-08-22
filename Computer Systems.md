@@ -2,6 +2,31 @@
 
 Topics: binary, hexadecimal, data representation, bits, bytes, words, integer representation, floating-point representation, Boolean logic, computer architecture, CPU structure, registers, instruction cycles, assembly language, machine code, memory hierarchy, CPU caches, cache locality, RAM, virtual memory, stack memory, heap memory, memory allocation, pointers, references, processes, threads, context switching, concurrency, parallelism, synchronization, locks, mutexes, semaphores, condition variables, deadlocks, operating systems, system calls, file systems, input/output, networking fundamentals, TCP/IP, UDP, DNS, sockets, compilers, interpreters, linking, loading
 
+Number Systems:
+The base tells us how many unique digits are used to represent numbers.
+
+Decimal (Base 10):
+Likely originated because humans counted on hands.
+10 symbols:
+0-9
+529 = 5 × 10² + 2 × 10¹ + 9 × 10⁰ = 500 + 20 + 9 = 529
+
+Binary (Base 2):
+Used because  it is efficient for processing electronic signals.
+On and off state represented by 0 and 1. 
+1011 = 1 × 2³ + 0 × 2² + 1 × 2¹ + 1 × 2⁰ = 8 + 0 + 2 + 1 = 11 (decimal)
+
+Hexadecimal (Base 16):
+Used because its a compact way to represent binary numbers.
+16 symbols:
+0-9 (values 0 to 9)
+A-F (values 10 to 15)
+2F3 = 2 × 16² + F (15) × 16¹ + 3 × 16⁰ = 512 + 240 + 3 = 755 (decimal)
+
+Converting between systems:
+
+
+
 ```
 Bitwise Operators:
 And (&)
