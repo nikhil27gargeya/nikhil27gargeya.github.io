@@ -401,7 +401,7 @@ class Solution:
 		return x
 ```
 
-# number of 1 bits:
+**number of 1 bits**:
 
 Problem: 
 
