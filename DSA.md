@@ -415,27 +415,14 @@ def hammingWeight(self, n: int) -> int:
 	for i in range(0, 32):
 		if n & 1 == 1:
 			x += 1
-            # right shift once
-            n = n >> 1
+		# right shift once
+		n = n >> 1
 	return x
 ```
 
 **counting bits**
 
 Problem: 
-
-
-```python
-class Solution:
-    def hammingWeight(self, n: int) -> int:
-        x = 0
-        for i in range(0, 32):
-            if (n & 1) == 1:
-                x += 1
-            # right shift once
-            n = n >> 1
-        return x
-```
 
 
 
