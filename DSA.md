@@ -424,6 +424,27 @@ def hammingWeight(self, n: int) -> int:
 
 Problem: 
 
+Core Idea:
+
+Algorithm: 
+
+```python
+def countBits(self, n: int) -> List[int]:
+	# 4
+	bitArray = []
+	for i in range(0, n + 1):
+		bit = self.calculateBits(i)
+		bitArray.append(bit)
+	return bitArray
+def calculateBits(self, n: int) -> int:
+	x = 0
+	for i in range(0, 32):
+		if n & 1 == 1:
+			x += 1
+		n = n >> 1
+	return x
+```
+
 
 
 
