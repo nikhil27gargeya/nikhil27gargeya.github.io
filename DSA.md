@@ -422,11 +422,13 @@ def hammingWeight(self, n: int) -> int:
 
 **counting bits**
 
-Problem: 
+Problem: Count the number of 1's in the binary representation of every number in the range [0, n] for an integer n
+ie. input: n = 4
+	output: [0, 1, 1, 2, 1]
 
-Core Idea:
+Core Idea: Utilize calculateBits for range (0 to n + 1) and add the results to an array
 
-Algorithm: 
+Algorithm: Iterate n + 1 times and for each i, calculateBits (same function as previous problem) which counts the number of 1 bits in the integer's binary representation. Then that is appended to an array. We then return the array.
 
 ```python
 def countBits(self, n: int) -> List[int]:
@@ -445,7 +447,13 @@ def calculateBits(self, n: int) -> int:
 	return x
 ```
 
+**reverse bits**
 
+Problem:
+
+Core Idea:
+
+Algorithm:
 
 
 
