@@ -403,7 +403,39 @@ class Solution:
 
 **number of 1 bits**:
 
+Problem: return the number of 1 bits in a binary representation
+
+Core Idea: Using bitwise operators, in this case x & 1 = x
+
+Algorithm: if n & 1 == 1, increment count. Right shift bits by 1. Repeat this 32 times to check each bit in the representation.
+
+```python
+def hammingWeight(self, n: int) -> int:
+	x = 0
+	for i in range(0, 32):
+		if n & 1 == 1:
+			x += 1
+            # right shift once
+            n = n >> 1
+	return x
+```
+
+**counting bits**
+
 Problem: 
+
+
+```python
+class Solution:
+    def hammingWeight(self, n: int) -> int:
+        x = 0
+        for i in range(0, 32):
+            if (n & 1) == 1:
+                x += 1
+            # right shift once
+            n = n >> 1
+        return x
+```
 
 
 
