@@ -532,10 +532,35 @@ class Solution:
         return n
 ```
 
+**reverse integer**
+
+Problem:
+
+Core Idea:
+
+Algorithm:
+
+
 ```python
 class Solution:
     def reverse(self, x: int) -> int:
-        
+        # -225
+        n = 0
+        neg = False
+        if x < 0:
+            x *= -1
+            neg = True
+        while x > 0:
+            digit = x % 10 # 5
+            print("digit:", digit)
+            n = (n * 10) + digit
+            x = x // 10 # x = 22
+            print(x)
+        if n >= (1 << 31):
+            return 0
+        if neg:
+            n *= -1
+        return n 
 ```
 
 
