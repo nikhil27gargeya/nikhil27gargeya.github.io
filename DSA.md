@@ -449,19 +449,72 @@ def calculateBits(self, n: int) -> int:
 
 **reverse bits**
 
+Problem: reverse the bits of the binary representation of n and return the result
+
+Core Idea: use n & 1 to extract the last bit, build x left to right by inserting the bit and the left shifting x to make space for the next bit.
+
+Algorithm: On each iteration, check the last bit of n. If the extracted bit is a 1, set the last bit of x to 1 using x | 1. If the extracted bit is a 0, use x & ~1 which clears the last bit but keeps every other bit the same (mask containing all 1s except for a 0 in the last position). Then right shift n by 1 so the next bit becomes the last bit. After processing all 32 bits, return x.
+
+
+```python
+class Solution:
+    def reverseBits(self, n: int) -> int:
+        x = 0
+        for i in range(32):
+            # the last bit is a 1
+            if n & 1 == 1:
+                # make space to insert the bit
+                x = x << 1
+                # insert the bit
+                x = x | 1
+                # move to the next bit in n that we need to insert
+                n = n >> 1
+            # the last bit is 0
+            elif n & 1 == 0:
+                # make space to insert the bit
+                x = x << 1
+                # insert the bit without destroying all the bits (because we need to preserve all the bits except for the last one which we are turning into 0)
+                x = x & ~1
+                # move to the next bit in n that we need to insert
+                n = n >> 1
+        return x
+```
+
+**missing number**
+
+Problem: return the single number in the range that is missing from nums. nums contains n integers in the range [0, n]
+
+Core Idea: Use XOR to cancel out every number that appears in both the complete range [0, n] and nums. Since a ^ a = 0, all the pairs cancel each other out. Also 0 ^ a = a, leaving the missing number.
+
+Algorithm: On each iteration, check the last bit of n. If the extracted bit is a 1, set the last bit of x to 1 using x | 1. If the extracted bit is a 0, use x & ~1 which clears the last bit but keeps every other bit the same (mask containing all 1s except for a 0 in the last position). Then right shift n by 1 so the next bit becomes the last bit. After processing all 32 bits, return x.
+
+
+```python
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        n = len(nums)
+        x = 0
+        y = 0
+        for i in range(n+1):
+            y ^= i
+        for i in range(n):
+            x ^= nums[i]
+        return x ^ y
+```
+
+**sum of two integers**
+
 Problem:
 
-Core Idea:
+Core Idea: 
 
-Algorithm:
-
-
+Algorithm: 
 
 
+```python
 
 
-
-
+```
 
 
 
@@ -501,6 +554,14 @@ Algorithm:
 
 
 
+
+
+
+
+
+
+
+------------------------------------
 
 
 
