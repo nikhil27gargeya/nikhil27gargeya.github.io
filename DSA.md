@@ -504,18 +504,39 @@ class Solution:
 
 **sum of two integers**
 
-Problem:
+Problem: add two numbers without + or - operators
 
-Core Idea: 
+Core Idea: perform binary addition one bit at a time. XOR gives the sum bit without carrying, and there has to be additional logic to determine whether a carry needs to be passed into the next bit position
 
-Algorithm: 
+Algorithm: determine insertBit by XORing aBit, bBit, and carryBit (will be 1 when there is odd number of 1s). Calculate the next carryBit by checking if aBit and bBit are both 1, or if one of them is 1 and the current carryBit is also 1. Finally, if the result represents a negative 32-bit integer, convert it from unsigned to signed.
 
 
 ```python
+class Solution:
+    def getSum(self, a: int, b: int) -> int:
+        carryBit = 0
+        n = 0
 
-
+        for i in range(32):
+            aBit = a & 1
+            bBit = b & 1
+            insertBit = aBit ^ bBit ^ carryBit
+            n = n | (insertBit << i)
+            # carry carrybit to next column if needed
+            carryBit = (aBit & bBit) | ((aBit | bBit) & carryBit)
+            a = a >> 1
+            b = b >> 1
+            # convert unsigned to signed integer
+		if n >= (1 << 31):
+			n -= (1 << 32)
+        return n
 ```
 
+```python
+class Solution:
+    def reverse(self, x: int) -> int:
+        
+```
 
 
 
