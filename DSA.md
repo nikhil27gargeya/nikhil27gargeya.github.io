@@ -382,6 +382,38 @@ class Solution:
 Problem: 
 
 
+*Math and Geometry*
+
+**rotate image**:
+
+Problem: rotate a square matrix clockwise
+
+Core Idea: reverse the matrix then transpose the elements across a diagonal to prevent duplicate operations
+
+Algorithm: 
+
+
+```python
+class Solution:
+    def rotate(self, matrix: List[List[int]]) -> None:
+        # first reverse the rows
+        # [
+        # [1,2], [3, 4]
+        # ]
+        matrix.reverse()
+        # [
+        # [3, 4], [1,2]
+        # ]
+        # transpose the rows into columns (ie. first row becomes first column)
+        for row in range(len(matrix)):
+            for col in range(row + 1, len(matrix)):
+                matrix[row][col], matrix[col][row] = matrix[col][row], matrix[row][col]
+```
+
+**spiral matrix**:
+
+
+
 
 *Bit Manipulation*
 
