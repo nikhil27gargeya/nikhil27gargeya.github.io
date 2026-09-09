@@ -390,8 +390,7 @@ Problem: rotate a square matrix clockwise
 
 Core Idea: reverse the matrix then transpose the elements across a diagonal to prevent duplicate operations
 
-Algorithm: 
-
+Algorithm: reverse the order of the rows, then transpose the matrix by swapping each element above the main diagonal with its mirrored element across the diagonal, producing a clockwise rotation.
 
 ```python
 class Solution:
@@ -405,13 +404,32 @@ class Solution:
         # [3, 4], [1,2]
         # ]
         # transpose the rows into columns (ie. first row becomes first column)
+		# loop through each row index
         for row in range(len(matrix)):
+			# loop through columns right of the diagonal
+			"""
+			row = 0 → col = 1, 2
+			row = 1 → col = 2
+			row = 2 → no columns
+			thus the visited positions are:
+			(0, 1)
+			(0, 2)
+			(1, 2)
+			X ✓ ✓
+			X X ✓
+			X X X
+			"""
             for col in range(row + 1, len(matrix)):
                 matrix[row][col], matrix[col][row] = matrix[col][row], matrix[row][col]
 ```
 
 **spiral matrix**:
 
+Problem: 
+
+Core Idea: 
+
+Algorithm: 
 
 
 
